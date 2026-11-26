@@ -19,6 +19,7 @@ See [ACHIEVEMENTS.md](ACHIEVEMENTS.md) for a dated, plain-language log. In short
 | Tao's C44 (relevant variables) | C44 ≥ 3/2 (Chiarelli–Hatami–Saks construction, all degrees) | `Lab/C44/LowerBound.lean` |
 | Davenport constant | the van Emde Boas–Kruyswijk conjecture fails for C_6^15 (Gao–Geroldinger–Wang–Zeng counterexample) | `Lab/Davenport/VanEmdeBoasKruyswijk.lean` |
 | Davenport constant | the same conjecture fails for every n ≡ 2 mod 4 (n ≥ 6) in every rank r ≥ 5n/2 (the whole GGWZ family) | `Lab/Davenport/GeneralFamily.lean` |
+| Davenport constant | GGWZ Theorem 1.1 in full: D(C_n^r) ≥ r(n−1)+1+⌊(r−1)/(5k−1)⌋ for n = 2k ≡ 2 mod 4, n ≥ 6, every r | `Lab/Davenport/FloorTerm.lean` |
 
 Constructions credited to others are theirs; what we add is the machine-checked proof. Details,
 sources and dead ends are in [ledger/](ledger/).

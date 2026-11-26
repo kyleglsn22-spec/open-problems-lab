@@ -13,7 +13,7 @@ over `C_n^r`, so `D(C_n^r) ≥ r(n-1) + 2`.
 
 The `n = 6` case is `Lab/Davenport/VanEmdeBoasKruyswijk.lean`; this file generalizes it.
 The sharper bound `D(C_n^r) ≥ r(n-1) + 1 + ⌊(r-1)/(5k-1)⌋` (their replacement step) is not
-formalized here.
+formalized here; it is `Lab/Davenport/FloorTerm.lean`.
 
 ## Layout (coordinates `Idx t b`, element kinds `Kind t b`)
 
