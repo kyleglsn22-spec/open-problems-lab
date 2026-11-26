@@ -37,3 +37,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.ListTotal.totalChromaticNumber_G
 #print axioms OpenProblemsLab.ListTotal.not_listTotalColouringConjecture
 #print axioms OpenProblemsLab.ListTotal.exists_counterexample
+#print axioms OpenProblemsLab.GMR.counterexample
+#print axioms OpenProblemsLab.GMR.not_nonAbelianGMR
+#print axioms OpenProblemsLab.GMR.exists_counterexample_card

@@ -122,3 +122,14 @@ Words we use:
   colours per vertex and edge from which no total colouring exists. This appears to be the first formal
   proof of this disproof. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ListTotal/Counterexample.lean).
+
+- **2026-11-26, 5:28 PM ET.** We found a smaller counterexample to the non-abelian
+  Gyarmati–Matolcsi–Ruzsa sumset inequality (a 2010 question, disproved in October 2026), and proved it
+  with a computer-checked Lean proof. The smallest published four-set counterexample lives in a group of
+  order 518,400; ours lives in a group of order 131,072 (almost four times smaller), and the same group also
+  gives the smallest known five-set counterexample. (Smaller groups were already known for six or more sets.)
+  It is a new way of building Elsholtz's "sparse template" (his Proposition 6.8), not a new mechanism. The
+  published paper says no minimality is claimed and leaves open whether this template can beat 518,400. This appears to be
+  the first improvement and the first formal proof of the disproof. Standard axioms only, kernel re-check passed.
+  Internal audit: pass. Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/GMR/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/gmr-non-abelian.md).
