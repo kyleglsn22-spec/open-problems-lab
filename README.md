@@ -1,59 +1,79 @@
 # Open Problems Lab
 
-A small, serious attempt at lesser-known open problems in mathematics, run by one person with AI
-agents. Every result marked "Lean-checked" here is a formal Lean 4 / mathlib proof that this
-repository's CI rebuilds and re-checks on every change.
+[![Lean checks](https://github.com/kyleglsn22-spec/open-problems-lab/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/kyleglsn22-spec/open-problems-lab/actions/workflows/lean.yml)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
-This is the public copy of the lab folder of a private working repository. "PR #n" in the notes
-refers to pull requests there; the proof files themselves are all here.
+Machine-checked proofs, in [Lean 4](https://lean-lang.org) with [mathlib](https://github.com/leanprover-community/mathlib4),
+of results on lesser-known open problems in combinatorics and Boolean function analysis.
 
-## Results so far
+Every theorem listed below builds in this repository's CI with **no `sorry`**, depends only on
+Lean's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`; no `native_decide`),
+and is re-checked by the independent kernel checker `leanchecker`. Where a statement exists in
+[google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures)
+(pinned in `lakefile.toml`), we prove exactly that statement.
 
-See [ACHIEVEMENTS.md](ACHIEVEMENTS.md) for a dated, plain-language log. In short:
+## Results
 
-| Problem | What is proved here | Lean file |
-| --- | --- | --- |
-| [Erdős #757](https://www.erdosproblems.com/757) | upper bounds 7/12, 4/7 and 5/9 | `Lab/Erdos757/UpperBound.lean`, `FourSevenths.lean`, `FiveNinths.lean` |
-| Erdős #757 | lower bound 9/17, conditional on Henning–Yeo (2021), stated as an explicit hypothesis | `Lab/Erdos757/LowerBound.lean` |
-| Tao's C37 (degree vs sensitivity) | no Boolean function of degree ≤ 4 has sensitivity 10 | `Lab/C37/Degree4.lean` |
-| Tao's C44 (relevant variables) | C44 ≥ 3/2 (Chiarelli–Hatami–Saks construction, all degrees) | `Lab/C44/LowerBound.lean` |
-| Davenport constant | the van Emde Boas–Kruyswijk conjecture fails for C_6^15 (Gao–Geroldinger–Wang–Zeng counterexample) | `Lab/Davenport/VanEmdeBoasKruyswijk.lean` |
-| Davenport constant | the same conjecture fails for every n ≡ 2 mod 4 (n ≥ 6) in every rank r ≥ 5n/2 (the whole GGWZ family) | `Lab/Davenport/GeneralFamily.lean` |
-| Davenport constant | GGWZ Theorem 1.1 in full: D(C_n^r) ≥ r(n−1)+1+⌊(r−1)/(5k−1)⌋ for n = 2k ≡ 2 mod 4, n ≥ 6, every r | `Lab/Davenport/FloorTerm.lean` |
+| Problem | Result | Lean theorem | Origin of the mathematics |
+| --- | --- | --- | --- |
+| [Erdős #757](https://www.erdosproblems.com/757): the largest c such that every finite (4,5)-set A ⊂ ℝ has a Sidon subset of size ≥ c·\|A\| | c ≤ 5/9 | [`sSup_le_five_ninths`](Lab/Erdos757/FiveNinths.lean) | construction posted online (Oct 2026); Lean proof for every size is ours |
+| | c ≤ 4/7 | [`sSup_le_four_sevenths`](Lab/Erdos757/FourSevenths.lean) | Ma–Tang, [arXiv:2602.23282](https://arxiv.org/abs/2602.23282) |
+| | c < 3/5 (via c ≤ 7/12) | [`erdos_757_upperBound`](Lab/Erdos757/UpperBound.lean) | Gyárfás–Lehel (1995) |
+| | c ≥ 9/17, **assuming** the Henning–Yeo (2021) hypergraph theorem, stated as an explicit hypothesis | [`erdos_757_lowerBound_of_henningYeo`](Lab/Erdos757/LowerBound.lean) | Ma–Tang |
+| Davenport constant: van Emde Boas–Kruyswijk conjecture D(C_n^r) = r(n−1)+1 (1969) | false for C_6^15 | [`not_vanEmdeBoasKruyswijk`](Lab/Davenport/VanEmdeBoasKruyswijk.lean) | Gao–Geroldinger–Wang–Zeng, [arXiv:2611.24775](https://arxiv.org/abs/2611.24775) |
+| | false for all n ≡ 2 (mod 4), n ≥ 6, r ≥ 5n/2 | [`vEBK_fails`](Lab/Davenport/GeneralFamily.lean) | Gao–Geroldinger–Wang–Zeng |
+| [Degree vs sensitivity](https://teorth.github.io/optimizationproblems/constants/37a.html) (Tao's constant C37) | no Boolean function of degree ≤ 4 has sensitivity 10 | [`no_degree4_sensitivity10`](Lab/C37/Degree4.lean) | Koshta (2026) result; our shorter two-block proof |
+| [Relevant variables](https://teorth.github.io/optimizationproblems/constants/44a.html) (Tao's constant C44) | C44 ≥ 3/2 | [`three_halves_le`](Lab/C44/LowerBound.lean) | Chiarelli–Hatami–Saks, [arXiv:1801.08564](https://arxiv.org/abs/1801.08564) |
 
-Constructions credited to others are theirs; what we add is the machine-checked proof. Details,
-sources and dead ends are in [ledger/](ledger/).
+Where the mathematics is someone else's, our contribution is the formal verification; as far as
+we could find, these are the first machine-checked proofs of these results (we may have missed
+something, and corrections are welcome). A dated plain-language log is in
+[ACHIEVEMENTS.md](ACHIEVEMENTS.md), and each problem's full notes, sources, computations and dead
+ends are in [`ledger/`](ledger/).
 
-## Rules
+## Verify it yourself
 
-1. **Lean is the only judge.** A result counts as checked only when it builds here with no
-   `sorry`, and `scripts/Axioms.lean` shows only `propext`, `Classical.choice` and
-   `Quot.sound`. CI also replays every module with `leanchecker`.
-2. **Statements come from formal-conjectures** (pinned in `lakefile.toml`) whenever they
-   exist there, so we prove exactly the reviewed statement.
-3. **The author never audits their own claim.** An Auditor (a separate AI session) checks that
-   each Lean statement says what the problem says, and re-runs every computation with
-   independently written code. Outside review is very welcome: open an issue.
-4. **Dead ends are results too.** Every refuted claim or abandoned approach goes in the
-   ledger with the reason.
-5. **Record which AI produced what**, with model and version.
+You need [elan](https://github.com/leanprover/elan) (the Lean version manager); everything else is
+pinned (`lean-toolchain`, `lake-manifest.json`).
 
-## Layout
+```sh
+git clone https://github.com/kyleglsn22-spec/open-problems-lab && cd open-problems-lab
+lake exe cache get          # download prebuilt mathlib
+lake build                  # compile every proof
+bash scripts/check_no_sorry.sh
+lake env lean scripts/Axioms.lean   # prints the axioms each main theorem uses
+bash scripts/check_kernel.sh        # independent kernel re-check (needs ~8 GB RAM)
+```
 
-| Path | What it holds |
+The same steps run on every push; see the [Actions tab](https://github.com/kyleglsn22-spec/open-problems-lab/actions).
+
+## Repository layout
+
+| Path | Contents |
 | --- | --- |
-| `ledger/` | One Markdown file per problem: statement, status, claims, attempts, dead ends. `shortlist.md` is the candidate list. |
-| `Lab/` | Lean proofs, one folder per problem. |
-| `explorer/` | Search code and certificates. Every certificate has its own checker. |
-| `audit/` | The Auditor's independent re-checks. |
-| `scripts/` | CI checks: no `sorry`, axiom audit, kernel replay. CI runs from `.github/workflows/lean.yml`. |
+| [`Lab/`](Lab/) | Lean proofs, one folder per problem |
+| [`ledger/`](ledger/) | One file per problem: statement, known results, our claims, attempts and dead ends |
+| [`explorer/`](explorer/) | Computer searches, certificates and their exact checkers (Python/C) |
+| [`audit/`](audit/) | Independent re-implementations used to cross-check computations |
+| [`scripts/`](scripts/) | CI checks: no `sorry`, axiom audit, kernel replay |
+| [`ACHIEVEMENTS.md`](ACHIEVEMENTS.md) | Dated log of results |
 
-## Check it yourself
+## How this was made
 
-```
-curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
-lake update
-lake exe cache get
-lake build
-bash scripts/check_no_sorry.sh && bash scripts/check_axioms.sh && bash scripts/check_kernel.sh
-```
+This is a one-person project run with AI assistance: Claude (Anthropic) wrote the Lean proofs and
+search code, and a separate AI session reviewed each claim, checking that every Lean statement
+matches the problem as published and re-running computations with independently written code.
+The Lean kernel, not any AI or person, is the judge of correctness; the remaining human-trust
+points are the *statements* (please check them) and the one explicit hypothesis noted above.
+This repository is a public mirror of the project's working folder; "PR #n" in the notes refers to
+the working repository's pull requests.
+
+## Citing
+
+See [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button). Please also cite the
+original authors of each result listed above.
+
+## Contact
+
+Found a mistake, or a prior formalization we missed? Please [open an issue](https://github.com/kyleglsn22-spec/open-problems-lab/issues).
+See [CONTRIBUTING.md](CONTRIBUTING.md).

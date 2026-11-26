@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these formal proofs, please cite this repository and the original authors of each result."
+title: "Open Problems Lab: machine-checked Lean 4 proofs on Erdős #757, the Davenport constant, and Tao's constants C37 and C44"
+type: software
+authors:
+  - name: "Open Problems Lab"
+repository-code: "https://github.com/kyleglsn22-spec/open-problems-lab"
+license: Apache-2.0
+date-released: 2026-11-26
+keywords:
+  - Lean 4
+  - mathlib
+  - formal verification
+  - Erdős problems
+  - Sidon sets
+  - Davenport constant
+  - Boolean functions

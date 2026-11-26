@@ -3,9 +3,6 @@ problem: van Emde Boas–Kruyswijk conjecture on the Davenport constant of C_n^r
 source: https://arxiv.org/abs/2611.24775 (Gao, Geroldinger, Wang, Zeng; v3, 24 Nov 2026); conjecture in Gao–Geroldinger survey 2006, Conjecture 3.5
 lean_statement: none upstream (formal-conjectures 9097e2f has no Davenport-constant file); ours is Lab/Davenport/VanEmdeBoasKruyswijk.lean
 status: active
-budget_usd: 150
-spent_usd: 0
-owner: Kyle
 ---
 
 # Davenport constant of C_n^r: the van Emde Boas–Kruyswijk conjecture

@@ -3,9 +3,6 @@ problem: Erdős Problem 1186 (second part), monochromatic 4-term progressions in
 source: https://www.erdosproblems.com/1186
 lean_statement: none yet (formal-conjectures has a statement for #1186 per teorth/erdosproblems; not checked)
 status: paused (beats published bound; not a record; combining with Marquardt shown to be empty, 2026-11-26)
-budget_usd: 150
-spent_usd: 0
-owner: Kyle
 ---
 
 # Erdős #1186: fewest one-colour 4-term progressions mod a prime

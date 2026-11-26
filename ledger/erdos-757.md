@@ -3,9 +3,6 @@ problem: Erdős Problem 757 (Tao constant C5b)
 source: https://www.erdosproblems.com/757
 lean_statement: FormalConjectures/ErdosProblems/757.lean (formal-conjectures 9097e2f)
 status: Ma–Tang upper bound (4/7) Lean-checked and audited (internal); 4/7 now beaten: c ≤ 5/9 Lean-checked for all K (`Lab/Erdos757/FiveNinths.lean`, theorem `sSup_le_five_ninths`; internal audit 2026-11-25); best known lower bound (9/17) Lean-checked conditional on the Henning–Yeo theorem (claim 757-3)
-budget_usd: 150
-spent_usd: 0
-owner: Kyle
 ---
 
 # Erdős #757: Sidon subsets of (4,5)-sets

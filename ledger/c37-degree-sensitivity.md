@@ -3,9 +3,6 @@ problem: Degree vs sensitivity exponent (Tao constant C37)
 source: https://teorth.github.io/optimizationproblems/constants/37a.html
 lean_statement: Lab/C37/Degree4.lean (degree-4 case, our own statement)
 status: paused
-budget_usd: 150
-spent_usd: 0
-owner: Kyle
 ---
 
 # C37: the degree–sensitivity exponent

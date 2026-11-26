@@ -3,9 +3,6 @@ problem: Relevant variables of bounded-degree Boolean functions (Tao constant C4
 source: https://teorth.github.io/optimizationproblems/constants/44a.html
 lean_statement: Lab/C44/LowerBound.lean (our own statement; formal-conjectures 9097e2f has none)
 status: paused (lower side: block compositions ruled out; Lean 3/2 done)
-budget_usd: 150
-spent_usd: 0
-owner: Kyle
 ---
 
 # C44: how many variables can a degree-d Boolean function depend on?
