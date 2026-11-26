@@ -52,5 +52,6 @@ import Lab.Davenport.VanEmdeBoasKruyswijk
 import Lab.Davenport.GeneralFamily
 import Lab.Davenport.FloorTerm
 import Lab.ListTotal.Counterexample
+import Lab.GMR.Counterexample
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/

@@ -147,6 +147,33 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-26 · PR #43 (non-abelian GMR inequality false in a group of order 2^17 [GMR-1], `Lab/GMR/Counterexample.lean`) · **pass, conditional on CI green + 3 wording fixes**
+
+Internal audit, outside review welcome. Reviewed at 3d318f7. This is a new result, so fidelity and novelty were checked against the primary sources.
+
+- **Statement is faithful.** `NonAbelianGMR` matches GMR Problem 1.3 as quoted by Nair–Namayandeh–Zhu (Conj. 1) and
+  Elsholtz (eq. (2)): |A₁⋯Aₙ|^(n−1) ≤ ∏ max_{a∈Aᵢ} |A₁⋯a⋯Aₙ| for nonempty finite sets in any group. The product is
+  the ordered pointwise product, `sliceMax` is a `sup` over nonempty sets, and `H` has one `Group` instance whose
+  laws are proved in Lean (`card_H = 131072`).
+- **Independent brute force gives the same numbers.** The Auditor's own script, built from the Lean `T` matrix, gives:
+  - |S| = 114,688 and N = (2368, 16384, 16384, 2368), ratio 1372/1369;
+  - 27 distinct nonzero labels;
+  - ω bilinear, the group associative and non-abelian.
+- **Construction.** This is Elsholtz's Prop. 6.8 (sparse single-coordinate template) with k = ℓ = 64, r = s = 9,
+  I = 27 and Δ = 3, the same ratio as his Thm 6.7 (order 2²³). What is new is the realization: three 3×3 blocks on
+  2-dimensional row and column spaces, so 17 dimensions instead of 23.
+- **The group is new and smaller.** Elsholtz v1 (Table 3, Q 9.1) gives 518,400 as the smallest found for n = 4, 5
+  and says after Prop. 6.8 that beating it with the sparse template is open. A singleton pad also gives n = 5 in
+  the same group. arXiv and web searches on 26 Nov 2026 found nothing later. For n ≥ 6, smaller groups (1728, 243)
+  are already published.
+- **Trust base is clean.** There is no sorry, native_decide, custom axioms or unsafe code; the label counts are
+  `decide +kernel`. The axiom audit covers all three theorems.
+- **Fixes requested.** (1) Cite Thm 6.7 / Prop. 6.8 (§6) and §9, not "§5" / "§10". (2) Say in ACHIEVEMENTS that the
+  record is for four (and five) sets. (3) Write "almost four times smaller" (518,400/131,072 ≈ 3.96) and call it a
+  new realization of Elsholtz's template.
+
+---
+
 ## 2026-11-26 · PR #41 (List Total Colouring Conjecture is false [LTC-1], `Lab/ListTotal/Counterexample.lean`) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at 9d1064a.
