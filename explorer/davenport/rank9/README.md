@@ -23,3 +23,6 @@ over `C_6^9`. They give no construction or proof. We did not find one. What we t
 
 The repeated near-miss at 1 suggests an obstruction in these families. A rank-9 example probably needs a
 different gadget.
+
+**Round 2 (same day, later):** new layouts, a reduction of the rank-9 question to a single rank-4 block
+property, one solver impossibility proof, and more empty searches. See `round2/README.md`.

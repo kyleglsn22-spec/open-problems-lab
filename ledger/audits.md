@@ -147,6 +147,52 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-26 · PR #41 (List Total Colouring Conjecture is false [LTC-1], `Lab/ListTotal/Counterexample.lean`) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at 9d1064a.
+
+- **Definitions match the standard ones.**
+  - `IsTotalColoring` and `totalChromaticNumber` are formal-conjectures' definitions, checked at the pin 9097e2f.
+  - `TotalChoosable k` (lists `Finset ℕ`, card ≥ k) is standard k-total-choosability. ℕ colours lose
+    nothing (relabel injectively), and "≥ k" is equivalent to "= k", so `¬ TotalChoosable 4` refutes 4-choosability.
+  - `listTotalChromaticNumber` is `sInf`. The `≠` proof handles the empty-set case.
+- **Scope.** The conjecture is stated for finite simple graphs. That is a special case of the published
+  multigraph conjecture, so refuting it refutes the original.
+- **Graph and lists match Noel (arXiv 2609.38417).** Four blocks, each a K₂ core plus 3 terminals, give a
+  cubic graph on 20 vertices (`G_cubic` by `decide`). Inside block i the lists are [5]∖{i+1}. The
+  cross-edge lists are B1B2∖3, B1B3∖5, B1B4∖2, B2B3∖4, B2B4∖5 and B3B4∖1, all as in the paper.
+- **Independent SAT recheck.** The Auditor's own pysat encoding, written from the paper text, gives:
+  no colouring from the lists (UNSAT), a 4-total-colouring exists (SAT), no 3-total-colouring (UNSAT).
+- **Trust base and wording are clean.**
+  - No sorry, native_decide, custom axioms or unsafe code. The axiom audit covers the new theorems.
+  - Noel is credited.
+  - The upper bound χ''_ℓ ≤ 5 is stated as not formalized (and it is not needed).
+  - "Appears to be the first formal proof" is hedged.
+
+---
+
+## 2026-11-26 · PR #39 (Davenport rank-9 search, round 2: notes and scripts only) · **pass**
+
+Internal audit, outside review welcome. Reviewed at d4af319.
+
+- **5-condition reduction: exact.** The Auditor re-ran `req.py`, `minreq.py` and `ach.py`:
+  - With rank-1 blocks (any length-4 zero-sumfree sequence in C₆), the third block's unique minimal
+    requirement is {011, 100, 101, 110, 111}.
+  - So the 5-condition is necessary and sufficient for that rank-9 layout.
+  - The paper's block fails it (`cond5.py`, |Miss| = 7).
+- **Rank-4 scan: matches exactly.** The re-run of `fam.c 4 1` gave 1,377,037 zero-sumfree blocks, 4
+  passing the 3-condition (all of the paper's type up to a basis change) and 0 passing the 5-condition.
+  This is a structured-family search, not a proof.
+- **Two copies of the paper's block, m = 8: UNSAT, confirmed independently.**
+  - Their CaDiCaL model returns UNSAT (27 s).
+  - The Auditor's own CNF (balanced adders, Glucose4) also returns UNSAT.
+  - Fixing the first top term to 0 is WLOG.
+- **Rank-3 claims and timeouts are honestly labelled.** The rank-3 results are reported as "none
+  found" and the timeouts as uninformative, consistent with the rank-15 calibration failure. The
+  Auditor corrected project memory, which had said "no rank-3 block has…".
+
+---
+
 ## 2026-11-26 · PR #35 (Davenport: full GGWZ Thm 1.1 with floor term [DAV-4], `Lab/Davenport/FloorTerm.lean`) · **pass, conditional on CI green + ACHIEVEMENTS entry**
 
 Internal audit, outside review welcome. Reviewed at 2bd45b3.

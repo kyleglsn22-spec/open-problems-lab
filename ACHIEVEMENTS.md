@@ -114,3 +114,11 @@ Words we use:
   Proof: PR #27,
   [Unconditional.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Erdos757/Unconditional.lean),
   [Lab/HenningYeo/](https://github.com/kyleglsn22-spec/open-problems-lab/tree/main/Lab/HenningYeo).
+
+- **2026-11-26, 3:15 PM ET.** We gave a computer-checked Lean proof that the **List Total
+  Colouring Conjecture** (Borodin–Kostochka–Woodall, Juvan–Mohar–Škrekovski, Hilton–Johnson, late
+  1990s) is false. The counterexample is Noel's (arXiv 2609.38417, September 2026, found with an AI
+  model): a 20-vertex graph that can be totally coloured with 4 colours, but has lists of 4 allowed
+  colours per vertex and edge from which no total colouring exists. This appears to be the first formal
+  proof of this disproof. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ListTotal/Counterexample.lean).
