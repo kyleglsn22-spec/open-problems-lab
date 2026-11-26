@@ -22,6 +22,7 @@ and is re-checked by the independent kernel checker `leanchecker`. Where a state
 | | c ≥ 9/17, **assuming** the Henning–Yeo (2021) hypergraph theorem, stated as an explicit hypothesis | [`erdos_757_lowerBound_of_henningYeo`](Lab/Erdos757/LowerBound.lean) | Ma–Tang |
 | Davenport constant: van Emde Boas–Kruyswijk conjecture D(C_n^r) = r(n−1)+1 (1969) | false for C_6^15 | [`not_vanEmdeBoasKruyswijk`](Lab/Davenport/VanEmdeBoasKruyswijk.lean) | Gao–Geroldinger–Wang–Zeng, [arXiv:2611.24775](https://arxiv.org/abs/2611.24775) |
 | | false for all n ≡ 2 (mod 4), n ≥ 6, r ≥ 5n/2 | [`vEBK_fails`](Lab/Davenport/GeneralFamily.lean) | Gao–Geroldinger–Wang–Zeng |
+| | D(C_n^r) ≥ r(n−1)+1+⌊(r−1)/(5k−1)⌋ for n = 2k ≡ 2 (mod 4), n ≥ 6, every r (their Theorem 1.1 in full) | [`ggwz_floor`](Lab/Davenport/FloorTerm.lean) | Gao–Geroldinger–Wang–Zeng |
 | [Degree vs sensitivity](https://teorth.github.io/optimizationproblems/constants/37a.html) (Tao's constant C37) | no Boolean function of degree ≤ 4 has sensitivity 10 | [`no_degree4_sensitivity10`](Lab/C37/Degree4.lean) | Koshta (2026) result; our shorter two-block proof |
 | [Relevant variables](https://teorth.github.io/optimizationproblems/constants/44a.html) (Tao's constant C44) | C44 ≥ 3/2 | [`three_halves_le`](Lab/C44/LowerBound.lean) | Chiarelli–Hatami–Saks, [arXiv:1801.08564](https://arxiv.org/abs/1801.08564) |
 
