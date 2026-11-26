@@ -96,3 +96,12 @@ Words we use:
   The construction is theirs, and this appears to be the first machine-checked proof of it.
   Internal audit: pass. Proof: PR #31,
   [GeneralFamily.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Davenport/GeneralFamily.lean).
+- **2026-11-26, about 9 AM ET.** We finished the Lean check of Gao, Geroldinger, Wang and Zeng's
+  Theorem 1.1 in full, including its sharper "floor" term: for every n = 6, 10, 14, … and every
+  number of coordinates r, Lean confirms a list of r(n−1) + ⌊(r−1)/(5k−1)⌋ elements of (Z/n)^r
+  (k = n/2) with no nonempty part summing to zero. So the 1969 conjecture is beaten by one more
+  element for every extra 5k−1 coordinates (for n = 6: by 2 from 29 coordinates, by 3 from 43).
+  The construction and the "replacement" trick are theirs; this appears to be the first
+  machine-checked proof of the full theorem. Internal audit: pass. Proof:
+  PR #35,
+  [FloorTerm.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Davenport/FloorTerm.lean).

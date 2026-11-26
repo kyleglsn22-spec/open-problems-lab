@@ -147,6 +147,26 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-26 · PR #35 (Davenport: full GGWZ Thm 1.1 with floor term [DAV-4], `Lab/Davenport/FloorTerm.lean`) · **pass, conditional on CI green + ACHIEVEMENTS entry**
+
+Internal audit, outside review welcome. Reviewed at 2bd45b3.
+
+- **Statement.** `ggwz_floor`: for n % 4 = 2, n ≥ 6 and every r, there is a zero-sumfree multiset of
+  size r(n−1) + (r−1)/(5(n/2)−1).
+  - Since n is even, n/2 = k exactly, so ℕ division is ⌊(r−1)/(5k−1)⌋ for r ≥ 1.
+  - The r = 0 case is a harmless extension.
+  - Because D = 1 + d, this is exactly GGWZ v3 Thm 1.1.
+- **`replace` lemma.** Its hypothesis ("nonempty, K-part 0, so C_n-part 1") is the paper's "every
+  subsum in ⟨F₁⟩ equals F₁", and the map (w, j) ↦ (w, j•g) is the paper's.
+- **`P_key`.** It is that property for P = S − (n−2)·F₁, proved the paper's way.
+- **Iteration.** The ranks and length bookkeeping match.
+- **Remark.** The n = 6 Remark (⌊(r−1)/8⌋) is still marked unproved.
+- **Trust base.** No sorry, no decide, no native_decide, no axiom. All three theorems are in
+  Axioms.lean.
+- **Condition.** Add a DAV-4 line to ACHIEVEMENTS.md (Kyle's standing rule).
+
+---
+
 ## 2026-11-26 · PR #31 (Davenport: Lean proof of the whole GGWZ family [DAV-3]; rank-9 search notes) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at 5aa68d6.
