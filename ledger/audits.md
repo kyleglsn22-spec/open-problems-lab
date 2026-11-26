@@ -416,3 +416,17 @@ Notes:
 
 Notes, all fixed in this PR: arc-count typo (18 to 62, not 64); "another way" wording in ACHIEVEMENTS;
 underived statements now marked "derived, not written up" / "numerically"; exact recomputation is for r = 1 only.
+
+## 2026-11-26 · Claim 757-4 (Erdős #757 `9/17 ≤ sSup`, unconditional; Henning–Yeo Theorem 6, PR 27) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `erdos_757_lowerBound` has exactly the upstream type of
+  `erdos_757.variants.lowerBound` (checked by `example`), `nine_seventeenths_le_sSup_unconditional`
+  and `henningYeoBound` take no hypothesis. `F7Free` (5 lines of AG(2,3) minus two points) is not
+  vacuous and is proved for the real AP hypergraph; `isoEdges`/`wt`/`Theorem6Bound` match the paper.
+- Trust surface: no sorry/axiom/native_decide/implemented_by/extern/unsafe/opaque in `Lab/` outside comments.
+- `scripts/Axioms.lean`: `theorem6`, `nine_seventeenths_le_sSup_unconditional`, `erdos_757_lowerBound`
+  depend only on propext, Classical.choice, Quot.sound. Local leanchecker on all new modules passed (≤ 7.4 GB).
+- Notes (fixed in this PR): ledger said "Theorem 6 in full"; only the bound (first half) is proved,
+  the strict part in the corrected weaker form; status line updated after this audit.
+

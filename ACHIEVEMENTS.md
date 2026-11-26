@@ -105,3 +105,12 @@ Words we use:
   machine-checked proof of the full theorem. Internal audit: pass. Proof:
   PR #35,
   [FloorTerm.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Davenport/FloorTerm.lean).
+- **2026-11-26, about 9:30 AM ET.** The Erdős #757 lower bound 9/17 ≈ 0.529 is now **Lean-checked with no
+  assumptions**. We formalized the 24-page Henning–Yeo (2021) hypergraph transversal theorem that the
+  earlier proof had to assume (about 7,700 lines of Lean). Along the way we found and fixed two small
+  issues in the published proof (see the plan notes). So both best known bounds for #757,
+  9/17 ≤ c ≤ 5/9, are now machine-checked. As far as we know this is the first formal proof of the
+  Henning–Yeo theorem. Standard axioms only, kernel re-check passed. Internal audit: pass with notes.
+  Proof: PR #27,
+  [Unconditional.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Erdos757/Unconditional.lean),
+  [Lab/HenningYeo/](https://github.com/kyleglsn22-spec/open-problems-lab/tree/main/Lab/HenningYeo).

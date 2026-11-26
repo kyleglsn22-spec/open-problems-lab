@@ -18,6 +18,10 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.E757.LowerBound.apEdges_F7Free
 #print axioms OpenProblemsLab.E757.LowerBound.apEdges_linear
 #print axioms OpenProblemsLab.E757.FiveNinths.sSup_le_five_ninths
+#print axioms OpenProblemsLab.E757.LowerBound.nine_seventeenths_le_sSup_of_theorem6
+#print axioms OpenProblemsLab.HY.theorem6
+#print axioms OpenProblemsLab.E757.LowerBound.nine_seventeenths_le_sSup_unconditional
+#print axioms OpenProblemsLab.E757.LowerBound.erdos_757_lowerBound
 #print axioms OpenProblemsLab.C44.exists_degLE_all_relevant
 #print axioms OpenProblemsLab.C44.three_halves_le
 #print axioms OpenProblemsLab.Davenport.zeroSumFree_S
