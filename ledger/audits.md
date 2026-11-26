@@ -147,6 +147,27 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-26 · PR #31 (Davenport: Lean proof of the whole GGWZ family [DAV-3]; rank-9 search notes) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at 5aa68d6.
+
+- **`ggwz` statement.** For n % 4 = 2, n ≥ 6 and 5n ≤ 2r, there is a zero-sumfree multiset of r(n−1)+1
+  elements in Fin r → ZMod n. This is exactly the "in particular" part of GGWZ v3 Thm 1.1 (r ≥ 5k).
+- **`vEBK_fails` statement.** It is the negation of the PR 28 conjecture def at each such (n, r).
+- **Construction.** The Auditor's own transcription of the paper's general construction, with padding,
+  equals a literal reading of `vZ`/`mult` as a multiset for t = 1..4 and b ∈ {0, 3}.
+- **Not-formalized wording.** The statement that the floor term `⌊(r−1)/(5k−1)⌋` is not formalized is
+  honest and appears consistently.
+- **Trust base.** No sorry, native_decide, axiom, extern, unsafe or set_option. The arithmetic is
+  symbolic in t.
+- **Rank-9 notes.** Reproduced independently: 66,672 zero-sumfree length-9 sequences in C_6², none with
+  a valid (c, a, d) triple.
+- **Stronger than the README says.** Rank-1 and rank-2 blocks each need deficit ≥ 2, and the scheme at
+  rank 9 has total deficit 3. Every split of block ranks summing to 6 has two blocks of rank ≤ 2, so no
+  choice of ranks or deficits works. The search runs are correctly labelled inconclusive.
+
+---
+
 ## 2026-11-26 · PR #28 (Davenport: Lean disproof of van Emde Boas–Kruyswijk via GGWZ, C_6^15 [DAV-1]; CP-SAT check [DAV-2]) · **pass, conditional on CI green + one rewording**
 
 Internal audit, outside review welcome. Reviewed at 6a8f469.

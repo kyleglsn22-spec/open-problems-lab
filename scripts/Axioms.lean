@@ -23,3 +23,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Davenport.zeroSumFree_S
 #print axioms OpenProblemsLab.Davenport.exists_zeroSumFree_C6_15
 #print axioms OpenProblemsLab.Davenport.not_vanEmdeBoasKruyswijk
+#print axioms OpenProblemsLab.Davenport.Family.ggwz
+#print axioms OpenProblemsLab.Davenport.Family.vEBK_fails
+#print axioms OpenProblemsLab.Davenport.Family.exists_zeroSumFree_family

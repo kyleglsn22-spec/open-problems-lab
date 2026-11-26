@@ -6,5 +6,6 @@ import Lab.Erdos757.LowerBound
 import Lab.Erdos757.FiveNinths
 import Lab.C44.LowerBound
 import Lab.Davenport.VanEmdeBoasKruyswijk
+import Lab.Davenport.GeneralFamily
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/

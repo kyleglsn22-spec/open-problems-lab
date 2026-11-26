@@ -29,6 +29,7 @@ has a nonempty subsequence summing to 0. Van Emde Boas and Kruyswijk (1969) conj
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | DAV-1 | There is a zero-sumfree sequence of 76 = 15·5+1 elements of (Z/6)^15, so `D(C_6^15) ≥ 77` and the van Emde Boas–Kruyswijk conjecture is false (`not_vanEmdeBoasKruyswijk`). The construction is GGWZ's (v3), the formalization is ours. | Kyle + Claude | audited (internal, PR 29) | `Lab/Davenport/VanEmdeBoasKruyswijk.lean` |
+| DAV-3 | For every `n ≡ 2 (mod 4)`, `n ≥ 6`, and every `r` with `2r ≥ 5n`, there is a zero-sumfree sequence of `r(n-1)+1` elements of `(Z/n)^r` (`Family.ggwz`); this is the "in particular" part of GGWZ Theorem 1.1, for the whole family. The floor-term bound `+⌊(r-1)/(5k-1)⌋` (replacement step) is not formalized. | Kyle + Claude | audited (internal) | `Lab/Davenport/GeneralFamily.lean` |
 | DAV-2 | GGWZ v3 sequences for n = 6 (rank 15, length 76) and n = 10 (rank 25, length 226) are zero-sumfree, by a CP-SAT infeasibility verdict (no certificate exported) that does not use the paper's argument | Kyle + Claude | solver verdict | `explorer/davenport/` |
 
 ## Novelty (checked 2026-11-26)
@@ -39,6 +40,11 @@ has a nonempty subsequence summing to 0. Van Emde Boas and Kruyswijk (1969) conj
 - So DAV-1 appears to be the first machine-checked disproof. The mathematics is GGWZ's.
 
 ## Log
+- 2026-11-26 (later): Lean proof for the whole family (DAV-3): every n ≡ 2 mod 4, n ≥ 6, every
+  rank r ≥ 5n/2. Arithmetic is symbolic in t (n = 4t+2): block and leaf lemmas reduce each
+  congruence to a few multiples of n, then omega. Build ~10 s, leanchecker 6.1 GB.
+- 2026-11-26: Rank-9 search for n = 6 (Remark): negative. Rank-2 blocks are exhaustively impossible,
+  and structured annealing came within 1 condition. Details are in explorer/davenport/rank9/.
 - 2026-11-26: Scouted Tao constants with no 2026 activity; picked this because the 8-day-old
   disproof has an explicit, elementary construction and no formal check. Built the k = 3
   sequence, confirmed zero-sumfree by CP-SAT (k = 3, 5), formalized in Lean (block lemma +
@@ -46,5 +52,5 @@ has a nonempty subsequence summing to 0. Van Emde Boas and Kruyswijk (1969) conj
   peak 6.5 GB.
 
 ## Next
-- Lean proof for all `n = 2k`, `k ≥ 3` odd (paper's Lemma 3.1 + center/leaves argument are uniform in k).
-- The rank-9 claim for n = 6 in the Remark has no proof in the paper: find and verify an explicit sequence.
+- Formalize the replacement step (the `⌊(r-1)/(5k-1)⌋` term of Theorem 1.1).
+- Rank-9 claim for n = 6 (Remark): searched, not found; see `explorer/davenport/rank9/README.md`.

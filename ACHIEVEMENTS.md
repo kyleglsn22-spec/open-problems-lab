@@ -89,3 +89,10 @@ Words we use:
   as far as we can find, ours is the first machine-checked proof of it. Standard axioms only, kernel
   re-check passed. Internal audit: pass. Proof: PR #28,
   [VanEmdeBoasKruyswijk.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Davenport/VanEmdeBoasKruyswijk.lean).
+- **2026-11-26, morning ET.** We extended the Lean check of Gao, Geroldinger, Wang and Zeng's
+  disproof to their whole family of examples: for every n = 6, 10, 14, … (n ≡ 2 mod 4) and every
+  number of coordinates r ≥ 5n/2, Lean confirms a list of r(n−1)+1 elements of (Z/n)^r with no
+  nonempty part summing to zero. So the 1969 conjecture fails for all these cases, not just one.
+  The construction is theirs, and this appears to be the first machine-checked proof of it.
+  Internal audit: pass. Proof: PR #31,
+  [GeneralFamily.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Davenport/GeneralFamily.lean).
