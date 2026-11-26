@@ -45,3 +45,21 @@ Both still need the Scout's full literature check before work starts (logged in 
   constant 53a). A preprint of 18–24 Nov 2026 (Gao–Geroldinger–Wang–Zeng) disproves it with an
   explicit construction; nobody has machine-checked it. Payoff: first formal disproof of a 1969
   conjecture. See `ledger/davenport-vebk.md`.
+
+## Round 4 (2026-11-26, scouting thread)
+
+Scanned arXiv/Hexagon/Zenodo for disproofs and new theorems from September to November 2026, then checked each
+one against the AFTD auto-formalization site (rainwangphy/aftd-platform, about 28k Lean files, which formalizes new arXiv
+papers within days), formal-conjectures and GitHub. Ranked by likely payoff for us:
+
+| # | Candidate | Source | Why | Formalized elsewhere? | Plan |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **List Total Colouring Conjecture is false** (Borodin–Kostochka–Woodall, Juvan–Mohar–Škrekovski, Hilton–Johnson, late 1990s) | Noel, arXiv 2609.38417 (29 Sep 2026), counterexample found by an AI model | Well-known conjecture; explicit 20-vertex cubic graph with total chromatic number 4 but not total 4-choosable; short hand proof | No (not on AFTD; press coverage says no formal proof) | **Pick: Lean disproof now** |
+| 2 | **Non-abelian Gyarmati–Matolcsi–Ruzsa inequality is false** (GMR 2010, Problem 1.3) | Nair–Namayandeh–Zhu arXiv 2611.00156 (D_4^14); Elsholtz arXiv 2611.12776 (general double-coset theorem, smallest n=4 group found has order 518,400, "no minimality claimed") | Lean: the general double-coset theorem only needs a lower bound on the product set and upper bounds on the slices. Search: a smaller group for 4 sets would beat a published record | No | Next: Lean, then a smaller-group search |
+| 3 | Claw-free Schur-positivity conjecture (Stanley 1998 / Gasharov) is false | Prajapati arXiv 2607.26364; Matherne–Morales | 12-vertex graph, one Schur coefficient equals -64 | No | Later: needs chromatic symmetric functions and Schur coefficients in Lean (heavy definitions) |
+| 4 | Partial List Colouring Conjecture (Albertson–Grossman–Haas) is false | Noel arXiv 2609.23291 | Same author and style as #1 | Not checked yet | Bundle with #1 if the proof is short |
+| 5 | Gerards–Schrijver Edmonds–Johnson conjecture is false | arXiv 2611.28580 (20 Nov 2026), a 5×6 matrix | Very fresh | AFTD cites it once | Later: Chvátal closure is hard to formalize |
+
+Dropped: **Hilton's conjecture** (proved arXiv 2611.12199): AFTD already has a Lean proof (11 Nov) and Bai (Zenodo
+24152331) Lean-proved the follow-up conjecture. Also dropped: El-Zahar–Erdős (probabilistic proof, hard to formalize) and
+the happy-edge conjecture (flip-distance lower bounds, heavy).

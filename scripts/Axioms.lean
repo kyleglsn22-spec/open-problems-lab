@@ -33,3 +33,7 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Davenport.Floor.ggwz_floor
 #print axioms OpenProblemsLab.Davenport.Floor.ggwz_floor'
 #print axioms OpenProblemsLab.Davenport.Floor.replace
+#print axioms OpenProblemsLab.ListTotal.not_totalChoosable_four
+#print axioms OpenProblemsLab.ListTotal.totalChromaticNumber_G
+#print axioms OpenProblemsLab.ListTotal.not_listTotalColouringConjecture
+#print axioms OpenProblemsLab.ListTotal.exists_counterexample
