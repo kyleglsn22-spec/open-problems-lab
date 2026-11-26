@@ -1,0 +1,5 @@
+n=16 G=31/4 ports=(1,5) -> TIMEOUT iters=1 conflicts=0 121.6s
+n=16 G=31/4 ports=(1,9) -> TIMEOUT iters=1 conflicts=0 122.3s
+n=16 G=31/4 ports=(1,13) -> TIMEOUT iters=1 conflicts=0 121.8s
+n=16 G=31/4 ports=(2,4) -> TIMEOUT iters=1 conflicts=0 122.1s
+n=16 G=31/4 ports=(2,8) -> TIMEOUT iters=1 conflicts=0 122.2s

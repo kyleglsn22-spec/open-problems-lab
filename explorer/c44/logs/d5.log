@@ -1,0 +1,9 @@
+d=5 rmax=8 target>=47: 14 cases
+r=3 degs=(1, 1) Phi=47: INFEASIBLE (0.0s)
+r=4 degs=(1, 1) Phi=48: INFEASIBLE (0.0s)
+r=5 degs=(1, 1) Phi=49: INFEASIBLE (0.2s)
+r=5 degs=(1, 2, 2) Phi=47: INFEASIBLE (0.7s)
+r=6 degs=(1, 1) Phi=50: INFEASIBLE (0.3s)
+r=6 degs=(1, 2, 2) Phi=48: INFEASIBLE (4.8s)
+r=7 degs=(1, 1) Phi=51: INFEASIBLE (0.9s)
+r=7 degs=(1, 2, 2) Phi=49: INFEASIBLE (84.2s)

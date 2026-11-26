@@ -1,0 +1,4 @@
+d=3 target>=11 Nmax=10: 5 weight vectors
+w=(2, 2, 2) V=12: INFEASIBLE (0.0s)
+w=(2, 2, 1, 1, 1) V=11: INFEASIBLE (0.1s)
+w=(2, 2, 1, 1, 1, 1) V=12: INFEASIBLE (0.1s)

@@ -1,0 +1,155 @@
+{
+ "parts": [
+  8,
+  2
+ ],
+ "degree": 4,
+ "n": 10,
+ "target_pattern": [
+  1,
+  2
+ ],
+ "claim": "every LP-feasible point has target orbit sum strictly between consecutive integers",
+ "combinations": {
+  "lower": [
+   {
+    "class": [
+     0,
+     2
+    ],
+    "side": "N<=cap",
+    "mult": "4"
+   },
+   {
+    "class": [
+     1,
+     1
+    ],
+    "side": "N<=cap",
+    "mult": "1"
+   },
+   {
+    "class": [
+     2,
+     0
+    ],
+    "side": "N<=cap",
+    "mult": "2/3"
+   },
+   {
+    "class": [
+     3,
+     2
+    ],
+    "side": "N>=0",
+    "mult": "1/10"
+   },
+   {
+    "class": [
+     5,
+     0
+    ],
+    "side": "N>=0",
+    "mult": "1/15"
+   },
+   {
+    "class": [
+     7,
+     2
+    ],
+    "side": "N<=cap",
+    "mult": "1/2"
+   },
+   {
+    "class": [
+     8,
+     0
+    ],
+    "side": "N<=cap",
+    "mult": "2/3"
+   },
+   {
+    "class": [
+     8,
+     2
+    ],
+    "side": "N>=0",
+    "mult": "12/5"
+   }
+  ],
+  "upper": [
+   {
+    "class": [
+     1,
+     1
+    ],
+    "side": "N<=cap",
+    "mult": "28/9"
+   },
+   {
+    "class": [
+     2,
+     0
+    ],
+    "side": "N<=cap",
+    "mult": "32/9"
+   },
+   {
+    "class": [
+     3,
+     2
+    ],
+    "side": "N>=0",
+    "mult": "13/105"
+   },
+   {
+    "class": [
+     4,
+     1
+    ],
+    "side": "N>=0",
+    "mult": "74/315"
+   },
+   {
+    "class": [
+     5,
+     0
+    ],
+    "side": "N>=0",
+    "mult": "113/630"
+   },
+   {
+    "class": [
+     6,
+     2
+    ],
+    "side": "N<=cap",
+    "mult": "10/21"
+   },
+   {
+    "class": [
+     7,
+     1
+    ],
+    "side": "N<=cap",
+    "mult": "37/63"
+   },
+   {
+    "class": [
+     8,
+     0
+    ],
+    "side": "N<=cap",
+    "mult": "2/63"
+   },
+   {
+    "class": [
+     8,
+     2
+    ],
+    "side": "N>=0",
+    "mult": "32/5"
+   }
+  ]
+ }
+}

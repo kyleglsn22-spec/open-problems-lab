@@ -1,0 +1,9 @@
+d=4 rmax=7 target>=23: 10 cases
+r=3 degs=(1, 1) Phi=23: INFEASIBLE (0.1s)
+r=4 degs=(1, 1) Phi=24: INFEASIBLE (0.1s)
+r=5 degs=(1, 1) Phi=25: INFEASIBLE (0.1s)
+r=5 degs=(1, 2, 2) Phi=23: INFEASIBLE (0.9s)
+r=6 degs=(1, 1) Phi=26: INFEASIBLE (0.3s)
+r=6 degs=(1, 2, 2) Phi=24: INFEASIBLE (8.0s)
+r=7 degs=(1, 1) Phi=27: INFEASIBLE (0.9s)
+r=7 degs=(1, 2, 2) Phi=25: INFEASIBLE (91.2s)

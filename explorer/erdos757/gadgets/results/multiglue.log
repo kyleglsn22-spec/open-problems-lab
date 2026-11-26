@@ -1,0 +1,8 @@
+multiglue.py (2026-11-25): k-point self-similar gluing S_{K+1} = O ∪ φ(S_K), φ any affine contraction
+sending >= 2 points of O into O, copies 0 and 2 disjoint. Ratio = max cycle mean / (|O| - k).
+Ratio = transfer bound (exact only without cross-copy progressions); (4,5)-validity and cross-copy
+progressions not examined.
+reader O (11 pts): 1871 maps, best 5/9 (the known (101,119) gluing), next 16/27
+Ma-Tang 14-point set: 5869 maps (210 with 3 shared points), best 7/12
+Fibonacci 13 (not (4,5), sanity only): 4159 maps, best 3/5
+reader S_1 (20 pts): not finished in 15 min

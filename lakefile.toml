@@ -1,0 +1,17 @@
+name = "open_problems_lab"
+defaultTargets = ["Lab"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+# Problem statements come from DeepMind's formal-conjectures, pinned to one commit,
+# so our theorems prove exactly the statements the community reviewed.
+# It also pins mathlib (v4.33.1).
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
+
+[[lean_lib]]
+name = "Lab"

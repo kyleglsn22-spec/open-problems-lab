@@ -1,0 +1,6 @@
+n=10 rank=25 length=226 (conjecture bound R(n-1) = 225)
+zero-sum subsequence exists? INFEASIBLE (INFEASIBLE = zero-sumfree)
+control, one extra copy of (1, 1, 1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) -> OPTIMAL
+control, one extra copy of (0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) -> OPTIMAL
+control, one extra copy of (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 8, 0, 0, 0, 0, 1) -> OPTIMAL
+control, one extra copy of (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1) -> OPTIMAL

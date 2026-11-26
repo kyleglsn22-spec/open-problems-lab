@@ -1,0 +1,50 @@
+---
+problem: van Emde Boas–Kruyswijk conjecture on the Davenport constant of C_n^r (1969)
+source: https://arxiv.org/abs/2611.24775 (Gao, Geroldinger, Wang, Zeng; v3, 24 Nov 2026); conjecture in Gao–Geroldinger survey 2006, Conjecture 3.5
+lean_statement: none upstream (formal-conjectures 9097e2f has no Davenport-constant file); ours is Lab/Davenport/VanEmdeBoasKruyswijk.lean
+status: active
+budget_usd: 150
+spent_usd: 0
+owner: Kyle
+---
+
+# Davenport constant of C_n^r: the van Emde Boas–Kruyswijk conjecture
+
+## Statement
+`D(G)` is the least `ℓ` such that every sequence of `ℓ` elements of the finite abelian group `G`
+has a nonempty subsequence summing to 0. Van Emde Boas and Kruyswijk (1969) conjectured
+`D(C_n^r) = r(n-1) + 1` for all `n, r`. The lower bound `≥` is classical, so the content is
+`≤`: every sequence of `r(n-1)+1` elements has a nonempty zero-sum subsequence.
+
+## Known results
+| Bound or result | Reference | Checked by us? |
+| --- | --- | --- |
+| True for prime-power `n` and for `r ≤ 2` | Olson, Kruyswijk (1960s) | no |
+| `D(C_n^r) ≥ r(n-1)+1+⌊(r-1)/(5k-1)⌋` for `n = 2k`, `k ≥ 3` odd: conjecture false from rank `5k` (rank 15 for n = 6) | GGWZ arXiv:2611.24775 v3, Thm 1.1 | **yes for n = 6, rank 15: Lean-checked**; n = 6 and n = 10 also by CP-SAT |
+| Remark: `D(C_6^r) ≥ 5r+1+⌊(r-1)/8⌋` (counterexample from rank 9) | GGWZ v3, Remark after Thm 1.1 (no proof given) | no |
+| v1 of the same preprint: counterexample from rank 23 (different construction) | GGWZ v1, 18 Nov 2026 | no (superseded by v3) |
+| `D(C_n^3) = 3n-2` for all large `n` | GGWZ v3, Thm 1.2 | no |
+
+## Claims
+| ID | Claim | Author (person + AI/model) | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| DAV-1 | There is a zero-sumfree sequence of 76 = 15·5+1 elements of (Z/6)^15, so `D(C_6^15) ≥ 77` and the van Emde Boas–Kruyswijk conjecture is false (`not_vanEmdeBoasKruyswijk`). The construction is GGWZ's (v3), the formalization is ours. | Kyle + Claude | audited (internal, PR 29) | `Lab/Davenport/VanEmdeBoasKruyswijk.lean` |
+| DAV-2 | GGWZ v3 sequences for n = 6 (rank 15, length 76) and n = 10 (rank 25, length 226) are zero-sumfree, by a CP-SAT infeasibility verdict (no certificate exported) that does not use the paper's argument | Kyle + Claude | solver verdict | `explorer/davenport/` |
+
+## Novelty (checked 2026-11-26)
+- The DARC verification board for this preprint lists "Lean or other formal proof" as open: none known.
+- The preprint itself mentions no computer check or formal proof.
+- Mathlib has no Davenport constant; formal-conjectures (our pin) has no file on it.
+- A Zenodo note (Fujimoto, Apr 2026) formalizes only tiny cases `D(Z_3..Z_5)`, `D(Z_2²)` via `native_decide`.
+- So DAV-1 appears to be the first machine-checked disproof. The mathematics is GGWZ's.
+
+## Log
+- 2026-11-26: Scouted Tao constants with no 2026 activity; picked this because the 8-day-old
+  disproof has an explicit, elementary construction and no formal check. Built the k = 3
+  sequence, confirmed zero-sumfree by CP-SAT (k = 3, 5), formalized in Lean (block lemma +
+  leaf lemma by `interval_cases`/`omega`, multiset-to-count bridge). Build ~2 min, leanchecker
+  peak 6.5 GB.
+
+## Next
+- Lean proof for all `n = 2k`, `k ≥ 3` odd (paper's Lemma 3.1 + center/leaves argument are uniform in k).
+- The rank-9 claim for n = 6 in the Remark has no proof in the paper: find and verify an explicit sequence.

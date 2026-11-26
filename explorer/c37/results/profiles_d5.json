@@ -1,0 +1,3066 @@
+{
+"14": [
+{
+"C": [
+0,
+14,
+-91,
+238,
+-268,
+108
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+222,
+-227,
+82
+],
+"singleton_types": 3,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+222,
+-226,
+81
+],
+"singleton_types": 2,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+222,
+-228,
+84
+],
+"singleton_types": 1,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-229,
+83
+],
+"singleton_types": 6,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-230,
+85
+],
+"singleton_types": 4,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-231,
+86
+],
+"singleton_types": 11,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-232,
+87
+],
+"singleton_types": 11,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-233,
+88
+],
+"singleton_types": 5,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+223,
+-234,
+89
+],
+"singleton_types": 2,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-231,
+84
+],
+"singleton_types": 6,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-232,
+86
+],
+"singleton_types": 1,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-233,
+87
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-234,
+88
+],
+"singleton_types": 27,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-235,
+89
+],
+"singleton_types": 25,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-236,
+90
+],
+"singleton_types": 21,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-237,
+91
+],
+"singleton_types": 15,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+224,
+-238,
+92
+],
+"singleton_types": 5,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-233,
+85
+],
+"singleton_types": 2,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-238,
+91
+],
+"singleton_types": 41,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-239,
+92
+],
+"singleton_types": 36,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+227,
+-234,
+85
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-235,
+88
+],
+"singleton_types": 15,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-236,
+89
+],
+"singleton_types": 36,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-237,
+90
+],
+"singleton_types": 43,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-240,
+93
+],
+"singleton_types": 24,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+225,
+-241,
+94
+],
+"singleton_types": 2,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-237,
+89
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+228,
+-236,
+86
+],
+"singleton_types": 2,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+228,
+-238,
+89
+],
+"singleton_types": 7,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-240,
+92
+],
+"singleton_types": 60,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+228,
+-240,
+91
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-238,
+90
+],
+"singleton_types": 36,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-239,
+91
+],
+"singleton_types": 54,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-241,
+93
+],
+"singleton_types": 56,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-242,
+94
+],
+"singleton_types": 46,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+226,
+-243,
+95
+],
+"singleton_types": 6,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-240,
+91
+],
+"singleton_types": 29,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-241,
+92
+],
+"singleton_types": 60,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-242,
+93
+],
+"singleton_types": 73,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-243,
+94
+],
+"singleton_types": 74,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-244,
+95
+],
+"singleton_types": 68,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+227,
+-245,
+96
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-242,
+92
+],
+"singleton_types": 14,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-243,
+93
+],
+"singleton_types": 55,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-244,
+94
+],
+"singleton_types": 81,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-245,
+95
+],
+"singleton_types": 89,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-246,
+96
+],
+"singleton_types": 87,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+228,
+-247,
+97
+],
+"singleton_types": 32,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+229,
+-245,
+94
+],
+"singleton_types": 39,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+229,
+-246,
+95
+],
+"singleton_types": 78,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+229,
+-247,
+96
+],
+"singleton_types": 96,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+229,
+-248,
+97
+],
+"singleton_types": 104,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+229,
+-249,
+98
+],
+"singleton_types": 53,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+230,
+-247,
+95
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+230,
+-248,
+96
+],
+"singleton_types": 64,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+230,
+-249,
+97
+],
+"singleton_types": 95,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+230,
+-250,
+98
+],
+"singleton_types": 115,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+230,
+-251,
+99
+],
+"singleton_types": 74,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+231,
+-250,
+97
+],
+"singleton_types": 39,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+231,
+-251,
+98
+],
+"singleton_types": 83,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+231,
+-252,
+99
+],
+"singleton_types": 117,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+231,
+-253,
+100
+],
+"singleton_types": 90,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+232,
+-252,
+98
+],
+"singleton_types": 10,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+232,
+-253,
+99
+],
+"singleton_types": 61,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+232,
+-254,
+100
+],
+"singleton_types": 106,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+232,
+-255,
+101
+],
+"singleton_types": 101,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+233,
+-255,
+100
+],
+"singleton_types": 30,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+233,
+-256,
+101
+],
+"singleton_types": 84,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+233,
+-257,
+102
+],
+"singleton_types": 104,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+234,
+-258,
+102
+],
+"singleton_types": 52,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+228,
+-239,
+90
+],
+"singleton_types": 9,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-240,
+90
+],
+"singleton_types": 7,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-241,
+91
+],
+"singleton_types": 29,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-242,
+92
+],
+"singleton_types": 34,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-243,
+93
+],
+"singleton_types": 29,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-244,
+94
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-245,
+95
+],
+"singleton_types": 8,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+229,
+-246,
+96
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-243,
+92
+],
+"singleton_types": 33,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-244,
+93
+],
+"singleton_types": 60,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-245,
+94
+],
+"singleton_types": 64,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-246,
+95
+],
+"singleton_types": 59,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-247,
+96
+],
+"singleton_types": 47,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+230,
+-248,
+97
+],
+"singleton_types": 9,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-245,
+93
+],
+"singleton_types": 24,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-246,
+94
+],
+"singleton_types": 69,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-247,
+95
+],
+"singleton_types": 91,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-248,
+96
+],
+"singleton_types": 96,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-249,
+97
+],
+"singleton_types": 87,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+231,
+-250,
+98
+],
+"singleton_types": 29,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+232,
+-248,
+95
+],
+"singleton_types": 59,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+232,
+-249,
+96
+],
+"singleton_types": 106,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+232,
+-250,
+97
+],
+"singleton_types": 122,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+232,
+-251,
+98
+],
+"singleton_types": 123,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+234,
+-259,
+103
+],
+"singleton_types": 94,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+234,
+-260,
+104
+],
+"singleton_types": 13,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+235,
+-260,
+103
+],
+"singleton_types": 15,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-91,
+235,
+-261,
+104
+],
+"singleton_types": 71,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+235,
+-262,
+105
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+236,
+-263,
+105
+],
+"singleton_types": 35,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+236,
+-264,
+106
+],
+"singleton_types": 21,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-91,
+237,
+-266,
+107
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+232,
+-252,
+99
+],
+"singleton_types": 60,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+233,
+-250,
+96
+],
+"singleton_types": 34,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+233,
+-251,
+97
+],
+"singleton_types": 100,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+233,
+-252,
+98
+],
+"singleton_types": 136,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+233,
+-253,
+99
+],
+"singleton_types": 154,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+233,
+-254,
+100
+],
+"singleton_types": 94,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+234,
+-252,
+97
+],
+"singleton_types": 3,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+234,
+-253,
+98
+],
+"singleton_types": 72,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+234,
+-248,
+94
+],
+"singleton_types": 13,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+234,
+-249,
+95
+],
+"singleton_types": 27,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+234,
+-250,
+96
+],
+"singleton_types": 24,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+234,
+-251,
+97
+],
+"singleton_types": 11,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+234,
+-254,
+99
+],
+"singleton_types": 133,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+234,
+-255,
+100
+],
+"singleton_types": 170,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+234,
+-256,
+101
+],
+"singleton_types": 127,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-250,
+95
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-251,
+96
+],
+"singleton_types": 46,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-252,
+97
+],
+"singleton_types": 66,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-253,
+98
+],
+"singleton_types": 66,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-254,
+99
+],
+"singleton_types": 52,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+235,
+-255,
+100
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+235,
+-255,
+99
+],
+"singleton_types": 28,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+235,
+-256,
+100
+],
+"singleton_types": 108,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+235,
+-257,
+101
+],
+"singleton_types": 171,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+235,
+-258,
+102
+],
+"singleton_types": 155,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+236,
+-253,
+97
+],
+"singleton_types": 39,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+236,
+-254,
+98
+],
+"singleton_types": 89,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+236,
+-255,
+99
+],
+"singleton_types": 108,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+236,
+-256,
+100
+],
+"singleton_types": 108,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+236,
+-257,
+101
+],
+"singleton_types": 59,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+237,
+-255,
+98
+],
+"singleton_types": 12,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+236,
+-258,
+101
+],
+"singleton_types": 67,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+236,
+-259,
+102
+],
+"singleton_types": 150,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+236,
+-260,
+103
+],
+"singleton_types": 170,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+237,
+-260,
+102
+],
+"singleton_types": 14,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+237,
+-261,
+103
+],
+"singleton_types": 108,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+237,
+-262,
+104
+],
+"singleton_types": 168,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+237,
+-263,
+105
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+237,
+-256,
+99
+],
+"singleton_types": 82,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+237,
+-257,
+100
+],
+"singleton_types": 131,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+237,
+-258,
+101
+],
+"singleton_types": 152,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+237,
+-259,
+102
+],
+"singleton_types": 104,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+238,
+-258,
+100
+],
+"singleton_types": 50,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+238,
+-259,
+101
+],
+"singleton_types": 127,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+238,
+-260,
+102
+],
+"singleton_types": 176,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+238,
+-261,
+103
+],
+"singleton_types": 153,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+239,
+-260,
+101
+],
+"singleton_types": 7,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+238,
+-263,
+104
+],
+"singleton_types": 45,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+238,
+-264,
+105
+],
+"singleton_types": 142,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+239,
+-257,
+99
+],
+"singleton_types": 8,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+238,
+-265,
+106
+],
+"singleton_types": 40,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+239,
+-261,
+102
+],
+"singleton_types": 96,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+239,
+-256,
+98
+],
+"singleton_types": 10,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-94,
+240,
+-258,
+99
+],
+"singleton_types": 11,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+239,
+-266,
+106
+],
+"singleton_types": 88,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+239,
+-267,
+107
+],
+"singleton_types": 48,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+240,
+-268,
+107
+],
+"singleton_types": 19,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-92,
+240,
+-269,
+108
+],
+"singleton_types": 40,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-92,
+241,
+-271,
+109
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+239,
+-262,
+103
+],
+"singleton_types": 178,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+239,
+-263,
+104
+],
+"singleton_types": 185,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+240,
+-263,
+103
+],
+"singleton_types": 40,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+240,
+-259,
+100
+],
+"singleton_types": 43,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+240,
+-260,
+101
+],
+"singleton_types": 53,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+240,
+-261,
+102
+],
+"singleton_types": 45,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+240,
+-264,
+104
+],
+"singleton_types": 150,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+240,
+-265,
+105
+],
+"singleton_types": 205,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+240,
+-266,
+106
+],
+"singleton_types": 21,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+240,
+-262,
+103
+],
+"singleton_types": 14,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-93,
+241,
+-266,
+105
+],
+"singleton_types": 91,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+241,
+-267,
+106
+],
+"singleton_types": 198,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+241,
+-261,
+101
+],
+"singleton_types": 44,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+241,
+-262,
+102
+],
+"singleton_types": 85,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+241,
+-263,
+103
+],
+"singleton_types": 102,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+241,
+-264,
+104
+],
+"singleton_types": 76,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+241,
+-268,
+107
+],
+"singleton_types": 48,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+242,
+-263,
+102
+],
+"singleton_types": 17,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+242,
+-264,
+103
+],
+"singleton_types": 88,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+242,
+-265,
+104
+],
+"singleton_types": 138,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+242,
+-266,
+105
+],
+"singleton_types": 132,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+242,
+-268,
+106
+],
+"singleton_types": 15,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+242,
+-269,
+107
+],
+"singleton_types": 146,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+242,
+-270,
+108
+],
+"singleton_types": 75,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+243,
+-266,
+104
+],
+"singleton_types": 55,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+243,
+-267,
+105
+],
+"singleton_types": 144,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+243,
+-271,
+108
+],
+"singleton_types": 62,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-93,
+243,
+-272,
+109
+],
+"singleton_types": 76,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+243,
+-268,
+106
+],
+"singleton_types": 173,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+243,
+-269,
+107
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+244,
+-263,
+101
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-95,
+245,
+-266,
+103
+],
+"singleton_types": 11,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-93,
+244,
+-274,
+110
+],
+"singleton_types": 53,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+244,
+-268,
+105
+],
+"singleton_types": 7,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-94,
+244,
+-269,
+106
+],
+"singleton_types": 109,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+244,
+-270,
+107
+],
+"singleton_types": 196,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+244,
+-271,
+108
+],
+"singleton_types": 40,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+245,
+-267,
+104
+],
+"singleton_types": 26,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+245,
+-268,
+105
+],
+"singleton_types": 21,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-95,
+246,
+-268,
+104
+],
+"singleton_types": 1,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-93,
+245,
+-276,
+111
+],
+"singleton_types": 10,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-94,
+245,
+-271,
+107
+],
+"singleton_types": 43,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+245,
+-272,
+108
+],
+"singleton_types": 172,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+245,
+-273,
+109
+],
+"singleton_types": 76,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+246,
+-274,
+109
+],
+"singleton_types": 101,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+246,
+-275,
+110
+],
+"singleton_types": 96,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+245,
+-269,
+106
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-95,
+246,
+-269,
+105
+],
+"singleton_types": 39,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+246,
+-270,
+106
+],
+"singleton_types": 72,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+246,
+-271,
+107
+],
+"singleton_types": 68,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+247,
+-271,
+106
+],
+"singleton_types": 16,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+246,
+-272,
+108
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-94,
+247,
+-276,
+110
+],
+"singleton_types": 12,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-94,
+247,
+-277,
+111
+],
+"singleton_types": 82,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-94,
+248,
+-279,
+112
+],
+"singleton_types": 37,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+247,
+-272,
+107
+],
+"singleton_types": 88,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+247,
+-273,
+108
+],
+"singleton_types": 126,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+247,
+-274,
+109
+],
+"singleton_types": 20,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+248,
+-274,
+108
+],
+"singleton_types": 56,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+248,
+-275,
+109
+],
+"singleton_types": 145,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+248,
+-276,
+110
+],
+"singleton_types": 53,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+249,
+-276,
+109
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-95,
+249,
+-277,
+110
+],
+"singleton_types": 114,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+249,
+-278,
+111
+],
+"singleton_types": 82,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+250,
+-279,
+111
+],
+"singleton_types": 43,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+250,
+-280,
+112
+],
+"singleton_types": 89,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+250,
+-274,
+107
+],
+"singleton_types": 3,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-96,
+251,
+-277,
+109
+],
+"singleton_types": 27,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+251,
+-282,
+113
+],
+"singleton_types": 57,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-95,
+252,
+-284,
+114
+],
+"singleton_types": 4,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-96,
+251,
+-278,
+110
+],
+"singleton_types": 41,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+251,
+-279,
+111
+],
+"singleton_types": 10,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-96,
+252,
+-279,
+110
+],
+"singleton_types": 13,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-96,
+252,
+-280,
+111
+],
+"singleton_types": 68,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+252,
+-281,
+112
+],
+"singleton_types": 37,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+253,
+-282,
+112
+],
+"singleton_types": 48,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+253,
+-283,
+113
+],
+"singleton_types": 57,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+254,
+-285,
+114
+],
+"singleton_types": 55,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-96,
+255,
+-287,
+115
+],
+"singleton_types": 20,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-97,
+257,
+-287,
+114
+],
+"singleton_types": 9,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-97,
+256,
+-285,
+113
+],
+"singleton_types": 9,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-97,
+256,
+-286,
+114
+],
+"singleton_types": 4,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-97,
+257,
+-288,
+115
+],
+"singleton_types": 20,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+14,
+-97,
+258,
+-290,
+116
+],
+"singleton_types": 24,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+14,
+-98,
+262,
+-295,
+118
+],
+"singleton_types": 5,
+"level1": "OPTIMAL"
+}
+],
+"15": [
+{
+"C": [
+0,
+15,
+-105,
+277,
+-308,
+122
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-105,
+277,
+-307,
+121
+],
+"singleton_types": 0,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-105,
+278,
+-310,
+123
+],
+"singleton_types": 5,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-105,
+279,
+-312,
+124
+],
+"singleton_types": 3,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-105,
+280,
+-315,
+126
+],
+"singleton_types": 4,
+"level1": "OPTIMAL"
+},
+{
+"C": [
+0,
+15,
+-105,
+281,
+-317,
+127
+],
+"singleton_types": 1,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-106,
+283,
+-318,
+127
+],
+"singleton_types": 1,
+"level1": "INFEASIBLE"
+},
+{
+"C": [
+0,
+15,
+-106,
+284,
+-320,
+128
+],
+"singleton_types": 3,
+"level1": "OPTIMAL"
+}
+]
+}
