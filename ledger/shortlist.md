@@ -63,3 +63,10 @@ papers within days), formal-conjectures and GitHub. Ranked by likely payoff for 
 Dropped: **Hilton's conjecture** (proved arXiv 2611.12199): AFTD already has a Lean proof (11 Nov) and Bai (Zenodo
 24152331) Lean-proved the follow-up conjecture. Also dropped: El-Zahar–Erdős (probabilistic proof, hard to formalize) and
 the happy-edge conjecture (flip-distance lower bounds, heavy).
+
+## Round 5 leads (2026-11-27, hard slot)
+
+| # | Lead | Source | Status |
+| --- | --- | --- | --- |
+| 1 | Partial List Colouring for lists 2+ colours short (`ℓ ≤ k − 2`, `ℓ ∤ k`; first cases `(5,2)`, `(5,3)`) | raised by PLC-3 (ours) | Attempted. Noel-type terminal designs provably fail (ledger/partial-list-colouring.md, Dead ends). Needs a new idea; parked |
+| 2 | List Total Colouring: counterexamples for every maximum degree `Δ ≥ 3`, or a gap `χ''_ℓ ≥ χ'' + 2` (Noel asks whether `χ''_ℓ ≤ χ'' + 1` always; gap 3 would disprove the List Edge Colouring Conjecture) | Noel, arXiv 2609.38417, closing remarks | Next hard item |

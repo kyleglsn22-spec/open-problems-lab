@@ -69,6 +69,27 @@ Statement notes for PLC-2:
   definitions). Lean proof written and checked locally: builds in ~50 s, standard axioms, leanchecker 7.2 GB peak.
 
 ## Dead ends
+- **Lists 2+ colours short (`ℓ ≤ k − 2`, `ℓ ∤ k`), terminal designs (2026-11-27).** Designs of Noel's type (independent
+  terminals with bad `ℓ`-lists, cliques `K_k` with a common bad `ℓ`-list whose vertices see some terminals) cannot reach
+  these cases by the routes below:
+  - A single coloured terminal never costs a clique anything unless it sees all `k` clique vertices, which makes a `K_{k+1}`.
+    So the terminals gain at least 1, and more generally the payoff of colouring `h` terminals is only cut by cliques that
+    see several of them.
+  - *Cross-colour links* (a clique loses when terminals coloured `a ≠ b` both see its non-private vertices): to lose, a
+    clique needs `ℓ − 1` private vertices at most, so `k − ℓ + 1 ≥ 3` non-private vertices. The adversary's blocked set
+    for one clique is then a box `(X ∩ B_i) × (X ∩ B_j) × …` with side lengths summing to `k`. For `(5,3)` with 2 terminals
+    one needs at least 5 cliques, and five `2 × 3` boxes cover the `5 × 5` grid (pinwheel plus centre). With 4 terminals
+    and all triples punished, 26 boxes of shape `2 × 2 × 1` already pin one coordinate per triple, so two triples sharing a
+    terminal can be made inconsistent. Only `ℓ = k − 1` escapes (PLC-3), where a box has volume at most 2.
+  - *Same-colour links* (a clique loses when two terminals with the same colour see all its vertices) give weak boxes,
+    but the problem then reduces to itself: the colourer gains as much as a partial colouring of the "punishment graph"
+    from the terminals' bad lists, and the all-equal-lists adversary forces that graph to be `k`-colourable. If all bad
+    lists are equal, the colourer takes the `ℓ` largest colour classes and gains at least `rℓ/k`.
+  - (3,2) with 3 terminals and all 12 pairwise triangles (ratio 25/39 < 9/14 if it worked) also fails: four dominoes can
+    cover any 8 cells of a `3 × 3` grid, so the adversary makes the three pair-projections inconsistent.
+- Easy closure fact (not new, as far as we can tell): a failure at `(k, ℓ)` on a graph gives a failure at `(k, mℓ)` for
+  `mℓ < k` on the same graph (give each vertex `m` disjoint copies of its bad list; a partial colouring splits by
+  copy). With PLC-3 this adds nothing, but `(5,2)` would give `(5,4)`, `(7,2)` would give `(7,4)` and `(7,6)`, and so on.
 - Attaching new copies through a single hub vertex adjacent to each copy's private vertex: the copy is then
   not always colourable when the private vertex loses a colour, so 3-choosability can fail.
 - Attaching through a terminal: same problem (brute force finds 3-lists with no colouring).
