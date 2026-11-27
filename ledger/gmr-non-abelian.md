@@ -34,14 +34,13 @@ Statement notes for the Auditor:
 
 ## Log
 - 2026-11-27: smaller-group search, round 2 (Kyle + Claude). **No group below 131,072 found.** Details and
-  scripts: `explorer/gmr/smaller/`. Findings: (1) a size floor (paper proof, not Lean-checked, not yet
-  audited): if the background pairs commute, `|H| ≥ ∏(l_i+1)` and `|J| ≥ ∏(k_i+1)`. An exhaustive list then
+  scripts: `explorer/gmr/smaller/`. Findings: (1) a size floor (paper proof, not Lean-checked; internal audit PASS with notes on PR 12) for block designs with free rare double cosets: if the background pairs commute, `|H| ≥ ∏(l_i+1)` and `|J| ≥ ∏(k_i+1)`. An exhaustive list then
   shows that the only block designs that could fit below 131,072 are two-block designs (`4×6`: floor
   60,025; `5×5`: 66,096; `4×7`: 91,200; `5×6`: 107,604) and GMR-1's three `3×3` blocks (floor 114,688,
   so GMR-1 is within 14% of optimal for its shape). (2) In GMR-1's class-two `F_2` family, non-block
   patterns where every row and column has 3 rare cells also need `6 + 6 + 5` dimensions. (3) A CP-SAT pattern
   finder (it re-finds GMR-1 in 1 s) found no block design in `PSL(2,q)` (`q ≤ 29`), `PGL(2,11/13)`, `A7`,
-  `PSL(3,3)` (all subgroup pairs of order ≥ 10), or in `M12` (two-block shapes, `25 ≤ |H|,|J| ≤ 100`).
+  `PSL(3,3)` (all subgroup pairs of order ≥ 10), or in `M12` and `S4 ≀ S3` (two-block shapes, `25 ≤ |H|,|J| ≤ 100`).
   Side note: GMR-1's group gives ratio `343/324 ≈ 1.0586` when the identity is dropped from `B` and `C`.
 - 2026-11-26: PR 43 merged 5:28 PM ET (squash d4a0cda) after CI green and internal audit PASS (Thm 6.7/Prop 6.8 citations, scope to n = 4, 5).
 - 2026-11-26: Lean proof done (build 8.05 GB, leanchecker 6.8 GB, ~30 s, standard axioms). Kernel pitfall: any

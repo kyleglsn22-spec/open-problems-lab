@@ -2,9 +2,10 @@
 
 Goal: a four-set counterexample to the non-abelian Gyarmati–Matolcsi–Ruzsa inequality in a group of
 order below `2^17 = 131,072` (our GMR-1). Result of this round: **no smaller group found**. What we
-can say is a size floor: for the whole "commuting background" family, which contains every published
-four-set example and ours, the only shapes that could go below 131,072 are listed below, and our
-shape is within 14% of its floor.
+can say is a size floor for commuting-background **block designs** (GMR-1 and Elsholtz's Theorem 5.1
+examples are of this kind; his order-`2^23` circulant example, Thm 6.7, is not a block design and is not
+covered). The only block shapes that could go below 131,072 are listed below, and our shape is within
+14% of its floor.
 
 Notation (Elsholtz's double-coset template, arXiv:2611.12776, §5): `A = H`, `D = J` are subgroups with
 `H ∩ J = 1`; `B ⊂ J`, `C ⊂ H`. The cell `(y, z) ∈ B × C` gets the label `H y z J`. The label `HJ` is the
@@ -27,7 +28,7 @@ both sides gives `f_1 y_1 f_1⁻¹ = f'_1 y_1 f'_1⁻¹`, because `f_2, …, f_m
 `Y_1`. So `f_1 = f'_1`. Cancel `f_1` and repeat with `y_2`, and so on. So `R_1 × ⋯ × R_m → H` is injective.
 The `J` side is symmetric, using `H y z J = H (y z y⁻¹) J` and `E_j = C_J(⋃_{i≠j} Z_i) ⊇ Y_j`. ∎
 
-When all rare double cosets are free (size `|H||J|`; a smaller one only lowers the ratio), the ratio of a
+Assume all rare double cosets are free (size `|H||J|`); non-free blocks are checked only in a simple model (rare double cosets of size `|H||J|/t`, `t ≤ 4`, done by the auditor), where nothing gets below 60,025 either. Then the ratio of a
 block design is exactly `L³ / (R_1 R_4 r_2 r_3)`. Here `L = 1 + Σ k_i l_i`, `R_4 = Σ k_i (l_i + 1)`,
 `R_1 = Σ l_i (k_i + 1)`, `r_2 = 1 + max l_i` and `r_3 = 1 + max k_i`, with the identity excluded from
 `B` and `C` (including it is the "+e" variant, which never helps). Also `|G| ≥ |S| = L |H| |J|`.
@@ -43,7 +44,7 @@ and `L ∏(k_i+1)(l_i+1) < 131,072`:
 | two `5 × 6` | 1.0723 | 107,604 |
 | three `3 × 3` (GMR-1's shape) | 1.0586 | 114,688 |
 
-So with commuting background, a group below 131,072 needs a **two-block** design. Three `3 × 3`
+So for commuting-background block designs with free rare double cosets, a group below 131,072 needs a **two-block** design. Three `3 × 3`
 blocks can only fit in orders 114,688 to 131,071. That is also the
 `H = J = 64`, `|S| = 64 · 64 · 28` count of GMR-1, which is optimal for its shape.
 
@@ -74,7 +75,7 @@ Searched, all pairs with `|H|, |J| ≥ 10`, every uniform block shape (`m` block
 that can give ratio above 1. There was a 4 s cap per shape; a few checks timed out, mostly in `A7` and
 `PSL(2,16)`, and the logs list them. The groups: `PSL(2,q)` for `q = 11, 13, 16, 17, 19, 23, 27, 29`,
 `PGL(2,11)`, `PGL(2,13)`, `A7`, `PSL(3,3)`. Two-block shapes only, `25 ≤ |H|, |J| ≤ 100`: `M12`
-(order 95,040, 237 pairs). The rest of the sweep is listed in the ledger log. No block design was found.
+(order 95,040, 237 pairs) and `S4 ≀ S3` (order 82,944, 352 pairs). No block design was found.
 An earlier plain annealing search was useless: it could not even re-find GMR-1.
 
 ## 4. What is still open
