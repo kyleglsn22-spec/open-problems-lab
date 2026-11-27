@@ -23,7 +23,7 @@ For every finite claw-free graph `G` (no induced `K_{1,3}`), Stanley's chromatic
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | CF-1 | `¬ ClawFreeSchurPositivity`: the 12-vertex line graph `G` above is claw-free and `X_G` (in four variables) is not a non-negative combination of Schur polynomials | Kyle + Claude, 2026-11-27 (mathematics: Prajapati; Matherne–Morales) | Lean-checked, audited (internal; verdict in ledger/audits.md) | `not_clawFreeSchurPositivity`, `not_schurPositive`, `G_isClawFree` in `Lab/ClawFree/` |
-| CF-2 | `¬ ClawFreeSchurPositivity` via the second minimal counterexample (graph6 ``K?`CR@`bAbRB``, 12 vertices, 21 edges): claw-free, and `X_G` in four variables is not Schur-positive (forced `[s_{3333}] = 1056 − 3·24 − 2·152 − 3·240 = −40`) | Kyle + Claude (Opus 5.5), 2026-11-26 (mathematics: Prajapati) | Lean-checked; audit pending | `OpenProblemsLab.ClawFree.Second.not_clawFreeSchurPositivity` in `Lab/ClawFree2/`; Python cross-check `explorer/clawfree2/check.py` |
+| CF-2 | `¬ ClawFreeSchurPositivity` via the second minimal counterexample (graph6 ``K?`CR@`bAbRB``, 12 vertices, 21 edges): claw-free, and `X_G` in four variables is not Schur-positive (forced `[s_{3333}] = 1056 − 3·24 − 2·152 − 3·240 = −40`) | Kyle + Claude (Opus 5.5), 2026-11-26 (mathematics: Prajapati) | Lean-checked, audited (internal audit PASS, PR 14 review) | `OpenProblemsLab.ClawFree.Second.not_clawFreeSchurPositivity` in `Lab/ClawFree2/`; Python cross-check `explorer/clawfree2/check.py` |
 
 Statement notes for the Auditor:
 - `chromSym G n` and `schurPoly n μ` are the standard combinatorial formulas restricted to the variables
