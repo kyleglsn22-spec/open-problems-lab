@@ -147,6 +147,25 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #16 (connected Partial List Colouring counterexamples with gap n/42 [PLC-2], `Lab/PartialList/Connected.lean`) · **pass, conditional on CI green + 1 wording fix**
+
+Internal audit, outside review welcome. Reviewed at 3b5d815.
+
+- **Statement.** For every t ≥ 1, `connected_gap` gives a graph on 14t vertices that is `Connected`, has `listChromaticNumber = 3`
+  (formal-conjectures' definition), and has 2-lists such that every proper partial colouring has |S| ≤ 9t and 2n ≥ |S|·χ_ℓ + t. That is exactly
+  a gap nℓ/k − |S| ≥ n/42.
+- **Proof.**
+  - The bound of 9 per copy holds by restriction.
+  - `colour_avoid` carries Noel's 8 < 9 pair count, because the first triangle's bad pairs lie in one set of at most 3 colours (`bad_cases`, `bad_sub`).
+  - The copies are coloured in order, and the link edge (j+1,3)–(j,2) gives connectivity.
+- **Independent recheck.** The Auditor's own script finds the chains for t = 1 and t = 2 connected, with maximum partial colourings of exactly 9 and 18. Random
+  3-list sanity checks also passed: the t = 3 chain, and Noel's graph with vertex 3 avoiding a colour.
+- **Trust base.** It is clean, and the axiom audit covers all four theorems.
+- **Novelty and wording.** An arXiv search finds nothing after Noel. The Chappell cap (2n/21) is right. Noel's remark is a suggestion, not a formal open
+  problem, so ACHIEVEMENTS should soften "answered an open question" to "answered a question raised in Noel's paper (no published answer known to us)".
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #14 (second minimal claw-free Schur counterexample [CF-2], `Lab/ClawFree2/`) · **pass, conditional on CI green + 2 wording fixes**
 
 Internal audit, outside review welcome. Reviewed at 0112e2c.
