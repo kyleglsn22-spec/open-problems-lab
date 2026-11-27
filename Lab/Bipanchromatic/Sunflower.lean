@@ -12,7 +12,7 @@ colour over all panchromatic `k`-colourings, and `α(H) = α_{χ_P}(H)`. A panch
 
 Lalou, Mbarek, Skender and Togni (Discrete Appl. Math. 2026, Conjecture 1) conjectured `χ_B = χ_P - ⌈α/2⌉` for every
 hypergraph (merging the unique colours of an optimal panchromatic colouring in pairs is optimal).
-The same authors disproved it (arXiv:2610.08042); Novaković and Jojić (arXiv:2610.27133, Theorem 3.1) give the *sunflowers*
+The same authors disproved it (arXiv:2610.08042); Novaković and Jojić (arXiv:2610.27133, Theorem 1) give the *sunflowers*
 `S_n`: vertices `s_1,…,s_n, p_1,…,p_n` and hyperedges `e_i = {s_1,…,s_n, p_i}`. For `n ≥ 3`,
 `χ_P = n + 1`, `α = n`, `χ_B = n`, so `χ_B` exceeds the conjectured value by `⌈n/2⌉ - 1 ≥ 1`.
 `S_3` (six vertices, three hyperedges) is the smallest counterexample.
@@ -183,7 +183,7 @@ lemma two_mul_le_of_bipan {k : ℕ} {c : V → Fin k} (hsurj : ∀ i, ∃ v, c v
   calc 2 * k = ∑ _i : Fin k, 2 := by simp [mul_comm]
     _ ≤ _ := sum_le_sum fun i _ => hfib i
 
-/-- **Sunflower theorem** (arXiv:2610.27133, Theorem 3.1): for `n ≥ 3`, `χ_P(S_n) = n + 1`,
+/-- **Sunflower theorem** (arXiv:2610.27133, Theorem 1): for `n ≥ 3`, `χ_P(S_n) = n + 1`,
 `α(S_n) = n` and `χ_B(S_n) = n`. -/
 theorem sunflower_parameters (hn : 3 ≤ n) :
     chiP (sunflower n) = n + 1 ∧ alpha (sunflower n) = n ∧ chiB (sunflower n) = n := by

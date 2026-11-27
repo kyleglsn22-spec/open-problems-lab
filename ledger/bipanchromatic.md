@@ -18,13 +18,13 @@ spanning trees in split graphs, conjectured `χ_B = χ_P − ⌈α/2⌉` (pairin
 | Bound or result | Reference | Checked by us? |
 | --- | --- | --- |
 | False: three-hyperedge sunflowers `H_{d,q}`, excess exactly `d` | Lalou et al., arXiv 2610.08042 | No |
-| False: sunflowers `S_n` (`n ≥ 3`) have `χ_P = n+1`, `α = n`, `χ_B = n`, excess `⌈n/2⌉ − 1`; `S_3` is smallest | Novaković–Jojić, arXiv 2610.27133, Thm 3.1 | Yes (BP-1) |
+| False: sunflowers `S_n` (`n ≥ 3`) have `χ_P = n+1`, `α = n`, `χ_B = n`, excess `⌈n/2⌉ − 1`; `S_3` is smallest | Novaković–Jojić, arXiv 2610.27133, Thm 1 | Yes (BP-1) |
 | Minimum order of an excess-`d` counterexample is `4d + 2`; ratio `χ_B/β < 2`, sharp | Novaković–Jojić | No |
 
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| BP-1 | Lean: Novaković–Jojić Theorem 3.1. For every `n ≥ 3` the sunflower `S_n` has `χ_P = n + 1`, `α = n`, `χ_B = n`. Hence the conjecture is false (already for `S_3`, 6 vertices, 3 hyperedges), and no added constant repairs it | Kyle + Claude, 2026-11-27 | pending audit | `sunflower_parameters`, `not_conjecture`, `excess_unbounded` in `Lab/Bipanchromatic/Sunflower.lean` |
+| BP-1 | Lean: Novaković–Jojić Theorem 1. For every `n ≥ 3` the sunflower `S_n` has `χ_P = n + 1`, `α = n`, `χ_B = n`. Hence the conjecture is false (already for `S_3`, 6 vertices, 3 hyperedges), and no added constant repairs it | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 30 review) | `sunflower_parameters`, `not_conjecture`, `excess_unbounded` in `Lab/Bipanchromatic/Sunflower.lean` |
 
 Statement notes for the Auditor:
 - Hypergraph = finite vertex type `V` with `E : Finset (Finset V)`. A `k`-colouring is `c : V → Fin k`;
