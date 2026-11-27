@@ -1,6 +1,6 @@
 # Contributing
 
-Corrections and review are very welcome.
+Corrections and review are very welcome. How the lab itself works is in [WORKFLOW.md](WORKFLOW.md).
 
 - **A statement looks wrong** (a Lean definition does not match the problem as published): open an
   issue naming the file and the definition. This is the most valuable kind of review, because the

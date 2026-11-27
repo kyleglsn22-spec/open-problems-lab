@@ -48,7 +48,7 @@ lake env lean scripts/Axioms.lean   # prints the axioms each main theorem uses
 bash scripts/check_kernel.sh        # independent kernel re-check (needs ~8 GB RAM)
 ```
 
-The same steps run on every push; see the [Actions tab](https://github.com/kyleglsn22-spec/open-problems-lab/actions).
+The same steps run on every pull request and push; see the [Actions tab](https://github.com/kyleglsn22-spec/open-problems-lab/actions).
 
 ## Repository layout
 
@@ -60,6 +60,7 @@ The same steps run on every push; see the [Actions tab](https://github.com/kyleg
 | [`audit/`](audit/) | Independent re-implementations used to cross-check computations |
 | [`scripts/`](scripts/) | CI checks: no `sorry`, axiom audit, kernel replay |
 | [`ACHIEVEMENTS.md`](ACHIEVEMENTS.md) | Dated log of results |
+| [`WORKFLOW.md`](WORKFLOW.md) | How we work: rules, pull requests, audits |
 
 ## How this was made
 
@@ -68,8 +69,9 @@ search code, and a separate AI session reviewed each claim, checking that every 
 matches the problem as published and re-running computations with independently written code.
 The Lean kernel, not any AI or person, is the judge of correctness; the remaining human-trust
 points are the *statements* (please check them).
-This repository is a public mirror of the project's working folder; "PR #n" in the notes refers to
-the working repository's pull requests.
+Since 2026-11-27 all work happens here in the open; see [WORKFLOW.md](WORKFLOW.md) for how. Notes
+dated before then that say "PR #n" refer to the earlier private working repository, not to this
+repository's pull requests.
 
 ## Citing
 

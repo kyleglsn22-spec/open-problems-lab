@@ -1,24 +1,50 @@
+# Lean checks: build all of Lab/, no `sorry`, axiom audit, and a kernel re-check with leanchecker.
+#
+# Pull requests: mathlib and our build outputs are cached, so only changed modules are rebuilt,
+# and leanchecker replays every module that is new or changed (or imports something that
+# changed); a module is skipped only if this exact build of it already passed leanchecker
+# (scripts/check_kernel.sh, incremental mode). A newer push cancels the older PR run.
+# Every push to main replays ALL modules from scratch (full mode), as does a manual run.
 name: Open Problems Lab - Lean checks
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      full_replay:
+        description: "Replay every module with leanchecker, ignoring earlier replays"
+        type: boolean
+        default: true
+
+concurrency:
+  group: lab-lean-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      DEPS_KEY: lab-deps-${{ hashFiles('lakefile.toml', 'lake-manifest.json', 'lean-toolchain') }}
     steps:
       - uses: actions/checkout@v4
       - name: Install elan
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-      - name: Cache Lean build outputs
+      - name: Cache dependencies (mathlib, formal-conjectures)
         uses: actions/cache@v4
         with:
-          path: .lake
-          key: lean-${{ hashFiles('lakefile.toml', 'lean-toolchain') }}
+          path: .lake/packages
+          key: ${{ env.DEPS_KEY }}
+      - name: Restore our build outputs and kernel-replay records
+        uses: actions/cache/restore@v4
+        with:
+          path: .lake/build
+          key: ${{ env.DEPS_KEY }}-build-${{ github.run_id }}
+          restore-keys: ${{ env.DEPS_KEY }}-build-
       - name: Fetch dependencies and mathlib cache
         run: |
           lake update
@@ -30,4 +56,14 @@ jobs:
       - name: Axiom audit
         run: bash scripts/check_axioms.sh
       - name: Kernel replay with leanchecker
+        env:
+          KERNEL_REPLAY: ${{ (github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && !inputs.full_replay)) && 'incremental' || 'full' }}
         run: bash scripts/check_kernel.sh
+      # Saved even when a later step fails, so the next push only redoes what changed.
+      # Replay records are written only for modules that passed, so this is safe.
+      - name: Save our build outputs and kernel-replay records
+        if: ${{ !cancelled() }}
+        uses: actions/cache/save@v4
+        with:
+          path: .lake/build
+          key: ${{ env.DEPS_KEY }}-build-${{ github.run_id }}
