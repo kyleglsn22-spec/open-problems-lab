@@ -147,6 +147,23 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #19 (Lean disproof of the DFM gap-one conjecture for equitable colouring of block graphs [BEQ-1], `Lab/BlockEquitable/Counterexample.lean`) · **pass, conditional on CI green + 1 fix**
+
+Internal audit, outside review welcome. Reviewed at c734344.
+
+- **Statement.**
+  - `IsBlockGraph` says every 2-connected induced subgraph is complete (∅, singletons and 2-sets are handled correctly), which is equivalent to "every block is a clique".
+  - `αAt`, `αmin`, `L` (ceiling as `(n+1+α)/(α+1)`) and `IsEquitableColoring` (every class of `Fin q` has size between ⌊n/q⌋ and ⌈n/q⌉) match Lauri, arXiv:2608.14517, word for word.
+  - `GapOneConjecture` is restricted to connected block graphs, so its negation is stronger than the original (every block graph).
+- **Independent recheck.**
+  - The Auditor built the graph from the paper's description; its edge set equals the Lean `adjR`.
+  - networkx: connected; blocks of sizes [2, 7, 7, 7, 7, 7], all cliques; ω = 7; α_min = 4; L = 7.
+  - CP-SAT: equitable q-colourings are infeasible for q = 7 and 8 and feasible for q = 9, so χ_= = 9.
+- **Trust base.** The grep is clean. `decide` / `decide +kernel` only. The axiom lines were added. There was no local build (no Lean toolchain in the Auditor's container).
+- **Required change.** ACHIEVEMENTS "(merge time TBD)" must become the real time. Suggested: "smallest one" → "smallest graph in his family".
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #17 (Partial List Colouring Conjecture fails for every k ≥ 3 with ℓ = k − 1 [PLC-3], `Lab/PartialList/General.lean`) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at f5f9723.
