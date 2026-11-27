@@ -23,6 +23,7 @@ Let `G` have `n` vertices and list chromatic number `χ_ℓ(G) = k ≥ 2`, and l
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | PLC-1 | Lean: Noel's graph has `listChromaticNumber = 3`, and every proper partial colouring from his 2-lists colours at most 9 vertices; hence `¬ PartialListColouringConjecture` | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 10 review) | `not_partialListColouringConjecture`, `exists_counterexample` in `Lab/PartialList/Counterexample.lean`; Python cross-check `explorer/partial-list/check.py` (exhaustive: maximum is exactly 9) |
+| PLC-2 | Lean: answers Noel's question about connected counterexamples with a large gap. For every `t ≥ 1`, the chain of `t` copies of Noel's graph (vertex 3 of copy `j+1` joined to vertex 2 of copy `j`) is connected, has `listChromaticNumber = 3`, and from Noel's lists on each copy at most `9t` of its `n = 14t` vertices can be coloured, against the promised `28t/3`. So the gap is at least `t/3 = n/42`, linear in `n` (Chappell's bound caps it at `2n/21`) | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 16 review) | `connected_gap`, `chain_connected`, `listChromaticNumber_chain`, `chain_partial_le` in `Lab/PartialList/Connected.lean`; cross-check `explorer/partial-list/connected_check.py` (CP-SAT: maximum is exactly `9t` for `t ≤ 5`; 6000 random 3-list assignments colourable) |
 
 Statement notes for the Auditor:
 - `IsKChoosable G k` and `listChromaticNumber G = sInf {k | G.IsKChoosable k}` are formal-conjectures' definitions
@@ -35,15 +36,30 @@ Statement notes for the Auditor:
   `terminal_choice` (common colour, or the 8 < 9 counting of bad pairs), `tri_extend` (greedy triangle colouring),
   and `not_isKChoosable_of_le_two` (the triangle 2, 3, 4).
 
+Statement notes for PLC-2:
+- `connected_gap t` (for `t ≥ 1`) gives a graph `H` on `Fin t × Fin 14` with `H.Connected`,
+  `H.listChromaticNumber = 3`, and 2-lists `L` such that every proper partial colouring `(S, c)` from `L` has
+  `|S| ≤ 9t` and `|V| · 2 ≥ |S| · χ_ℓ(H) + t`, i.e. the deficit `nℓ/k − |S|` is at least `t/3`.
+- Upper bound: within a copy the chain contains Noel's graph, so `partial_le_nine` applies to each copy.
+- 3-choosability: copies are coloured in order. The new lemma `colour_avoid` says Noel's graph is colourable from
+  any 3-lists even when vertex 3 must avoid one given colour `f`. Proof: Noel's terminal-pair count still works,
+  because the first triangle (now with the 2-list `X = L 3 \ {f}` on vertex 3) rules out at most 2 of the 9 pairs:
+  every bad pair lies inside `Y = L 4` if `X ⊆ Y`, and inside `X` otherwise (`bad_cases`, `bad_sub`).
+- Making a *private* vertex or a *terminal* the attachment point fails (found by brute force: some 3-lists
+  then have no colouring), which is why the link goes into vertex 3.
+
 ## Log
+- 2026-11-27: PLC-2. Chain of copies of Noel's graph gives connected counterexamples with gap `n/42`; Lean proof for all `t`, builds locally, standard axioms. Novelty: no follow-up to Noel's question found on arXiv or the web.
 - 2026-11-27: picked as the "easier" slot (round-4 shortlist #4). Not on AFTD (kb.json searched for the arXiv id,
   "partial list", "Albertson") and not in formal-conjectures (latest commit ea8e3e1 has only the choosability
   definitions). Lean proof written and checked locally: builds in ~50 s, standard axioms, leanchecker 7.2 GB peak.
 
 ## Dead ends
-- (none)
+- Attaching new copies through a single hub vertex adjacent to each copy's private vertex: the copy is then
+  not always colourable when the private vertex loses a colour, so 3-choosability can fail.
+- Attaching through a terminal: same problem (brute force finds 3-lists with no colouring).
 
 ## Leads
-- Noel asks for *connected* counterexamples whose gap from `nℓ/k` is large (disjoint copies give a large gap
-  trivially). A computer search over small connected graphs built from the same triangle-and-terminal gadget is a
-  natural hard follow-up.
+- Noel's connected-large-gap question: answered by PLC-2 (gap `n/42`). Still open: the best constant. The gap
+  lies between `n/42` (ours) and `2n/21` (Chappell). Also open: whether other `(k, ℓ)` admit connected linear-gap
+  examples (our chain trick needs a base example plus a vertex whose list can lose a colour).
