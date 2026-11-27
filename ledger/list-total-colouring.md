@@ -55,4 +55,25 @@ LTC-2 statement notes:
   leanchecker 6.9 GB peak.
 
 ## Dead ends
-- (none)
+- **Gap 2 (`χ''_ℓ ≥ χ'' + 2`), attempted 2026-11-27, no result.**
+  - Necessary conditions (easy, by hand). Colour the vertices first (lists of size `≥ Δ + 1` suffice), then
+    the edges from their lists minus the two endpoint colours. This gives `χ''_ℓ ≤ χ'_ℓ + 2`. So a gap-2 graph
+    either disproves the List Edge Colouring Conjecture, or is Type 1 (`χ'' = Δ + 1`), class 2
+    (`χ' = Δ + 1`) and has `χ''_ℓ = χ'_ℓ + 2 = Δ + 3` exactly. Also `Δ ≥ 4`, since cubic graphs are totally
+    5-choosable (Juvan–Mohar–Škrekovski) and the conjecture holds for `Δ ≤ 2`.
+  - Why Noel's method does not extend: his blocks are rigid because each block's palette is exactly `Δ + 1`,
+    the minimum a vertex star needs. For gap 2 the lists have size `Δ + 2`. A block that is rigid at `Δ + 2`
+    colours would need its own `χ''` to be `Δ + 2`, which contradicts the whole graph being Type 1. So the
+    forcing must come from lists that differ inside a block, not from uniform block lists.
+  - Computer search (`explorer/list-total/cegar_bad_lists.py`, CEGAR with two SAT solvers). Lists are a
+    palette of `P` colours minus `P − k` colours.
+    - `K_5` (`Δ = 4`, Type 1, class 2), `k = 6`: every assignment from a 7-colour palette is colourable (39 s).
+      An 8-colour palette did not finish in 30 min.
+    - Complement of `C_3 ∪ C_4` (4-regular on 7 vertices, Type 1, class 2), `k = 6`, `P = 7`: did not finish
+      in 50 min.
+    - Fat-triangle multigraphs `(m, m, m)` (`χ'' = χ' = 3m`). For `m = 2`, `k = 7`: colourable for
+      `P = 8, 9, 10`. For `m = 3`, `k = 10`: colourable for `P = 11`; `P = 12` did not finish.
+    - The complement of `C_7` is Type 2 (`χ'' = 6`), so it is not a candidate.
+  - These palette-limited checks do not rule anything out in general (a bad assignment may need many more
+    colours). The naive CEGAR does not scale past about 15 elements. A real attempt needs either a new forcing
+    gadget or a much stronger solver.

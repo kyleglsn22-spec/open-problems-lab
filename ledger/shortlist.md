@@ -84,13 +84,15 @@ Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked 
 | # | Lead | Source | Status |
 | --- | --- | --- | --- |
 | 1 | Partial List Colouring for lists 2+ colours short (`ℓ ≤ k − 2`, `ℓ ∤ k`; first cases `(5,2)`, `(5,3)`) | raised by PLC-3 (ours) | Attempted. Noel-type terminal designs provably fail (ledger/partial-list-colouring.md, Dead ends). Needs a new idea; parked |
-| 2 | List Total Colouring: counterexamples for every maximum degree `Δ ≥ 3`, or a gap `χ''_ℓ ≥ χ'' + 2` (Noel asks whether `χ''_ℓ ≤ χ'' + 1` always; gap 3 would disprove the List Edge Colouring Conjecture) | Noel, arXiv 2609.38417, closing remarks | Every-Δ half DONE (LTC-2, Lean, all Δ ≥ 3). Gap ≥ 2 still open: next hard item |
+| 2 | List Total Colouring: counterexamples for every maximum degree `Δ ≥ 3`, or a gap `χ''_ℓ ≥ χ'' + 2` (Noel asks whether `χ''_ℓ ≤ χ'' + 1` always; gap 3 would disprove the List Edge Colouring Conjecture) | Noel, arXiv 2609.38417, closing remarks | Every-Δ half DONE (LTC-2, Lean, all Δ ≥ 3). Gap ≥ 2 attempted 2026-11-27: necessary conditions plus small searches, nothing found (ledger Dead ends); parked |
 
 ## Hard list additions (2026-11-27)
 
 - **Multiplicative bound for equitable colouring of block graphs** (open question in Lauri, arXiv 2608.14517): is there
   a constant `C` with `χ_=(G) ≤ C · L(G)` for every connected block graph? Lauri's family (Lean-checked, BEQ-1/BEQ-2)
   forces `C ≥ 9/7`, and `C ≥ 5/4` asymptotically. A proof or a family beating `9/7` would be new.
+  Attempted 2026-11-27: an elementary 7-vertex tree already gives `C ≥ 3/2`; Lauri-type obstructions look capped;
+  searches found nothing above 3/2 (ledger/block-equitable.md). Parked.
 - **`D_3 = U_3` for slow Fibonacci walks** (open question in Aliabadi, arXiv 2609.04473): do the 3-step gap sets of
   down- and up-integers agree? Numerically yes. Our FW-1 machinery (threshold lemma, general shift lemma, interval case
   analysis) might decide which gaps occur; a proof would be new. Also open: does `D_ℓ ≠ U_ℓ` for infinitely many `ℓ`?

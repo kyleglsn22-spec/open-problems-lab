@@ -147,6 +147,42 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #27 (T₃ = Cat(8,7,25) has χ_la = 43, Brondani–França Thm 4.1 [LA-2], `Lab/LocalAntimagic/T3.lean`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at 785f65f.
+
+- **Statement.**
+  - `Cat d3` with degrees (9, 9, 26) is exactly Cat(8, 7, 25).
+  - `T3` proves the following: it is a tree with 43 vertices, 40 leaves and chiLA = 43.
+  - Both directions of the `sInf` are proved (nonempty set, and every local antimagic labelling has 43 weights).
+- **Existence (replaces the Haslegrave citation).**
+  - Only `a–b` is not separated by the degree bounds (leaves ≤ 42 < 45; U(9) = 342 < 351 = L(26)).
+  - If `wt a = wt b`, swapping the labels x ≠ y of a leaf edge at `a` and one at `b` separates them by 2|x − y|.
+  - The Auditor checked this by hand.
+- **Independent recheck.** 19,855 of 20,000 random bijections are local antimagic, and all of them have exactly 43 distinct weights. The paper's intervals [45, 342] and [351, 767] were confirmed.
+- **Trust base.** Grep clean; axiom lines added. No local build.
+- **Required.** Fill in the ACHIEVEMENTS merge time.
+
+---
+
+## 2026-11-27 · open-problems-lab PR #24 (Lean disproof of the local antimagic leaf conjecture, Brondani–França Thm 5.2 (r ≥ 2) + Cor 5.3 [LA-1], `Lab/LocalAntimagic/`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at f5c817d.
+
+- **Statement.**
+  - Labelling `G.edgeSet ≃ Fin m` with label `f e + 1`, so labels are exactly 1..m. `wt` sums over incident edges only.
+  - `chiLA` is an `sInf`: an empty set would give 0, which only weakens the conjecture, so the disproof is safe. Here the set is nonempty.
+  - `LeafConjecture` is Conjecture 2.2 exactly: trees with ≥ 3 vertices, arbitrary decidability instances.
+  - `Separated` is the paper's degree separation, specialised to increasing degrees.
+- **Independent recheck.**
+  - Lean's `Separated` holds numerically for H_{r,t}, r = 2..5, t = 1..5. H_{3,1} has m = 20734, and its intervals match the paper.
+  - 20,000 random bijections on the small separated caterpillar (6, 14) gave all-distinct weights.
+  - The arithmetic (4)–(8) was re-derived by hand.
+- **Trust base.** Grep clean across the three files; axiom lines added. No local build.
+- **Notes.** The non-isomorphism clause of Thm 5.2 is not stated (it follows from the vertex count). r = 1, T₃ and T₄ are not covered, as the ledger says. **Required:** fill in the ACHIEVEMENTS merge time.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #23 (Lauri's whole family G_{d,k}: gap χ_= − L unbounded on connected block graphs [BEQ-2], `Lab/BlockEquitable/Family.lean`) · **pass, conditional on CI green + merge time filled in**
 
 Internal audit, outside review welcome. Reviewed at e9b1396.
