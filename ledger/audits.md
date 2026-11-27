@@ -147,6 +147,27 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #28 (Aliabadi's 9 ∈ U₄ \ D₄, Chung–Graham–Spiro gap-set conjecture false [FW-1], `Lab/FibWalk/`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at a443b66.
+
+- **Statement.**
+  - `IsDown` / `IsUp` are defined as "the CGS representation parameter t is even / odd". This is Aliabadi's working definition, from the CGS characterisation; slow walks themselves are not formalized.
+  - The `∃` definitions agree with CGS's D and U because the representation is unique (CGS). The Auditor checked uniqueness by brute force for n < 20,000. Suggested ledger wording: say this explicitly.
+  - `gapSet` via `Nat.nth`, with both sets proved infinite, is the increasing enumeration.
+- **Proof.**
+  - `shift` is a correct generalisation of the forward-8 and backward-5 lemmas (new representation `(a + f_r, b − f_{r+1})`).
+  - `core` is closed real arithmetic (`linarith`, 10 × 2⁸ cases). `maxHeartbeats` is a resource limit only.
+  - `downB` is proved correct below 377, and `decide` covers the windows with n ≤ 104.
+- **Independent recheck.**
+  - The up-integers begin 3, 4, 6, 8, 11, 14, 16, 17.
+  - For n < 200,000: D₄ = {5,6,7,8,10,11,13,16,18} and U₄ = D₄ ∪ {9}.
+  - A direct slow-walk computation for n < 250 agrees with t-parity in all 216 unambiguous cases.
+- **Trust base.** Grep clean apart from `maxHeartbeats`; no `native_decide`; axiom lines added. No local build.
+- **Required.** Fill in the ACHIEVEMENTS merge time.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #27 (T₃ = Cat(8,7,25) has χ_la = 43, Brondani–França Thm 4.1 [LA-2], `Lab/LocalAntimagic/T3.lean`) · **pass, conditional on CI green + merge time filled in**
 
 Internal audit, outside review welcome. Reviewed at 785f65f.
