@@ -147,6 +147,22 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #10 (Partial List Colouring Conjecture is false [PLC-1], `Lab/PartialList/Counterexample.lean`) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at 5dda71d.
+
+- **Definitions are standard.** `IsKChoosable` and `listChromaticNumber` are formal-conjectures' definitions, checked at the pin 9097e2f:
+  lists of exactly k colours from ℕ, and the χ_ℓ is the sInf over k. This is the standard Erdős–Rubin–Taylor notion; "exactly k" is equivalent to "≥ k".
+- **The statement matches AGH 2000 as stated by Noel.** For finite G with 1 ≤ ℓ < χ_ℓ and lists of exactly ℓ colours, it asks for
+  a set S, properly coloured from the lists, with n·ℓ ≤ |S|·χ_ℓ. That is the bound |S| ≥ nℓ/k written without division.
+- **The graph and lists match Noel §2.** The terminals 0 and 1 are non-adjacent. Triangle i is {3i+2 (private), 3i+3, 3i+4}. The terminals are
+  joined to the non-private vertices only (28 edges). The triangle lists are {1,3}, {1,4}, {2,3} and {2,4}, with L(s₁) = {1,2} and L(s₂) = {3,4}.
+- **Independent recheck.** The Auditor's own exhaustive search finds a maximum partial colouring of 9 (< 28/3), and the graph is not 2-colourable. As a
+  sanity check, 200,000 random 3-list assignments (palettes of 3–7 colours) were all colourable. The proof of 3-choosability itself is Lean's.
+- **Trust base is clean.** No sorry, native_decide, custom axioms or unsafe code. The axiom audit covers all four theorems.
+
+---
+
 ## 2026-11-27 · claw-free Schur-positivity conjecture is false [CF-1], `Lab/ClawFree/` · **pass, conditional on CI green + 1 wording fix (fix applied)**
 
 Internal audit, outside review welcome. Reviewed on the private draft before the lab moved to this repository
