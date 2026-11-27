@@ -147,48 +147,6 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
-## 2026-11-27 · Partial List Colouring Conjecture is false [PLC-1], `Lab/PartialList/` · **pass, conditional on CI green**
-
-Internal audit, outside review welcome. Full verdict: review on PR 10 (reviewed at `5dda71d`).
-
-- **Definitions are faithful.** `IsKChoosable` / `listChromaticNumber` are formal-conjectures' (pinned `9097e2f`):
-  the standard Erdős–Rubin–Taylor choice number ("exactly k" and "at least k" lists are equivalent).
-- **Statement matches Albertson–Grossman–Haas 2000** as Noel states it: finite `V`, `1 ≤ ℓ < k`, every ℓ-list
-  assignment admits a proper partial colouring of `S` with `n·ℓ ≤ |S|·k`.
-- **Graph and lists match Noel §2** (28 edges; triangle lists {1,3}, {1,4}, {2,3}, {2,4}); the proof follows the paper.
-- **Independent recheck:** exhaustive search gives maximum 9; not 2-colourable; 200,000 random 3-list assignments
-  colourable (sanity check only).
-- **Trust base:** no `sorry`, `native_decide`, `axiom`, `set_option` or custom syntax; all four theorems in
-  `scripts/Axioms.lean`.
-
-## 2026-11-27 · claw-free Schur-positivity conjecture is false [CF-1], `Lab/ClawFree/` · **pass, conditional on CI green + 1 wording fix (fix applied)**
-
-Internal audit, outside review welcome. Reviewed on the private draft before the lab moved to this repository
-(same Lean files); the requested wording fix has since been applied.
-
-- **Definitions are faithful.**
-  - `IsClawFree` means no induced K₁,₃.
-  - `chromSym G n` is X_G with x_k = 0 for k ≥ n.
-  - `IsSSYT`/`schurPoly` give the standard semistandard fillings (Mathlib cells are (row, col)).
-  - The finite-variable restriction is a ring map that keeps ℕ-coefficients, so the classical conjecture implies
-    `ClawFreeSchurPositivity`, and refuting it at n = 4 refutes the classical one.
-  - `SchurPositive` allows any finite set of diagrams, so it is at least as weak as the standard notion. The proof
-    handles five-row shapes (they vanish) and shapes of other sizes.
-- **The graph matches Prajapati Thm 1.** L(H), built from the paper's description, is isomorphic to the paper's
-  graph6 ``K?`CRAWWUXIM`` (networkx). So is the Lean `adjN` graph, and `adjBits` matches. It has 12 vertices and
-  22 edges and is claw-free.
-- **The counter is verified.** `mem_gen`, `nodup_gen` and `card_filter_eq` are Lean proofs, and the 84-prefix split is
-  sound (`gen4`, `gen_add`). All counts use `decide +kernel`.
-- **Independent recheck.** The Auditor's own backtracking, SSYT Kostka numbers and full triangular solve over partitions
-  of 12 with ≤ 4 parts give 5,376 colourings, monomials 4422: 128, 4332: 320 and 3333: 768, and Schur coefficients
-  128, 192 and **−64**.
-- **Trust base is clean.** No sorry, native_decide, custom axioms or unsafe code. The axiom audit covers the
-  three main theorems.
-- **Fix requested.** The claim "12 vertices is the minimum" is the paper's computer census (Prop. 4), not re-run by
-  us. ACHIEVEMENTS and the ledger Log must say so. (Done.)
-
----
-
 ## 2026-11-26 · PR #43 (non-abelian GMR inequality false in a group of order 2^17 [GMR-1], `Lab/GMR/Counterexample.lean`) · **pass, conditional on CI green + 3 wording fixes**
 
 Internal audit, outside review welcome. Reviewed at 3d318f7. This is a new result, so fidelity and novelty were checked against the primary sources.
