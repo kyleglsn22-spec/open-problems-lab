@@ -78,3 +78,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.FibWalk.nine_mem_up
 #print axioms OpenProblemsLab.FibWalk.exists_rep
 #print axioms OpenProblemsLab.FibWalk.shift
+#print axioms OpenProblemsLab.Bipanchromatic.not_conjecture
+#print axioms OpenProblemsLab.Bipanchromatic.excess_unbounded
+#print axioms OpenProblemsLab.Bipanchromatic.sunflower_parameters
