@@ -147,6 +147,20 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · Partial List Colouring Conjecture is false [PLC-1], `Lab/PartialList/` · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Full verdict: review on PR 10 (reviewed at `5dda71d`).
+
+- **Definitions are faithful.** `IsKChoosable` / `listChromaticNumber` are formal-conjectures' (pinned `9097e2f`):
+  the standard Erdős–Rubin–Taylor choice number ("exactly k" and "at least k" lists are equivalent).
+- **Statement matches Albertson–Grossman–Haas 2000** as Noel states it: finite `V`, `1 ≤ ℓ < k`, every ℓ-list
+  assignment admits a proper partial colouring of `S` with `n·ℓ ≤ |S|·k`.
+- **Graph and lists match Noel §2** (28 edges; triangle lists {1,3}, {1,4}, {2,3}, {2,4}); the proof follows the paper.
+- **Independent recheck:** exhaustive search gives maximum 9; not 2-colourable; 200,000 random 3-list assignments
+  colourable (sanity check only).
+- **Trust base:** no `sorry`, `native_decide`, `axiom`, `set_option` or custom syntax; all four theorems in
+  `scripts/Axioms.lean`.
+
 ## 2026-11-27 · claw-free Schur-positivity conjecture is false [CF-1], `Lab/ClawFree/` · **pass, conditional on CI green + 1 wording fix (fix applied)**
 
 Internal audit, outside review welcome. Reviewed on the private draft before the lab moved to this repository

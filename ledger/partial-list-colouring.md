@@ -22,7 +22,7 @@ Let `G` have `n` vertices and list chromatic number `χ_ℓ(G) = k ≥ 2`, and l
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| PLC-1 | Lean: Noel's graph has `listChromaticNumber = 3`, and every proper partial colouring from his 2-lists colours at most 9 vertices; hence `¬ PartialListColouringConjecture` | Kyle + Claude (Opus 5.5), 2026-11-27 | checked (Lean, CI pending); audit pending | `not_partialListColouringConjecture`, `exists_counterexample` in `Lab/PartialList/Counterexample.lean`; Python cross-check `explorer/partial-list/check.py` (exhaustive: maximum is exactly 9) |
+| PLC-1 | Lean: Noel's graph has `listChromaticNumber = 3`, and every proper partial colouring from his 2-lists colours at most 9 vertices; hence `¬ PartialListColouringConjecture` | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 10 review) | `not_partialListColouringConjecture`, `exists_counterexample` in `Lab/PartialList/Counterexample.lean`; Python cross-check `explorer/partial-list/check.py` (exhaustive: maximum is exactly 9) |
 
 Statement notes for the Auditor:
 - `IsKChoosable G k` and `listChromaticNumber G = sInf {k | G.IsKChoosable k}` are formal-conjectures' definitions
