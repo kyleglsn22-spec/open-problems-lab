@@ -147,6 +147,19 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #34 (Chen–van der Holst–Luo–Ma odd-fold cover conjecture disproof [OFC-1], `Lab/OddFoldCovers/Petersen.lean`) · **pass, conditional on green `build` at f19dd94 and the merge time being filled in**
+
+Internal audit, outside review welcome. Reviewed at f19dd94.
+
+- **Statement:** faithful to Wang, arXiv:2611.13394, Conjecture 1.1: loopless G, odd ℓ ≥ 3, s_ℓ(G) = L_ℓ(G). `cover`, `sCyc` (sInf over voltages α : E → ℤ/ℓ), `L` (max of Δ and ⌈2ℓ|E(G[S])|/(ℓ|S|−1)⌉ over odd S, |S| ≥ 3), `IsProper` and `chromaticIndex` match the paper's definitions. F is Wang's F_ℓ(P) at ℓ = 3 (p = 4 parallel edges per triangle side, connecting edges a matching).
+- **Proof:** read in full; follows Lemma 3.1 (every colour meets each lifted block's 9 leaving edges once) and the Section 4 spoke count (each class ≡ 1 mod 4 spokes, 9 classes vs total 15).
+- **Independent recheck:** own Python/networkx: Petersen isomorphism, F has 30 vertices, 135 edges, 9-regular; min odd cut of P is 3 (all odd subsets) and of F is 3 (Padberg–Rao via Gomory–Hu), so L_3(F) = 9; P has 6 perfect matchings with 1 or 5 spokes.
+- **Trust base:** no sorry/axiom/native_decide/set_option; small `decide`/`decide +kernel` facts only; `#print axioms` added for `not_conjecture`, `F_L`, `F_sCyc`.
+- **Scope:** only ℓ = 3 and the lower bound s_3 ≥ 10 (sufficient to refute); general ℓ, G_ℓ and s_3 = 10 not formalized.
+- **Required changes:** none beyond filling in the merge time.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #32 (Bencs–Csikvári spanning-forest conjecture false, K_{a,b}, Wu–Lu–Dong [SF-1], `Lab/SpanningForests/Counterexample.lean`) · **pass, conditional on CI green + merge time filled in**
 
 Internal audit, outside review welcome. Reviewed at 6a243b2.
