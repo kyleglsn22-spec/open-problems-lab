@@ -3,7 +3,7 @@ import Lab.BlockEquitable.Counterexample
 /-!
 # The whole family `G_{d,k}`: the gap `χ_= − L` is unbounded on connected block graphs
 
-Lauri (arXiv:2608.14517, Theorem 1.1): for all `d ≥ 2` and `k ≥ 4d − 1` there is a connected
+Lauri (arXiv:2608.14517, Theorem 2): for all `d ≥ 2` and `k ≥ 4d − 1` there is a connected
 block graph `G_{d,k}` with `L(G_{d,k}) = k` and `χ_=(G_{d,k}) = k + d`. Hence no bound
 `χ_=(G) ≤ L(G) + C` holds for connected block graphs. Definitions (`IsBlockGraph`, `αAt`, `αmin`,
 `L`, `IsEquitableColoring`, `equitableChromaticNumber`) are those of
@@ -496,7 +496,7 @@ theorem equitableChromaticNumber_eq (hd : 2 ≤ d) (hk : 4 * d - 1 ≤ k) :
 
 /-! ### Main results -/
 
-/-- **Lauri's theorem** (arXiv:2608.14517, Theorem 1.1): for `d ≥ 2` and `k ≥ 4d − 1`, `G_{d,k}`
+/-- **Lauri's theorem** (arXiv:2608.14517, Theorem 2): for `d ≥ 2` and `k ≥ 4d − 1`, `G_{d,k}`
 is a connected block graph with `L(G_{d,k}) = k` and `χ_=(G_{d,k}) = k + d`. -/
 theorem lauri_family (hd : 2 ≤ d) (hk : 4 * d - 1 ≤ k) :
     (G d k).Connected ∧ IsBlockGraph (G d k) ∧ L (G d k) = k ∧

@@ -190,9 +190,9 @@ Words we use:
   smallest graph in his family: 32 vertices, L = 7, but 9 colours are needed. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BlockEquitable/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/block-equitable.md).
-- **2026-11-27, (merge time TBD) ET.** We Lean-checked Lauri's **whole family** of block-graph counterexamples, not
+- **2026-11-27, about 2 AM ET.** We Lean-checked Lauri's **whole family** of block-graph counterexamples, not
   just the smallest one. For every d ≥ 2 and k ≥ 4d − 1 there is a tree-like graph where the formula L(G) says k
   colours but k + d are needed, so the formula can be off by any amount. Lean checks all of these graphs at once.
-  Standard axioms only, kernel re-check passed.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Family.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BlockEquitable/Family.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/block-equitable.md).

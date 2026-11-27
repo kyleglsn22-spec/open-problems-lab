@@ -25,7 +25,7 @@ graphs on at most 19 vertices by computer.
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | BEQ-1 | Lean: `G_{2,7}` (32 vertices: a `K_7` `Q ∋ v, w, c`, a pendant `u` at `c`, two `K_7` blocks hanging at `v` and two at `w`) is a connected block graph with `ω = 7`, `α_min = 4`, `L = 7` and `χ_= = 9`; hence `¬ GapOneConjecture` | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 19 review) | `not_gapOneConjecture`, `exists_counterexample` in `Lab/BlockEquitable/Counterexample.lean`; data and brute-force cross-check `explorer/block-equitable/gen.py` |
-| BEQ-2 | Lean: Lauri's Theorem 1.1 in full. For all `d ≥ 2`, `k ≥ 4d − 1`, `G_{d,k}` (central `K_{4d−1}`, pendant `u` at `c`, two `K_k` blocks at `v` and two at `w`; `4(k+d−1)` vertices) is a connected block graph with `L = k` and `χ_= = k + d`. Hence `χ_= − L` is unbounded on connected block graphs | Kyle + Claude, 2026-11-27 | pending audit | `lauri_family`, `gap_unbounded` in `Lab/BlockEquitable/Family.lean`; cross-check `explorer/block-equitable/family_check.py` (`d = 2..4`, four values of `k` each: colouring, all α values, clique number) |
+| BEQ-2 | Lean: Lauri's Theorem 2 in full. For all `d ≥ 2`, `k ≥ 4d − 1`, `G_{d,k}` (central `K_{4d−1}`, pendant `u` at `c`, two `K_k` blocks at `v` and two at `w`; `4(k+d−1)` vertices) is a connected block graph with `L = k` and `χ_= = k + d`. Hence `χ_= − L` is unbounded on connected block graphs | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 23 review) | `lauri_family`, `gap_unbounded` in `Lab/BlockEquitable/Family.lean`; cross-check `explorer/block-equitable/family_check.py` (`d = 2..4`, four values of `k` each: colouring, all α values, clique number) |
 
 Statement notes for the Auditor:
 - `IsBlockGraph G` (ours): every vertex set `S` whose induced subgraph is connected and stays connected after
@@ -50,7 +50,7 @@ Statement notes for BEQ-2:
 - Same definitions as BEQ-1 (imported). Vertices are `Fin (4d−1) ⊕ (Unit ⊕ (Fin 4 × Fin (k−1)))`; adjacency is
   given by cases (`adjR`), with `v, w, c` the `Q`-indices `0, 1, 2` and blocks `0, 1` at `v`, `2, 3` at `w`.
 - `gap_unbounded C`: some connected block graph has `L + C < χ_=` (take `d = C + 2`, `k = 4d − 1`).
-- The `(k+d)`-colouring is the paper's (Lemma 7, colours shifted down by one, with `Y₁ = [2,d]`,
+- The `(k+d)`-colouring is the paper's (Lemma 8, colours shifted down by one, with `Y₁ = [2,d]`,
   `Y₂ = [d+1,2d−1]`, `Y₃ = [2d,3d−1]`, `Y₄ = [3d,4d−3] ∪ {m, m+1}`); block `j` takes its allowed colours in
   increasing order (`f`), with explicit inverse `g`.
 - All arguments are general (no `decide` over `d`, `k`); no `set_option`.
