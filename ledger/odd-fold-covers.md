@@ -23,7 +23,7 @@ Luo and Ma (Conjecture 1 of their paper on edge-colouring spectra of cyclic cove
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| OFC-1 | Lean: for Wang's 9-regular multigraph `F_3` (Petersen graph with each vertex replaced by a triangle with 4 parallel edges per side), `L_3(F_3) = 9` but no cyclic 3-fold cover is 9-edge-colourable, so `s_3(F_3) ≥ 10` and the conjecture is false | Kyle + Claude, 2026-11-27 | pending audit | `F_L`, `no_nine_colouring`, `F_sCyc`, `not_conjecture` in `Lab/OddFoldCovers/Petersen.lean` |
+| OFC-1 | Lean: for Wang's 9-regular multigraph `F_3` (Petersen graph with each vertex replaced by a triangle with 4 parallel edges per side), `L_3(F_3) = 9` but no cyclic 3-fold cover is 9-edge-colourable, so `s_3(F_3) ≥ 10` and the conjecture is false | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 34 review) | `F_L`, `no_nine_colouring`, `F_sCyc`, `not_conjecture` in `Lab/OddFoldCovers/Petersen.lean` |
 
 Statement notes for the Auditor:
 - `Multigraph V E`: maps `src tgt : E → V` with `src e ≠ tgt e` (loopless; parallel edges allowed; the orientation is
