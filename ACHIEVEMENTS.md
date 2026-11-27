@@ -165,7 +165,7 @@ Words we use:
   Internal audit: pass.
   Proof: [Connected.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Connected.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
-- **2026-11-26, about 11:30 PM ET.** We showed the **Partial List Colouring Conjecture fails far more
+- **2026-11-26, about 11 PM ET.** We showed the **Partial List Colouring Conjecture fails far more
   widely than was known**. Noel's counterexample covered one case only (graphs needing 3 colours, lists
   of 2 colours). We generalised his construction to every case of the form "graphs needing k colours,
   lists of k − 1 colours", for every k ≥ 3: for example, a 111-vertex graph needing 4 colours where lists
