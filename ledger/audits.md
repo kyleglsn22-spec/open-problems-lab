@@ -147,6 +147,47 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #23 (Lauri's whole family G_{d,k}: gap χ_= − L unbounded on connected block graphs [BEQ-2], `Lab/BlockEquitable/Family.lean`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at e9b1396.
+
+- **Statement.**
+  - `lauri_family` (d ≥ 2, k ≥ 4d − 1): connected block graph with L = k and χ_= = k + d.
+  - `gap_unbounded C`: L + C < χ_= for some connected block graph.
+  - Both use the BEQ-1 definitions (audited, PR #19). `adjR` matches the paper's construction, and `card_V` gives 4(k + d − 1).
+- **Independent recheck.**
+  - The Lean colouring `f`/`col`, ported verbatim, is proper and equitable for all d = 2..8 and k = 4d−1..4d+24 (168 cases).
+  - On the Auditor's own graph built from the paper, for (d, k) = (2,7), (2,8), (2,10), (3,11), (3,12), (4,15):
+    - networkx: blocks are all cliques, ω = k, α_min = 4, L = k.
+    - CP-SAT: no equitable (k+d−1)-colouring; an equitable (k+d)-colouring exists.
+- **Trust base.** Grep clean. The arguments are general (no `decide` over d, k). Axiom lines added. No local build.
+- **Suggested.** arXiv v1 numbers the result Theorem 2 and the colouring Lemma 8, while the PR says Theorem 1.1 and Lemma 7; please align. **Required.** Fill in the ACHIEVEMENTS merge time.
+
+---
+
+## 2026-11-27 · open-problems-lab PR #21 (List Total Colouring fails for every k ≥ 4, generalised Noel graph [LTC-2], `Lab/ListTotal/General.lean`) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at d39192b.
+
+- **Statement.** `exists_counterexample k` (k ≥ 4) gives a finite simple graph with all degrees ≤ k − 1, `totalChromaticNumber = k`, not
+  `TotalChoosable k`, using the LTC-1 definitions. The `d + 1` dummy vertices `(i, inr i)` are isolated (checked in `gAdj`) and get nonempty
+  lists, so they affect neither χ'', nor choosability, nor degree. The `Sym2.lift` edge lists are well defined (`eL_symm`), and `degree_le`
+  counts true neighbours.
+- **Proof (re-derived by hand).**
+  - `priv_eq`: an injective map from d − 1 private vertices to d − 2 terminals is impossible.
+  - `block`: a cross edge has colour in {i, s_i}.
+  - `star`: pairwise-meeting 2-sets over ≥ 4 indices form a star.
+  - The `om` table covers every colour t with an edge {p, q} where t ∉ {p, q}.
+- **Independent recheck.** The Auditor's own CP-SAT script, built from the docstring, covers d = 3, 4, 5 (20, 35, 54 vertices, d-regular):
+  - no total d-colouring;
+  - a total (d+1)-colouring exists;
+  - the bad lists are infeasible.
+- **Trust base.** Grep clean; axiom lines added. No local build (no Lean toolchain in the Auditor's container).
+- **Docs.** Novelty is hedged appropriately. The PLC closure fact (k, ℓ) → (k, mℓ) was checked.
+- **Required changes.** None.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #19 (Lean disproof of the DFM gap-one conjecture for equitable colouring of block graphs [BEQ-1], `Lab/BlockEquitable/Counterexample.lean`) · **pass, conditional on CI green + 1 fix**
 
 Internal audit, outside review welcome. Reviewed at c734344.
