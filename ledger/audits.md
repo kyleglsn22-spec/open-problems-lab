@@ -147,6 +147,25 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #12 (GMR smaller-group search, round 2: notes and scripts only) · **pass with notes (2 wording fixes)**
+
+Internal audit, outside review welcome. Reviewed at 3fe6134.
+
+- **§1 lemma is correct.** With commuting background, |H| ≥ ∏(l_i+1) and |J| ≥ ∏(k_i+1). The Auditor checked each step: HyzJ = H(z⁻¹yz)J,
+  F_i = C_H(⋃_{j≠i}Y_j) ⊇ Z_i, and injectivity of R_1×⋯×R_m by successive conjugation.
+- **The ratio formula and the floor table reproduce.** Under free rare double cosets with all rare labels distinct, the ratio is
+  L³/(R₁R₄r₂r₃) and |G| ≥ L∏(k+1)(l+1). The Auditor's own enumeration gives the same floors: 60,025, 66,096,
+  91,200, 107,604 and 114,688.
+- **§2 is correct.** In a class-two 𝔽₂ group with a 3-regular 9×9 pattern, each row forces the even-weight vectors into
+  rowspace(Z), so dim V1 ≥ 9 − #components ≥ 6. The same holds for V2, and dim W ≥ 5, so the order is at least 2¹⁷.
+- **Fixes requested.**
+  - (1) The floor covers commuting-background *block* designs, not the whole family. Elsholtz's 2²³ circulant is not a block design.
+  - (2) "A non-free double coset only lowers the ratio" is unproved; state it as an assumption. In a model check (per-block size |H||J|/t,
+    t ≤ 4), no design gets below 60,025.
+- **Not checked.** The CP-SAT and GAP sweeps were not re-run; the timeouts are honestly listed. The affine one-liner was not checked.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #10 (Partial List Colouring Conjecture is false [PLC-1], `Lab/PartialList/Counterexample.lean`) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at 5dda71d.
