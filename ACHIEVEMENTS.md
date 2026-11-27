@@ -189,6 +189,6 @@ Words we use:
   those lists. So for every k ≥ 4 there is a graph whose total colouring number is k that is not totally
   k-choosable. Lean checks the whole infinite family. We found no published version of this (web search,
   27 Nov), but Noel mentions private discussions about extensions, so others may have it too.
-  Standard axioms only, kernel re-check passed. Internal audit: pending.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [General.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ListTotal/General.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/list-total-colouring.md).
