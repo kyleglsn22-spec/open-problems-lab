@@ -87,3 +87,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.OddFoldCovers.not_conjecture
 #print axioms OpenProblemsLab.OddFoldCovers.F_L
 #print axioms OpenProblemsLab.OddFoldCovers.F_sCyc
+#print axioms OpenProblemsLab.AlbertsonBerman.not_albertsonBermanConjecture
+#print axioms OpenProblemsLab.AlbertsonBerman.card_le_of_isAcyclic
+#print axioms OpenProblemsLab.AlbertsonBerman.straightLinePlanar_G
