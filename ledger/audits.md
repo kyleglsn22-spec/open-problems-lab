@@ -147,6 +147,18 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #38 (Albertson–Berman conjecture disproof via G29 [AB-1], `Lab/AlbertsonBerman/`) · **pass, conditional on green `build` at f991235 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at f991235.
+
+- **Statement:** `AlbertsonBermanConjecture` (every straight-line planar graph on n vertices has S with `(H.induce S).IsAcyclic` and n ≤ 2|S|) is the conjecture c_P ≥ 1/2 of Cames van Batenburg–Goedgebeur–Jooken (arXiv:2608.23260, Conj. 1.1) restricted to straight-line drawable graphs, so its negation refutes the original. `StraightLinePlanar` (injective map to ℝ², distinct edges' segments meet only at images of common endpoints) is a faithful straight-line plane drawing; the integer-orientation proof is sound.
+- **Edge list:** parsed from the arXiv TikZ of the G29 figure (labels v0..v28): the 80 solid edges equal `Basic.lean` `edges` exactly; the dashed G'29 edge is correctly excluded.
+- **Independent recheck:** own Python: planar, connectivity 2, {27,28} separates sides of size 12 and 15; exact integer check of the Lean coordinates (no crossings or touchings); CP-SAT with lazy cycle cuts gives a(G29) = 14.
+- **Trust base:** no sorry/axiom/native_decide/set_option; `decide +kernel` facts only; `allSub_sound` read; `#print axioms` added for the three main theorems.
+- **Required changes:** add the AB-1 entry to ACHIEVEMENTS.md.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #34 (Chen–van der Holst–Luo–Ma odd-fold cover conjecture disproof [OFC-1], `Lab/OddFoldCovers/Petersen.lean`) · **pass, conditional on green `build` at f19dd94 and the merge time being filled in**
 
 Internal audit, outside review welcome. Reviewed at f19dd94.
