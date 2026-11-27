@@ -133,3 +133,13 @@ Words we use:
   the first improvement and the first formal proof of the disproof. Standard axioms only, kernel re-check passed.
   Internal audit: pass. Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/GMR/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/gmr-non-abelian.md).
+
+- **2026-11-27, (merge time TBD).** We gave a computer-checked Lean proof that the **claw-free
+  Schur-positivity conjecture is false** (Stanley 1998, credited to Gasharov; disproved in July 2026 by
+  Prajapati and, independently, Matherne–Morales). The counterexample is a 12-vertex graph built from a
+  square with two triangles and two whiskers; its "chromatic symmetric function" has a negative Schur
+  coefficient (−64). Lean confirms the graph is claw-free and that no non-negative Schur expansion exists.
+  This appears to be the first formal proof of this disproof. According to the paper's computer census (not
+  re-checked by us), 12 vertices is the minimum. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ClawFree/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/claw-free-schur.md).

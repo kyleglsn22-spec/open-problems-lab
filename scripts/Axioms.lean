@@ -40,3 +40,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.GMR.counterexample
 #print axioms OpenProblemsLab.GMR.not_nonAbelianGMR
 #print axioms OpenProblemsLab.GMR.exists_counterexample_card
+#print axioms OpenProblemsLab.ClawFree.Counterexample.not_clawFreeSchurPositivity
+#print axioms OpenProblemsLab.ClawFree.Counterexample.not_schurPositive
+#print axioms OpenProblemsLab.ClawFree.Counterexample.G_isClawFree
