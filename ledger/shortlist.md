@@ -71,7 +71,7 @@ Scanned arXiv disproofs from August to November 2026 against the AFTD knowledge 
 | # | Candidate | Source | Formalized elsewhere? | Plan |
 | --- | --- | --- | --- | --- |
 | 1 | Gap-one conjecture for equitable colouring of block graphs (Dybizbański–Furmańczyk–Mkrtchyan 2024) is false | Lauri, arXiv 2608.14517 | No (not on AFTD) | **Done (BEQ-1):** Lean disproof for `G_{2,7}`; see ledger/block-equitable.md. Whole family `G_{d,k}` (unbounded gap) also done (BEQ-2). Open lead from the paper: a multiplicative bound `χ_= ≤ C·L` (hard) |
-| 2 | Local antimagic chromatic number, leaf conjecture | arXiv 2610.22783 | No | Easy-slot candidate |
+| 2 | Local antimagic chromatic number, leaf conjecture (`χ_la(T) ≤ ℓ(T) + 2` for trees) | Brondani–França, arXiv 2610.22783 | No | **Done (LA-1):** Lean proof of their Theorem 5.2 (r ≥ 2) and Corollary 5.3; see ledger/local-antimagic.md. Theorem 5.2 (caterpillars `H_{r,t}`, every labelling antimagic, `χ_la = ℓ + r`) |
 | 3 | Gap sets in the CGS setting | arXiv 2609.04473 | No | Needs CGS Prop. 4.2 plus a counting argument; medium |
 | 4 | Oxley's circuit–cocircuit question, via the Golay matroid | arXiv 2610.06033 | No | Heavy: Mathlib has no representable matroids |
 | 5 | Dominating Hadwiger conjecture | arXiv 2609.35361 | No | Probabilistic; hard list |
@@ -85,3 +85,8 @@ Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked 
 | --- | --- | --- | --- |
 | 1 | Partial List Colouring for lists 2+ colours short (`ℓ ≤ k − 2`, `ℓ ∤ k`; first cases `(5,2)`, `(5,3)`) | raised by PLC-3 (ours) | Attempted. Noel-type terminal designs provably fail (ledger/partial-list-colouring.md, Dead ends). Needs a new idea; parked |
 | 2 | List Total Colouring: counterexamples for every maximum degree `Δ ≥ 3`, or a gap `χ''_ℓ ≥ χ'' + 2` (Noel asks whether `χ''_ℓ ≤ χ'' + 1` always; gap 3 would disprove the List Edge Colouring Conjecture) | Noel, arXiv 2609.38417, closing remarks | Every-Δ half DONE (LTC-2, Lean, all Δ ≥ 3). Gap ≥ 2 attempted 2026-11-27: necessary conditions plus small searches, nothing found (ledger Dead ends); parked |
+## Hard list additions (2026-11-27)
+
+- **Multiplicative bound for equitable colouring of block graphs** (open question in Lauri, arXiv 2608.14517): is there
+  a constant `C` with `χ_=(G) ≤ C · L(G)` for every connected block graph? Lauri's family (Lean-checked, BEQ-1/BEQ-2)
+  forces `C ≥ 9/7`, and `C ≥ 5/4` asymptotically. A proof or a family beating `9/7` would be new.

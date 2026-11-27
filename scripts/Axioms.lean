@@ -67,3 +67,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.BlockEquitable.exists_counterexample
 #print axioms OpenProblemsLab.BlockEquitable.Family.lauri_family
 #print axioms OpenProblemsLab.BlockEquitable.Family.gap_unbounded
+#print axioms OpenProblemsLab.LocalAntimagic.not_leafConjecture
+#print axioms OpenProblemsLab.LocalAntimagic.no_constant
+#print axioms OpenProblemsLab.LocalAntimagic.family
