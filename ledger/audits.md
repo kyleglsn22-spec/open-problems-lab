@@ -147,6 +147,24 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #23 (Lauri's whole family G_{d,k}: gap χ_= − L unbounded on connected block graphs [BEQ-2], `Lab/BlockEquitable/Family.lean`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at e9b1396.
+
+- **Statement.**
+  - `lauri_family` (d ≥ 2, k ≥ 4d − 1): connected block graph with L = k and χ_= = k + d.
+  - `gap_unbounded C`: L + C < χ_= for some connected block graph.
+  - Both use the BEQ-1 definitions (audited, PR #19). `adjR` matches the paper's construction, and `card_V` gives 4(k + d − 1).
+- **Independent recheck.**
+  - The Lean colouring `f`/`col`, ported verbatim, is proper and equitable for all d = 2..8 and k = 4d−1..4d+24 (168 cases).
+  - On the Auditor's own graph built from the paper, for (d, k) = (2,7), (2,8), (2,10), (3,11), (3,12), (4,15):
+    - networkx: blocks are all cliques, ω = k, α_min = 4, L = k.
+    - CP-SAT: no equitable (k+d−1)-colouring; an equitable (k+d)-colouring exists.
+- **Trust base.** Grep clean. The arguments are general (no `decide` over d, k). Axiom lines added. No local build.
+- **Suggested.** arXiv v1 numbers the result Theorem 2 and the colouring Lemma 8, while the PR says Theorem 1.1 and Lemma 7; please align. **Required.** Fill in the ACHIEVEMENTS merge time.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #21 (List Total Colouring fails for every k ≥ 4, generalised Noel graph [LTC-2], `Lab/ListTotal/General.lean`) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at d39192b.
