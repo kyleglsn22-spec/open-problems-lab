@@ -153,3 +153,14 @@ Words we use:
   first formal proof of this disproof. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
+- **2026-11-26, about 10 PM ET.** We answered an open question from Noel's Partial List Colouring paper:
+  he asked for **connected** counterexamples that miss the conjecture's promise by a **large** amount (his
+  own example misses by only a third of a vertex). We chain copies of his graph together, joining each copy
+  to the next by a single edge at a carefully chosen vertex. With t copies (14t vertices) the graph is
+  connected and still needs 3 colours, yet at most 9t vertices can be coloured from the 2-colour lists,
+  against the promised 28t/3. So the shortfall grows in step with the size of the graph (n/42), and a
+  known theorem (Chappell) shows a shortfall of that order is the most possible. The key new step is
+  checking that each copy stays colourable when one vertex loses a colour; other joining points fail.
+  Lean checks the whole infinite family. Standard axioms only, kernel re-check passed.
+  Proof: [Connected.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Connected.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).

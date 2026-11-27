@@ -47,3 +47,7 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.PartialList.listChromaticNumber_G
 #print axioms OpenProblemsLab.PartialList.partial_le_nine
 #print axioms OpenProblemsLab.PartialList.exists_counterexample
+#print axioms OpenProblemsLab.PartialList.connected_gap
+#print axioms OpenProblemsLab.PartialList.chain_connected
+#print axioms OpenProblemsLab.PartialList.listChromaticNumber_chain
+#print axioms OpenProblemsLab.PartialList.chain_partial_le
