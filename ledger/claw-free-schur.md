@@ -2,7 +2,7 @@
 problem: Claw-free Schur-positivity conjecture (Stanley 1998, Conjecture 1.4, credited to Gasharov)
 source: https://arxiv.org/abs/2607.26364 (Prajapati, disproof) and https://arxiv.org/abs/2607.21508 (Matherne–Morales, independent)
 lean_statement: Lab/ClawFree/Defs.lean (`ClawFreeSchurPositivity`, our own statement; not in formal-conjectures)
-status: solved (formalized)
+status: solved (formalized, merged 2026-11-26 8:36 PM ET, squash 569c2aa)
 ---
 
 # Claw-free Schur-positivity conjecture

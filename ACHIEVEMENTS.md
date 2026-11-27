@@ -134,7 +134,7 @@ Words we use:
   Internal audit: pass. Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/GMR/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/gmr-non-abelian.md).
 
-- **2026-11-27, (merge time TBD).** We gave a computer-checked Lean proof that the **claw-free
+- **2026-11-26, 8:36 PM ET.** We gave a computer-checked Lean proof that the **claw-free
   Schur-positivity conjecture is false** (Stanley 1998, credited to Gasharov; disproved in July 2026 by
   Prajapati and, independently, Matherne–Morales). The counterexample is a 12-vertex graph built from a
   square with two triangles and two whiskers; its "chromatic symmetric function" has a negative Schur
