@@ -182,3 +182,13 @@ Words we use:
   only, kernel re-check passed. Internal audit: pass.
   Proof: [General.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/General.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
+- **2026-11-27, about 1 AM ET.** We showed the **List Total Colouring Conjecture fails at every size, not just
+  for cubic graphs**. Noel's counterexample has maximum degree 3. We generalised it to every maximum degree
+  d ≥ 3: glue d + 1 copies of a complete bipartite block together with single edges, and give each piece a
+  carefully chosen list of d + 1 colours. The graph can be totally coloured with d + 1 colours, but not from
+  those lists. So for every k ≥ 4 there is a graph whose total colouring number is k that is not totally
+  k-choosable. Lean checks the whole infinite family. We found no published version of this (web search,
+  27 Nov), but Noel mentions private discussions about extensions, so others may have it too.
+  Standard axioms only, kernel re-check passed. Internal audit: pending.
+  Proof: [General.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ListTotal/General.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/list-total-colouring.md).
