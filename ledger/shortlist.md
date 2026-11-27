@@ -91,3 +91,5 @@ Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked 
 - **Multiplicative bound for equitable colouring of block graphs** (open question in Lauri, arXiv 2608.14517): is there
   a constant `C` with `χ_=(G) ≤ C · L(G)` for every connected block graph? Lauri's family (Lean-checked, BEQ-1/BEQ-2)
   forces `C ≥ 9/7`, and `C ≥ 5/4` asymptotically. A proof or a family beating `9/7` would be new.
+  Attempted 2026-11-27: an elementary 7-vertex tree already gives `C ≥ 3/2`; Lauri-type obstructions look capped;
+  searches found nothing above 3/2 (ledger/block-equitable.md). Parked.
