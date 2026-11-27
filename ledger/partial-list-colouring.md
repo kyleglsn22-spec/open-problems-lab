@@ -24,6 +24,7 @@ Let `G` have `n` vertices and list chromatic number `χ_ℓ(G) = k ≥ 2`, and l
 | --- | --- | --- | --- | --- |
 | PLC-1 | Lean: Noel's graph has `listChromaticNumber = 3`, and every proper partial colouring from his 2-lists colours at most 9 vertices; hence `¬ PartialListColouringConjecture` | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 10 review) | `not_partialListColouringConjecture`, `exists_counterexample` in `Lab/PartialList/Counterexample.lean`; Python cross-check `explorer/partial-list/check.py` (exhaustive: maximum is exactly 9) |
 | PLC-2 | Lean: answers Noel's question about connected counterexamples with a large gap. For every `t ≥ 1`, the chain of `t` copies of Noel's graph (vertex 3 of copy `j+1` joined to vertex 2 of copy `j`) is connected, has `listChromaticNumber = 3`, and from Noel's lists on each copy at most `9t` of its `n = 14t` vertices can be coloured, against the promised `28t/3`. So the gap is at least `t/3 = n/42`, linear in `n` (Chappell's bound caps it at `2n/21`) | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 16 review) | `connected_gap`, `chain_connected`, `listChromaticNumber_chain`, `chain_partial_le` in `Lab/PartialList/Connected.lean`; cross-check `explorer/partial-list/connected_check.py` (CP-SAT: maximum is exactly `9t` for `t ≤ 5`; 6000 random 3-list assignments colourable) |
+| PLC-3 | Lean: the conjecture fails for **every** `k ≥ 3` with `ℓ = k − 1` (Noel's paper settles only `k = 3`). Generalised Noel graph `G_k` (`m = k − 1`): `m` independent terminals, one `K_k` per tuple `f ∈ [m]^m`, the two non-private vertices of each clique joined to every terminal; `n = m + k·m^m`. `χ_ℓ(G_k) = k`, and from the bad `m`-lists at most `m^k + m − 1` vertices can be coloured, below `n m / k` by exactly `1/k`. For `k = 3` it is Noel's graph | Kyle + Claude (Opus 5.5), 2026-11-27 | audited (internal audit PASS, PR 17 review) | `not_partialListColouringConjecture_general`, `listChromaticNumber_Gk`, `partial_violates` in `Lab/PartialList/General.lean`; cross-check `explorer/partial-list/general_k_check.py` (CP-SAT: maximum exactly `m^k + m − 1` for `k = 3, 4, 5`, i.e. 9/14, 83/111, 1027/1284; random `k`-lists colourable) |
 
 Statement notes for the Auditor:
 - `IsKChoosable G k` and `listChromaticNumber G = sInf {k | G.IsKChoosable k}` are formal-conjectures' definitions
@@ -35,6 +36,15 @@ Statement notes for the Auditor:
 - Proof follows the paper: `partial_le_nine` (triangles with a common 2-list, plus the terminal pair argument),
   `terminal_choice` (common colour, or the 8 < 9 counting of bad pairs), `tri_extend` (greedy triangle colouring),
   and `not_isKChoosable_of_le_two` (the triangle 2, 3, 4).
+
+Statement notes for PLC-3:
+- `not_partialListColouringConjecture_general k` (for `3 ≤ k`): a finite type `W`, graph `H` with
+  `H.listChromaticNumber = k`, lists of size `k − 1`, and `|S| · k < |W| · (k − 1)` for every proper partial colouring.
+- Upper bound (`partial_le`): each clique has a common `m`-list, so at most `m` coloured vertices; if all terminals are
+  coloured, their colours spell out one tuple `f`, whose clique then has its two non-private vertices uncoloured.
+- Choosability (`terminal_choice`, `isKChoosable`): two terminals with meeting lists share a colour (then at most `k − 2`
+  terminal colours); otherwise count blocked tuples (`prod_le_two`, `two_pow_lt`); then each clique is coloured by the
+  greedy SDR lemma `greedy`, vertex 0 then vertex 1 then the private vertices.
 
 Statement notes for PLC-2:
 - `connected_gap t` (for `t ≥ 1`) gives a graph `H` on `Fin t × Fin 14` with `H.Connected`,
@@ -49,6 +59,10 @@ Statement notes for PLC-2:
   then have no colouring), which is why the link goes into vertex 3.
 
 ## Log
+- 2026-11-27: PLC-3. Noel's construction generalises to all `k ≥ 3`, `ℓ = k − 1`. Key point: with `k − 2` private vertices per
+  clique, a clique blocks a choice of terminal colours only when all `k − 1` colours lie in the `k`-list of one vertex, which
+  happens for at most 2 of the `k^{k−1}` choices, and `2(k−1)^{k−1} < k^{k−1}`. Lean proof for all `k`; standard axioms;
+  leanchecker passes. Novelty: no other `(k, ℓ)` case found settled in the literature (arXiv/web search).
 - 2026-11-27: PLC-2. Chain of copies of Noel's graph gives connected counterexamples with gap `n/42`; Lean proof for all `t`, builds locally, standard axioms. Novelty: no follow-up to Noel's question found on arXiv or the web.
 - 2026-11-27: picked as the "easier" slot (round-4 shortlist #4). Not on AFTD (kb.json searched for the arXiv id,
   "partial list", "Albertson") and not in formal-conjectures (latest commit ea8e3e1 has only the choosability
@@ -63,3 +77,5 @@ Statement notes for PLC-2:
 - Noel's connected-large-gap question: answered by PLC-2 (gap `n/42`). Still open: the best constant. The gap
   lies between `n/42` (ours) and `2n/21` (Chappell). Also open: whether other `(k, ℓ)` admit connected linear-gap
   examples (our chain trick needs a base example plus a vertex whose list can lose a colour).
+- After PLC-3, the open cases are `ℓ ≤ k − 2` with `ℓ ∤ k`, the first being `(k, ℓ) = (5, 2)` and `(5, 3)`. With `r` terminals
+  this gadget family only works when `k ≤ r + 1` (partial terminal colourings go unpunished), so these need a new idea.
