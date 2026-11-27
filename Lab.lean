@@ -59,5 +59,6 @@ import Lab.PartialList.Connected
 import Lab.ClawFree2.Counterexample
 import Lab.PartialList.General
 import Lab.BlockEquitable.Counterexample
+import Lab.BlockEquitable.Family
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/

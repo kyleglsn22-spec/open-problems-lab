@@ -70,7 +70,7 @@ Scanned arXiv disproofs from August to November 2026 against the AFTD knowledge 
 
 | # | Candidate | Source | Formalized elsewhere? | Plan |
 | --- | --- | --- | --- | --- |
-| 1 | Gap-one conjecture for equitable colouring of block graphs (Dybizbański–Furmańczyk–Mkrtchyan 2024) is false | Lauri, arXiv 2608.14517 | No (not on AFTD) | **Done (BEQ-1):** Lean disproof for `G_{2,7}`; see ledger/block-equitable.md. Lead: the whole family `G_{d,k}` (unbounded gap) |
+| 1 | Gap-one conjecture for equitable colouring of block graphs (Dybizbański–Furmańczyk–Mkrtchyan 2024) is false | Lauri, arXiv 2608.14517 | No (not on AFTD) | **Done (BEQ-1):** Lean disproof for `G_{2,7}`; see ledger/block-equitable.md. Whole family `G_{d,k}` (unbounded gap) also done (BEQ-2). Open lead from the paper: a multiplicative bound `χ_= ≤ C·L` (hard) |
 | 2 | Local antimagic chromatic number, leaf conjecture | arXiv 2610.22783 | No | Easy-slot candidate |
 | 3 | Gap sets in the CGS setting | arXiv 2609.04473 | No | Needs CGS Prop. 4.2 plus a counting argument; medium |
 | 4 | Oxley's circuit–cocircuit question, via the Golay matroid | arXiv 2610.06033 | No | Heavy: Mathlib has no representable matroids |
