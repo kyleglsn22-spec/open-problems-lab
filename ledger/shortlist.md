@@ -106,7 +106,7 @@ bent sums (2610.32239), Borg intersecting partitions (2610.01747). Not formalize
 | --- | --- | --- | --- |
 | 1 | Bipanchromatic conjecture (Lalou et al.) | Novaković–Jojić 2610.27133 | **Done (BP-1):** sunflowers `S_n`, all `n ≥ 3`; see ledger/bipanchromatic.md |
 | 2 | Triangle-free planar graphs need not be POSH | 2611.32999 | Planar embeddings; heavy |
-| 3 | Chen–van der Holst–Luo–Ma conjecture on edge-colouring odd-fold covers (Petersen-based counterexample) | 2611.13394 | Needs chromatic index of Petersen multigraph; medium |
+| 3 | Chen–van der Holst–Luo–Ma conjecture on edge-colouring odd-fold covers (Petersen-based counterexample) | 2611.13394 | **Done (OFC-1):** `F_3`, `L_3 = 9`, `s_3 ≥ 10`; see ledger/odd-fold-covers.md |
 | 4 | Jiang–Zhu relaxed multiplication in list colouring (91-vertex graph) | 2611.03151 | Choosability; heavy |
 | 5 | Bencs–Csikvári spanning-forest conjecture `F(G) ≤ ∏ deg(v)` (min degree ≥ 3) | Wu–Lu–Dong 2611.18076 | **Done (SF-1):** `K_{3,38}` and `K_{a,4a³}` for all `a ≥ 3`; see ledger/spanning-forests.md |
 
