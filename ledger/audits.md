@@ -147,6 +147,29 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #17 (Partial List Colouring Conjecture fails for every k ≥ 3 with ℓ = k − 1 [PLC-3], `Lab/PartialList/General.lean`) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at f5f9723.
+
+- **Statement.** `not_partialListColouringConjecture_general k` (k ≥ 3) gives a finite graph with `listChromaticNumber = k` (formal-conjectures'
+  definition) and (k−1)-lists such that every proper partial colouring has |S|·k < n·(k−1). That is exactly "fewer than n(k−1)/k vertices can be coloured".
+  `not_conjecture_of` feeds it into the PLC-1 definition of `PartialListColouringConjecture`. `Gk 2` is Noel's graph.
+- **Proof (re-derived by hand).**
+  - Upper bound: each clique has a common m-list. If all terminals are coloured, their colours spell out S_f for one f, which blocks vertices 0 and 1 of
+    clique f. So |S|·k ≤ n·m − 1.
+  - Choosability: if two terminal lists meet, Hall's condition holds per clique. Otherwise a clique blocks at most ∏|L(t_i) ∩ L(v₁)| ≤ 2 choices,
+    and 2·m^m < (m+1)^m.
+- **Independent recheck.** The Auditor's own CP-SAT script finds exact optima of 9/14, 83/111 and 1027/1284 for k = 3, 4, 5, equal to m^k + m − 1.
+  Random k-lists were all colourable (300, 300 and 40 trials).
+- **Trust base.** A grep of `General.lean` is clean. Axioms are listed in `scripts/Axioms.lean`. There was no local build (no Lean toolchain in the
+  Auditor's container), so the verdict relies on CI.
+- **Novelty.** "To our knowledge, no case other than Noel's (3, 2) had been settled" is fair. Noel calls (3, 2) the first non-trivial case. The known
+  positive results (ℓ | k; Iradmusa's half of the ℓ values per graph; Janssen's Δ ≤ k) do not cover ℓ = k − 1, and the Auditor's web search found
+  no follow-up.
+- **Required changes.** None.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #16 (connected Partial List Colouring counterexamples with gap n/42 [PLC-2], `Lab/PartialList/Connected.lean`) · **pass, conditional on CI green + 1 wording fix**
 
 Internal audit, outside review welcome. Reviewed at 3b5d815.
