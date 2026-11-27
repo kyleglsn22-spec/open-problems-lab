@@ -81,3 +81,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Bipanchromatic.not_conjecture
 #print axioms OpenProblemsLab.Bipanchromatic.excess_unbounded
 #print axioms OpenProblemsLab.Bipanchromatic.sunflower_parameters
+#print axioms OpenProblemsLab.SpanningForests.not_conjecture
+#print axioms OpenProblemsLab.SpanningForests.counterexample_for_every_a
+#print axioms OpenProblemsLab.SpanningForests.card_le_numSpanningForests
