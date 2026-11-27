@@ -147,6 +147,24 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #14 (second minimal claw-free Schur counterexample [CF-2], `Lab/ClawFree2/`) · **pass, conditional on CI green + 2 wording fixes**
+
+Internal audit, outside review welcome. Reviewed at 0112e2c.
+
+- **Graph.** The paper's graph6 ``K?`CR@`bAbRB`` (Prajapati Prop. 4) decodes, label for label, to `edgesG` (21 edges). `adjBits` matches. The graph is
+  claw-free and is the line graph of a graph with 10 vertices and 12 edges. It is Wang–Zhang–Zhao's G₂.
+- **Independent recheck.** The Auditor's own script gives:
+  - 7,680 proper 4-colourings;
+  - monomial coefficients 5322: 24, 4422: 176, 4332: 440 and 3333: 1056, and no other non-increasing contents (so `antiOK` holds);
+  - a Kostka matrix equal to K00–K33;
+  - after a full triangular solve, Schur coefficients 24, 152, 240 and **−40**.
+- **Proof structure.** It is CF-1's audited inversion with four shapes, and the shared definitions are unchanged. The `gen4` split is a kernel `decide`.
+- **Trust base.** No sorry, native_decide, custom axioms or unsafe code. The axiom audit covers the three main theorems.
+- **Fixes.** (1) The ACHIEVEMENTS date should be 2026-11-27, not 11-26. (2) Both the census ("exactly two") and the WZZ minimality claim are published computer
+  results that we have not re-checked, so the text should say so.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #12 (GMR smaller-group search, round 2: notes and scripts only) · **pass with notes (2 wording fixes)**
 
 Internal audit, outside review welcome. Reviewed at 3fe6134.
