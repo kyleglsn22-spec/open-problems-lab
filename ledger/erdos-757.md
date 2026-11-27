@@ -92,3 +92,18 @@ finite sets equals the asymptotic constant. Details in `ledger/audits.md`.
 - 2026-11-26: Claim 757-4: the Henning–Yeo Theorem 6 bound formalized (about 7,700 lines under
   `Lab/HenningYeo/`), so Ma–Tang's lower bound `9/17` is now Lean-checked with no assumption.
   Both best known bounds for #757 (9/17 ≤ c ≤ 5/9 by our own upper bound) are formal.
+- 2026-11-27: New search method, attempted as a hard item, with no improvement on 5/9.
+  - Method: hypergraph first. A generic point of the linear space cut out by the 3-AP relations of an
+    abstract hypergraph H is a (4,5)-set whose 3-AP hypergraph is exactly H, provided no extra difference
+    coincidence is forced. That is a fast exact test with no ordering or SAT (`explorer/erdos757/hyper/hsearch.py`).
+    - It rediscovers f(12) = 7 in seconds, and accepts Ma–Tang's 14-point set.
+  - Periodic class (`periodic.py`): vertices (period k, class i), with a fixed list of 3-AP patterns. This is
+    strictly larger than the self-similar chains of PR 13: copies need not be affine images.
+    - The reader's 5/9 family sits in it (w = 9, offsets {−1, 0}). Window estimates give 5/9 for it, as they should.
+  - Annealing results:
+    - Unseeded (w ≤ 9): ≥ 0.60.
+    - Seeded from the 5/9 pattern with 10–12 classes (offsets ≤ 1, about 2 h): best 0.59.
+    - Free hypergraph search, n = 20–32: ≥ 0.60.
+  - Nothing below 5/9. The annealer is weak (it does not rediscover 5/9 from scratch). A stronger search,
+    for example SAT over pattern choices with the realizability test as a CEGAR oracle, is the obvious next
+    step. Parked.
