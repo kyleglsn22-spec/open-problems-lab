@@ -24,7 +24,7 @@ three vertices.
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| LA-1 | Lean: Brondani–França Theorem 5.2 for `r ≥ 2` and Corollary 5.3. For `r ≥ 2`, `t ≥ 1`, the caterpillar `H_{r,t}` (spine degrees `t·4^(2^r − 2^(r−i))`) is a tree with at least 3 vertices, every labelling has pairwise distinct weights, and `χ_la = ℓ + r`. Hence `¬ LeafConjecture`, and for every `C` some tree has `χ_la > ℓ + C` | Kyle + Claude, 2026-11-27 | pending audit | `family`, `not_leafConjecture`, `no_constant` in `Lab/LocalAntimagic/Family.lean` (general caterpillar lemma `chiLA_eq` in `Caterpillar.lean`, degree bounds `wt_bounds` in `Basic.lean`); cross-check `explorer/local-antimagic/check.py` |
+| LA-1 | Lean: Brondani–França Theorem 5.2 for `r ≥ 2` (up to the non-isomorphism remark, which follows from the vertex count growing with `t`) and Corollary 5.3. For `r ≥ 2`, `t ≥ 1`, the caterpillar `H_{r,t}` (spine degrees `t·4^(2^r − 2^(r−i))`) is a tree with at least 3 vertices, every labelling has pairwise distinct weights, and `χ_la = ℓ + r`. Hence `¬ LeafConjecture`, and for every `C` some tree has `χ_la > ℓ + C` | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 24 review) | `family`, `not_leafConjecture`, `no_constant` in `Lab/LocalAntimagic/Family.lean` (general caterpillar lemma `chiLA_eq` in `Caterpillar.lean`, degree bounds `wt_bounds` in `Basic.lean`); cross-check `explorer/local-antimagic/check.py` |
 
 Statement notes for the Auditor:
 - A labelling is `f : G.edgeSet ≃ Fin m` with `m = |E|`; the label of edge `e` is `f e + 1`, so labels are exactly
