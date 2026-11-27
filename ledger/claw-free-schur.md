@@ -16,13 +16,14 @@ For every finite claw-free graph `G` (no induced `K_{1,3}`), Stanley's chromatic
 | --- | --- | --- |
 | True for incomparability graphs of (3+1)-free posets | Gasharov 1996 | No |
 | False: line graph of a 4-cycle with triangles at two opposite vertices and pendant edges at the other two (12 vertices, 22 edges), `[s_{3333}] X_G = −64` | Prajapati, arXiv 2607.26364, Theorem 1 | **Lean-checked (CF-1)** |
-| 12 vertices is the minimum; exactly two counterexamples on 12 vertices (the other has `[s_{3333}] = −40`) | Prajapati, Proposition 4 (exhaustive census, 1.9 million claw-free graphs) | No (computer census, not re-run) |
-| Two infinite families of line-graph counterexamples | arXiv 2607.27166 | No |
+| 12 vertices is the minimum; exactly two counterexamples on 12 vertices (the other has `[s_{3333}] = −40`) | Prajapati, Proposition 4 (exhaustive census, 1.9 million claw-free graphs) | The second graph is **Lean-checked (CF-2)**; the census itself is not re-run |
+| Two infinite families (adjoin a clique `K_t`, `t ≥ 4`, by one edge); the −40 graph is also the smallest counterexample ordered by edges first | Wang–Zhang–Zhao, arXiv 2607.27166 | No (families); the −40 graph itself: yes (CF-2) |
 
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | CF-1 | `¬ ClawFreeSchurPositivity`: the 12-vertex line graph `G` above is claw-free and `X_G` (in four variables) is not a non-negative combination of Schur polynomials | Kyle + Claude, 2026-11-27 (mathematics: Prajapati; Matherne–Morales) | Lean-checked, audited (internal; verdict in ledger/audits.md) | `not_clawFreeSchurPositivity`, `not_schurPositive`, `G_isClawFree` in `Lab/ClawFree/` |
+| CF-2 | `¬ ClawFreeSchurPositivity` via the second minimal counterexample (graph6 ``K?`CR@`bAbRB``, 12 vertices, 21 edges): claw-free, and `X_G` in four variables is not Schur-positive (forced `[s_{3333}] = 1056 − 3·24 − 2·152 − 3·240 = −40`) | Kyle + Claude (Opus 5.5), 2026-11-26 (mathematics: Prajapati) | Lean-checked, audited (internal audit PASS, PR 14 review) | `OpenProblemsLab.ClawFree.Second.not_clawFreeSchurPositivity` in `Lab/ClawFree2/`; Python cross-check `explorer/clawfree2/check.py` |
 
 Statement notes for the Auditor:
 - `chromSym G n` and `schurPoly n μ` are the standard combinatorial formulas restricted to the variables
@@ -49,10 +50,14 @@ Statement notes for the Auditor:
 - 2026-11-27: smaller counterexample: according to the paper's computer census (Prajapati Prop. 4, not re-checked
   by us), 12 vertices is the minimum (all 216,777 connected claw-free graphs on ≤ 11 vertices are Schur-positive).
 
+- 2026-11-26 (evening ET): CF-2, the second minimal counterexample, Lean-checked with the same method (four shapes:
+  `5322`, `4422`, `4332`, `3333`; 7,680 proper 4-colourings, split into 256 prefixes over 8 files, each ~8.3 GB to
+  build and ~6.5 GB to replay). Graph given by its edge list decoded from the graph6 code; the 16 Kostka numbers and
+  the four monomial counts are kernel-computed.
+
 ## Dead ends
 - Single `decide` over all 4^12 colourings: hopeless; a single backtracking list in one file: 12.8 GB.
 
 ## Open leads
-- Lean-check the second minimal counterexample (graph6 code ``K?`CR@`bAbRB``) (`[s_{3333}] = −40`; needs a fourth shape `5322`).
 - Lean-check one of the infinite families of arXiv 2607.27166.
 - Re-run (or Lean-check) the minimality census: 216,777 graphs, too large for the kernel as is.
