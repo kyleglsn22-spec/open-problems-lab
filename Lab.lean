@@ -67,5 +67,6 @@ import Lab.LocalAntimagic.Family
 import Lab.LocalAntimagic.T3
 import Lab.FibWalk.Main
 import Lab.Bipanchromatic.Sunflower
+import Lab.SpanningForests.Counterexample
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
