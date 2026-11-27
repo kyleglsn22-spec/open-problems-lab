@@ -234,11 +234,11 @@ Words we use:
   has just 6 points. Lean checks the whole family. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Sunflower.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Bipanchromatic/Sunflower.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bipanchromatic.md).
-- **2026-11-27, (merge time TBD).** We Lean-checked the disproof of the **Bencs–Csikvári spanning-forest
+- **2026-11-27, about 7:00 AM ET.** We Lean-checked the disproof of the **Bencs–Csikvári spanning-forest
   conjecture**. A spanning forest of a network is a choice of links with no closed loop; the conjecture said that
   if every point has at least 3 links, the number of spanning forests is at most the product of the link counts.
   Wu, Lu and Dong (arXiv:2611.18076, Nov 2026) showed that "complete bipartite" networks (two groups, every point
   linked to every point of the other group) break it once one group is much bigger. Lean checks a concrete
-  example with 3 + 38 points and the whole infinite family. Standard axioms only, kernel re-check passed.
+  example with 3 + 38 points and the whole infinite family. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/SpanningForests/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/spanning-forests.md).

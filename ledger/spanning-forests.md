@@ -22,7 +22,7 @@ with minimum degree at least `3` satisfies `F(G) ≤ ∏_v deg(v)`.
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| SF-1 | Lean: `F(K_{a,b}) ≥ (a+1)^b` and `∏ deg = b^a a^b`, so the conjecture fails for `K_{3,38}`, and for every `a ≥ 3` some `K_{a,b}` (we take `b = 4a³`) is a counterexample | Kyle + Claude, 2026-11-27 | pending audit | `card_le_numSpanningForests`, `prod_degree`, `not_conjecture`, `counterexample_for_every_a` in `Lab/SpanningForests/Counterexample.lean` |
+| SF-1 | Lean: `F(K_{a,b}) ≥ (a+1)^b` and `∏ deg = b^a a^b`, so the conjecture fails for `K_{3,38}`, and for every `a ≥ 3` some `K_{a,b}` (we take `b = 4a³`) is a counterexample | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 32 review) | `card_le_numSpanningForests`, `prod_degree`, `not_conjecture`, `counterexample_for_every_a` in `Lab/SpanningForests/Counterexample.lean` |
 
 Statement notes for the Auditor:
 - `numSpanningForests G` = number of `S ⊆ G.edgeFinset` with `(fromEdgeSet S).IsAcyclic` (Mathlib's acyclicity).
@@ -34,5 +34,6 @@ Statement notes for the Auditor:
 - The concrete inequality `38^3 · 3^38 < 4^38` is checked by `norm_num`; no `decide`, no `set_option`.
 
 ## Dead ends and notes
+- The `K_{3,14}` example is stated in the paper itself (Section 1, "As a concrete example, consider K_{3,14}", via Stark 2013); the Auditor independently recomputed it (F = 13,186,891,776 > 13,124,466,936) and found it is the least `b` for `a = 3`.
 - Not formalized: the paper's exact `K_{3,14}` example (needs Stark's closed formula for `F(K_{a,b})`) and its
   positive upper bounds.
