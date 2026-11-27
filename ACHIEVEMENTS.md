@@ -206,3 +206,11 @@ Words we use:
   Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Family.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BlockEquitable/Family.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/block-equitable.md).
+- **2026-11-27, (merge time TBD) ET.** We Lean-checked the disproof of the **leaf conjecture for local antimagic
+  colouring of trees**. Number the edges 1, 2, 3, … and give each vertex the sum of its edge numbers; the
+  conjecture said that, with a clever numbering, a tree never needs more than "number of leaves + 2" different
+  sums while neighbours always differ. Brondani and França (arXiv:2610.22783, Oct 2026) built caterpillar trees
+  where every numbering gives all vertices different sums, so the excess can be any size. Lean checks the whole
+  infinite family. Standard axioms only, kernel re-check passed.
+  Proof: [Family.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LocalAntimagic/Family.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/local-antimagic.md).
