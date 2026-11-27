@@ -153,3 +153,10 @@ Words we use:
   first formal proof of this disproof. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
+- **2026-11-26, (merge time TBD).** We Lean-checked the **second of the two smallest counterexamples** to
+  the claw-free Schur-positivity conjecture. A computer census (Prajapati 2026) found exactly two bad graphs on
+  12 vertices; we had already checked the first (coefficient −64). This one has 21 edges and coefficient −40,
+  and Wang, Zhang and Zhao showed it is also the smallest counterexample when graphs are ordered by edge
+  count first. Now both minimal counterexamples are machine-verified. Standard axioms only, kernel re-check passed.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ClawFree2/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/claw-free-schur.md).
