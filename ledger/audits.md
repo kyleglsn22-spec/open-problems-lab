@@ -147,6 +147,21 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #32 (Bencs–Csikvári spanning-forest conjecture false, K_{a,b}, Wu–Lu–Dong [SF-1], `Lab/SpanningForests/Counterexample.lean`) · **pass, conditional on CI green + merge time filled in**
+
+Internal audit, outside review welcome. Reviewed at 6a243b2.
+
+- **Statement.** `numSpanningForests` counts the acyclic edge subsets on all of V, which is the paper's 𝓕(G). `Conjecture` is Conjecture 1.1 word for word: δ ≥ 3 implies F(G) ≤ ∏ deg, with no connectivity assumption.
+- **Proof.** Star forests are acyclic and injective, so (a+1)^b ≤ F(K_{a,b}), which is the paper's argument. `prod_degree` gives b^a a^b.
+- **Independent recheck.**
+  - Exact integers show 4^38 > 38³·3³⁸, and the inequality fails at b = 37.
+  - Brute force gives F(K_{3,3}) = 328 and F(K_{3,4}) = 1856, which agree with the Auditor's own block-decomposition count.
+  - That count shows K_{3,14} is the smallest a = 3 counterexample (F = 13,186,891,776 > 13,124,466,936).
+- **Trust base.** Grep clean, with no `decide` or `set_option`. Axiom lines added. Not built locally.
+- **Note.** The K_{3,14} / Stark remark was not found in the arXiv text the Auditor read. The number is correct, so if the paper does not state it, attribute it to our own computation.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #30 (sunflowers S_n disprove the Lalou–Mbarek–Skender–Togni bipanchromatic conjecture, Novaković–Jojić [BP-1], `Lab/Bipanchromatic/Sunflower.lean`) · **pass, conditional on CI green**
 
 Internal audit, outside review welcome. Reviewed at a981afe.
