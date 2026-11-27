@@ -43,3 +43,7 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.ClawFree.Counterexample.not_clawFreeSchurPositivity
 #print axioms OpenProblemsLab.ClawFree.Counterexample.not_schurPositive
 #print axioms OpenProblemsLab.ClawFree.Counterexample.G_isClawFree
+#print axioms OpenProblemsLab.PartialList.not_partialListColouringConjecture
+#print axioms OpenProblemsLab.PartialList.listChromaticNumber_G
+#print axioms OpenProblemsLab.PartialList.partial_le_nine
+#print axioms OpenProblemsLab.PartialList.exists_counterexample

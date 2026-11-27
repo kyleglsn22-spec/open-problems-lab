@@ -143,3 +143,13 @@ Words we use:
   re-checked by us), 12 vertices is the minimum. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ClawFree/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/claw-free-schur.md).
+- **2026-11-26, about 9 PM ET.** We gave a computer-checked Lean proof that the **Partial List
+  Colouring Conjecture is false** (Albertson, Grossman and Haas, 2000; disproved in September 2026 by
+  Noel, with a counterexample found by an AI model). The conjecture says: if a graph needs k colours for
+  list colouring, then from any lists of ℓ < k colours you can still properly colour at least an ℓ/k share
+  of its vertices. Noel's 14-vertex graph (four triangles plus two hub vertices) needs 3 colours, yet from
+  his lists of 2 colours at most 9 of the 14 vertices can be coloured, short of the promised 28/3 ≈ 9.33.
+  Lean checks both halves, including that every assignment of 3-colour lists works. This appears to be the
+  first formal proof of this disproof. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
