@@ -115,6 +115,6 @@ Also already formalized (skip): Costas-array conjecture disproof 2611.00098 (aut
 ## Hard slot, 2026-11-27 evening
 | Candidate | Source | Status |
 | --- | --- | --- |
-| Albertson–Berman ratio `c_P ≤ 25/52` (Problem 5.1) and Chappell–Pelsmajer `d = 2..6` (Problem 5.3) | 2608.23260 | Attempted: gadget calculus and searches, no improvement; see ledger/albertson-berman.md |
-| Petersen colouring: smallest counterexample, gap `40 ≤ n ≤ 52` | 2608.10028 | Not started (needs targeted weak-snark generation) |
+| Albertson–Berman ratio `c_P ≤ 25/52` (Problem 5.1) and Chappell–Pelsmajer `d = 2..6` (Problem 5.3) | 2608.23260 | Attempted: gadget calculus and searches, no improvement; see ledger/albertson-berman.md. Easy slot: **Done (AB-1)**, Lean disproof of the conjecture itself via `G₂₉` |
+| Petersen colouring: smallest counterexample, gap `40 ≤ n ≤ 52` | 2608.10028 | **In progress (hard slot):** multipole replacement searches in G52, nothing smaller yet |
 | Non-cancelling intersections: smallest lattice without a winning tree | 2608.27416 | Not started (small primes `p = 5, 7` look unhelpful) |
