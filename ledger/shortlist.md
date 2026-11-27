@@ -96,3 +96,15 @@ Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked 
 - **`D_3 = U_3` for slow Fibonacci walks** (open question in Aliabadi, arXiv 2609.04473): do the 3-step gap sets of
   down- and up-integers agree? Numerically yes. Our FW-1 machinery (threshold lemma, general shift lemma, interval case
   analysis) might decide which gaps occur; a proof would be new. Also open: does `D_ℓ ≠ U_ℓ` for infinitely many `ℓ`?
+
+## Round 6 easy-slot scouting (2026-11-27)
+
+Fresh arXiv disproofs checked against AFTD: already formalized there: Gao–Gu weighted Catalan (2611.26953), Tokareva
+bent sums (2610.32239), Borg intersecting partitions (2610.01747). Not formalized:
+
+| # | Candidate | Source | Plan |
+| --- | --- | --- | --- |
+| 1 | Bipanchromatic conjecture (Lalou et al.) | Novaković–Jojić 2610.27133 | **Done (BP-1):** sunflowers `S_n`, all `n ≥ 3`; see ledger/bipanchromatic.md |
+| 2 | Triangle-free planar graphs need not be POSH | 2611.32999 | Planar embeddings; heavy |
+| 3 | Chen–van der Holst–Luo–Ma conjecture on edge-colouring odd-fold covers (Petersen-based counterexample) | 2611.13394 | Needs chromatic index of Petersen multigraph; medium |
+| 4 | Jiang–Zhu relaxed multiplication in list colouring (91-vertex graph) | 2611.03151 | Choosability; heavy |

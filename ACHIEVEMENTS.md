@@ -227,3 +227,10 @@ Words we use:
   them with a new five-shift argument. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/Main.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/fib-walk-gaps.md).
+- **2026-11-27, about 6:00 AM ET.** We Lean-checked the disproof of the **bipanchromatic colouring conjecture**
+  of Lalou, Mbarek, Skender and Togni. Colour the points of a hypergraph so that every group sees every colour; the
+  conjecture predicted the best you can do when no colour may be used only once. Novaković and Jojić
+  (arXiv:2610.27133) showed that "sunflower" hypergraphs beat the prediction by an unlimited amount; the smallest
+  has just 6 points. Lean checks the whole family. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Sunflower.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Bipanchromatic/Sunflower.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bipanchromatic.md).
