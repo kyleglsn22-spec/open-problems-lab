@@ -242,3 +242,10 @@ Words we use:
   example with 3 + 38 points and the whole infinite family. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/SpanningForests/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/spanning-forests.md).
+- **2026-11-27, about 8:05 AM ET.** We Lean-checked the disproof of the **Chen–van der Holst–Luo–Ma conjecture
+  on colouring the links of "covers" of networks**. A 3-fold cover stacks three copies of a network and rewires
+  each link between the copies; the conjecture gave an exact formula for the fewest link colours some such cover
+  needs. Wang (arXiv:2611.13394, Nov 2026) built a network from the famous Petersen graph where the formula says
+  9 but every cyclic cover needs 10. Lean checks this for the 30-point example. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Petersen.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/OddFoldCovers/Petersen.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/odd-fold-covers.md).
