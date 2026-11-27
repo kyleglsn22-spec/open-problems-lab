@@ -111,3 +111,10 @@ bent sums (2610.32239), Borg intersecting partitions (2610.01747). Not formalize
 | 5 | Bencs–Csikvári spanning-forest conjecture `F(G) ≤ ∏ deg(v)` (min degree ≥ 3) | Wu–Lu–Dong 2611.18076 | **Done (SF-1):** `K_{3,38}` and `K_{a,4a³}` for all `a ≥ 3`; see ledger/spanning-forests.md |
 
 Also already formalized (skip): Costas-array conjecture disproof 2611.00098 (authors' own Lean proof).
+
+## Hard slot, 2026-11-27 evening
+| Candidate | Source | Status |
+| --- | --- | --- |
+| Albertson–Berman ratio `c_P ≤ 25/52` (Problem 5.1) and Chappell–Pelsmajer `d = 2..6` (Problem 5.3) | 2608.23260 | Attempted: gadget calculus and searches, no improvement; see ledger/albertson-berman.md |
+| Petersen colouring: smallest counterexample, gap `40 ≤ n ≤ 52` | 2608.10028 | Not started (needs targeted weak-snark generation) |
+| Non-cancelling intersections: smallest lattice without a winning tree | 2608.27416 | Not started (small primes `p = 5, 7` look unhelpful) |
