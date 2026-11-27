@@ -171,6 +171,6 @@ Words we use:
   lists of k − 1 colours", for every k ≥ 3: for example, a 111-vertex graph needing 4 colours where lists
   of 3 colours let at most 83 vertices be coloured, short of the promised 83.25. Lean checks the whole
   infinite family at once. To our knowledge no case other than Noel's had been settled. Standard axioms
-  only, kernel re-check passed.
+  only, kernel re-check passed. Internal audit: pass.
   Proof: [General.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/General.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
