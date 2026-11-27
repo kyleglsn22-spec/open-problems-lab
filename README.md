@@ -16,10 +16,10 @@ and is re-checked by the independent kernel checker `leanchecker`. Where a state
 
 | Problem | Result | Lean theorem | Origin of the mathematics |
 | --- | --- | --- | --- |
-| [Erdős #757](https://www.erdosproblems.com/757): the largest c such that every finite (4,5)-set A ⊂ ℝ has a Sidon subset of size ≥ c·\|A\| | c ≤ 5/9 | [`sSup_le_five_ninths`](Lab/Erdos757/FiveNinths.lean) | construction posted online (Oct 2026); Lean proof for every size is ours |
+| [Erdős #757](https://www.erdosproblems.com/757): the largest c such that every finite (4,5)-set A ⊂ ℝ has a Sidon subset of size ≥ c·\|A\| | c ≤ 5/9 | [`sSup_le_five_ninths`](Lab/Erdos757/FiveNinths.lean) | reader submission 7bkzb8 on erdosproblemaday.com (Oct 2026, not peer reviewed); Lean proof for every size is ours |
 | | c ≤ 4/7 | [`sSup_le_four_sevenths`](Lab/Erdos757/FourSevenths.lean) | Ma–Tang, [arXiv:2602.23282](https://arxiv.org/abs/2602.23282) |
 | | c < 3/5 (via c ≤ 7/12) | [`erdos_757_upperBound`](Lab/Erdos757/UpperBound.lean) | Gyárfás–Lehel (1995) |
-| | c ≥ 9/17, with no assumptions: includes a full Lean proof of the Henning–Yeo (2021) hypergraph transversal theorem it relies on | [`erdos_757_lowerBound`](Lab/Erdos757/Unconditional.lean) | Ma–Tang; Henning–Yeo |
+| | c ≥ 9/17, with no assumptions: includes a full Lean proof of the Henning–Yeo (2021) hypergraph transversal bound it relies on (their Theorem 7, via the bound in their Theorem 6) | [`erdos_757_lowerBound`](Lab/Erdos757/Unconditional.lean) | Ma–Tang; Henning–Yeo |
 | Davenport constant: van Emde Boas–Kruyswijk conjecture D(C_n^r) = r(n−1)+1 (1969) | false for C_6^15 | [`not_vanEmdeBoasKruyswijk`](Lab/Davenport/VanEmdeBoasKruyswijk.lean) | Gao–Geroldinger–Wang–Zeng, [arXiv:2611.24775](https://arxiv.org/abs/2611.24775) |
 | | false for all n ≡ 2 (mod 4), n ≥ 6, r ≥ 5n/2 | [`vEBK_fails`](Lab/Davenport/GeneralFamily.lean) | Gao–Geroldinger–Wang–Zeng |
 | | D(C_n^r) ≥ r(n−1)+1+⌊(r−1)/(5k−1)⌋ for n = 2k ≡ 2 (mod 4), n ≥ 6, every r (their Theorem 1.1 in full) | [`ggwz_floor`](Lab/Davenport/FloorTerm.lean) | Gao–Geroldinger–Wang–Zeng |

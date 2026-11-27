@@ -110,7 +110,8 @@ Words we use:
   earlier proof had to assume (about 7,700 lines of Lean). Along the way we found and fixed two small
   issues in the published proof (see the plan notes). So both best known bounds for #757,
   9/17 ≤ c ≤ 5/9, are now machine-checked. As far as we know this is the first formal proof of the
-  Henning–Yeo theorem. Standard axioms only, kernel re-check passed. Internal audit: pass with notes.
+  Henning–Yeo bound (their Theorem 7, and the inequality of their Theorem 6; the strict case of
+  Theorem 6 is proved only in a corrected, weaker form, see the plan notes). Standard axioms only, kernel re-check passed. Internal audit: pass with notes.
   Proof: PR #27,
   [Unconditional.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Erdos757/Unconditional.lean),
   [Lab/HenningYeo/](https://github.com/kyleglsn22-spec/open-problems-lab/tree/main/Lab/HenningYeo).
