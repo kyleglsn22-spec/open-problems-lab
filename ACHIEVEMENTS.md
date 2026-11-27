@@ -219,3 +219,11 @@ Words we use:
   internal vertices is the fewest any counterexample can have. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [T3.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LocalAntimagic/T3.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/local-antimagic.md).
+- **2026-11-27, (merge time TBD) ET.** We Lean-checked the disproof of the **Chung–Graham–Spiro gap-set
+  conjecture**. Split the whole numbers from 2 up into two lists ("down" and "up") by a Fibonacci rule; the
+  conjecture said the two lists always have the same spacing patterns. Aliabadi (arXiv:2609.04473, Sept 2026)
+  showed that five consecutive "up" numbers can span exactly 9 but five consecutive "down" numbers never can.
+  Our Lean proof is fully self-contained: it re-proves the older results the paper cites, and replaces two of
+  them with a new five-shift argument. Standard axioms only, kernel re-check passed.
+  Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/fib-walk-gaps.md).
