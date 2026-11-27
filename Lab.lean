@@ -61,5 +61,8 @@ import Lab.ClawFree2.Counterexample
 import Lab.PartialList.General
 import Lab.BlockEquitable.Counterexample
 import Lab.BlockEquitable.Family
+import Lab.LocalAntimagic.Basic
+import Lab.LocalAntimagic.Caterpillar
+import Lab.LocalAntimagic.Family
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
