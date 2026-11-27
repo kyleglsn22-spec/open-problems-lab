@@ -182,3 +182,11 @@ Words we use:
   only, kernel re-check passed. Internal audit: pass.
   Proof: [General.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/General.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
+- **2026-11-27, about 12:30–1 AM ET.** We Lean-checked the disproof of the **gap-one conjecture for equitable
+  colouring of block graphs** (Dybizbański, Furmańczyk and Mkrtchyan, 2024; checked by them by computer for all
+  block graphs up to 19 vertices). An equitable colouring is a proper colouring where all colour groups have almost
+  the same size. The conjecture said a simple lower bound L(G) is always within one of the true minimum number of
+  colours. Lauri (arXiv:2608.14517, Aug 2026) found tree-like graphs where it is off by more; we checked the
+  smallest graph in his family: 32 vertices, L = 7, but 9 colours are needed. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BlockEquitable/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/block-equitable.md).
