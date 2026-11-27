@@ -165,6 +165,14 @@ Words we use:
   Internal audit: pass.
   Proof: [Connected.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/PartialList/Connected.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/partial-list-colouring.md).
+- **2026-11-26, about 11:30 PM ET (2026-11-27 UTC).** We Lean-checked the **second of the two smallest
+  counterexamples** to the claw-free Schur-positivity conjecture. A computer census (Prajapati 2026) found exactly
+  two bad graphs on 12 vertices; we had already checked the first (coefficient −64). This one has 21 edges and
+  coefficient −40, and Wang, Zhang and Zhao showed it is also the smallest counterexample when graphs are ordered
+  by edge count first (both published computer results, not re-checked by us). With this, both counterexamples
+  from that census are machine-verified. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/ClawFree2/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/claw-free-schur.md).
 - **2026-11-26, about 11 PM ET.** We showed the **Partial List Colouring Conjecture fails far more
   widely than was known**. Noel's counterexample covered one case only (graphs needing 3 colours, lists
   of 2 colours). We generalised his construction to every case of the form "graphs needing k colours,

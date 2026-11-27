@@ -56,6 +56,7 @@ import Lab.GMR.Counterexample
 import Lab.ClawFree.Counterexample
 import Lab.PartialList.Counterexample
 import Lab.PartialList.Connected
+import Lab.ClawFree2.Counterexample
 import Lab.PartialList.General
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
