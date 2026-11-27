@@ -24,7 +24,7 @@ graphs on at most 19 vertices by computer.
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| BEQ-1 | Lean: `G_{2,7}` (32 vertices: a `K_7` `Q ∋ v, w, c`, a pendant `u` at `c`, two `K_7` blocks hanging at `v` and two at `w`) is a connected block graph with `ω = 7`, `α_min = 4`, `L = 7` and `χ_= = 9`; hence `¬ GapOneConjecture` | Kyle + Claude, 2026-11-27 | pending audit | `not_gapOneConjecture`, `exists_counterexample` in `Lab/BlockEquitable/Counterexample.lean`; data and brute-force cross-check `explorer/block-equitable/gen.py` |
+| BEQ-1 | Lean: `G_{2,7}` (32 vertices: a `K_7` `Q ∋ v, w, c`, a pendant `u` at `c`, two `K_7` blocks hanging at `v` and two at `w`) is a connected block graph with `ω = 7`, `α_min = 4`, `L = 7` and `χ_= = 9`; hence `¬ GapOneConjecture` | Kyle + Claude, 2026-11-27 | audited (internal audit PASS, PR 19 review) | `not_gapOneConjecture`, `exists_counterexample` in `Lab/BlockEquitable/Counterexample.lean`; data and brute-force cross-check `explorer/block-equitable/gen.py` |
 
 Statement notes for the Auditor:
 - `IsBlockGraph G` (ours): every vertex set `S` whose induced subgraph is connected and stays connected after
