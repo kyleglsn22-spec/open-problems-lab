@@ -78,3 +78,10 @@ Scanned arXiv disproofs from August to November 2026 against the AFTD knowledge 
 | 6 | Weighted union-closed variant | arXiv 2609.25101 | No | Asymptotic; hard list |
 
 Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked by its authors.
+
+## Round 5 leads (2026-11-27, hard slot)
+
+| # | Lead | Source | Status |
+| --- | --- | --- | --- |
+| 1 | Partial List Colouring for lists 2+ colours short (`ℓ ≤ k − 2`, `ℓ ∤ k`; first cases `(5,2)`, `(5,3)`) | raised by PLC-3 (ours) | Attempted. Noel-type terminal designs provably fail (ledger/partial-list-colouring.md, Dead ends). Needs a new idea; parked |
+| 2 | List Total Colouring: counterexamples for every maximum degree `Δ ≥ 3`, or a gap `χ''_ℓ ≥ χ'' + 2` (Noel asks whether `χ''_ℓ ≤ χ'' + 1` always; gap 3 would disprove the List Edge Colouring Conjecture) | Noel, arXiv 2609.38417, closing remarks | Every-Δ half DONE (LTC-2, Lean, all Δ ≥ 3). Gap ≥ 2 still open: next hard item |

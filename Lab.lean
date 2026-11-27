@@ -52,6 +52,7 @@ import Lab.Davenport.VanEmdeBoasKruyswijk
 import Lab.Davenport.GeneralFamily
 import Lab.Davenport.FloorTerm
 import Lab.ListTotal.Counterexample
+import Lab.ListTotal.General
 import Lab.GMR.Counterexample
 import Lab.ClawFree.Counterexample
 import Lab.PartialList.Counterexample
