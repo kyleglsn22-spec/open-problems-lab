@@ -72,3 +72,9 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.LocalAntimagic.family
 #print axioms OpenProblemsLab.LocalAntimagic.T3
 #print axioms OpenProblemsLab.LocalAntimagic.not_leafConjecture_T3
+#print axioms OpenProblemsLab.FibWalk.nine_mem_up_not_down
+#print axioms OpenProblemsLab.FibWalk.not_gapSet_conjecture
+#print axioms OpenProblemsLab.FibWalk.nine_not_mem_down
+#print axioms OpenProblemsLab.FibWalk.nine_mem_up
+#print axioms OpenProblemsLab.FibWalk.exists_rep
+#print axioms OpenProblemsLab.FibWalk.shift

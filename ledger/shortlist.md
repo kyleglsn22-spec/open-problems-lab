@@ -72,7 +72,7 @@ Scanned arXiv disproofs from August to November 2026 against the AFTD knowledge 
 | --- | --- | --- | --- | --- |
 | 1 | Gap-one conjecture for equitable colouring of block graphs (Dybizbański–Furmańczyk–Mkrtchyan 2024) is false | Lauri, arXiv 2608.14517 | No (not on AFTD) | **Done (BEQ-1):** Lean disproof for `G_{2,7}`; see ledger/block-equitable.md. Whole family `G_{d,k}` (unbounded gap) also done (BEQ-2). Open lead from the paper: a multiplicative bound `χ_= ≤ C·L` (hard) |
 | 2 | Local antimagic chromatic number, leaf conjecture (`χ_la(T) ≤ ℓ(T) + 2` for trees) | Brondani–França, arXiv 2610.22783 | No | **Done (LA-1):** Lean proof of their Theorem 5.2 (r ≥ 2) and Corollary 5.3; see ledger/local-antimagic.md. Theorem 5.2 (caterpillars `H_{r,t}`, every labelling antimagic, `χ_la = ℓ + r`) |
-| 3 | Gap sets in the CGS setting | arXiv 2609.04473 | No | Needs CGS Prop. 4.2 plus a counting argument; medium |
+| 3 | Gap sets in the CGS setting | arXiv 2609.04473 | No | **Done (FW-1):** self-contained Lean proof of `9 ∈ U_4 \ D_4`; see ledger/fib-walk-gaps.md. Open lead from the paper: is `D_3 = U_3`? (hard list) |
 | 4 | Oxley's circuit–cocircuit question, via the Golay matroid | arXiv 2610.06033 | No | Heavy: Mathlib has no representable matroids |
 | 5 | Dominating Hadwiger conjecture | arXiv 2609.35361 | No | Probabilistic; hard list |
 | 6 | Weighted union-closed variant | arXiv 2609.25101 | No | Asymptotic; hard list |
@@ -93,3 +93,6 @@ Dropped: Wormald's conjecture disproof (arXiv 2610.00086), already Lean-checked 
   forces `C ≥ 9/7`, and `C ≥ 5/4` asymptotically. A proof or a family beating `9/7` would be new.
   Attempted 2026-11-27: an elementary 7-vertex tree already gives `C ≥ 3/2`; Lauri-type obstructions look capped;
   searches found nothing above 3/2 (ledger/block-equitable.md). Parked.
+- **`D_3 = U_3` for slow Fibonacci walks** (open question in Aliabadi, arXiv 2609.04473): do the 3-step gap sets of
+  down- and up-integers agree? Numerically yes. Our FW-1 machinery (threshold lemma, general shift lemma, interval case
+  analysis) might decide which gaps occur; a proof would be new. Also open: does `D_ℓ ≠ U_ℓ` for infinitely many `ℓ`?
