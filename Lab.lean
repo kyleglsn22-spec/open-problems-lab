@@ -64,5 +64,6 @@ import Lab.BlockEquitable.Family
 import Lab.LocalAntimagic.Basic
 import Lab.LocalAntimagic.Caterpillar
 import Lab.LocalAntimagic.Family
+import Lab.LocalAntimagic.T3
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/

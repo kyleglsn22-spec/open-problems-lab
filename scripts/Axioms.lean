@@ -70,3 +70,5 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.LocalAntimagic.not_leafConjecture
 #print axioms OpenProblemsLab.LocalAntimagic.no_constant
 #print axioms OpenProblemsLab.LocalAntimagic.family
+#print axioms OpenProblemsLab.LocalAntimagic.T3
+#print axioms OpenProblemsLab.LocalAntimagic.not_leafConjecture_T3

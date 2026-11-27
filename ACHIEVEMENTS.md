@@ -214,3 +214,8 @@ Words we use:
   infinite family. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Family.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LocalAntimagic/Family.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/local-antimagic.md).
+- **2026-11-27, about 4:15 AM ET.** We also Lean-checked the **smallest counterexample** in the same paper: a
+  43-vertex tree with 40 leaves that needs 43 different sums, three more than the number of leaves. Three
+  internal vertices is the fewest any counterexample can have. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [T3.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LocalAntimagic/T3.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/local-antimagic.md).
