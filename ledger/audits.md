@@ -147,6 +147,25 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-27 · open-problems-lab PR #30 (sunflowers S_n disprove the Lalou–Mbarek–Skender–Togni bipanchromatic conjecture, Novaković–Jojić [BP-1], `Lab/Bipanchromatic/Sunflower.lean`) · **pass, conditional on CI green**
+
+Internal audit, outside review welcome. Reviewed at a981afe.
+
+- **Statement.**
+  - `IsPanchromatic`, `uniqueVerts`, `chiP` and `chiB` (via `sSup`), `alphaK` (via `sInf`) and `alpha = alphaK chiP` match the paper's Definitions 1–3 and its `α = α_{χ_P}`.
+  - For S_n every set is nonempty and bounded, so each value is a genuine max or min.
+  - `Conjecture` adds the hypotheses |V| ≥ 2, E ≠ ∅ and hyperedges of size ≥ 2. These only shrink the class of hypergraphs, so the negation is stronger.
+- **Proof.**
+  - Re-derived by hand: injectivity on each hyperedge forces all s_i to be unique and all p_i to share a colour.
+  - The colouring {s_i, p_i} ↦ i is bipanchromatic, and χ_B ≤ |V|/2.
+- **Independent recheck.** Brute force over all colourings gives:
+  - S₃: χ_P = 4, α = 3, χ_B = 3, against a conjectured 2.
+  - S₄: χ_P = 5, α = 4, χ_B = 4, against a conjectured 3.
+- **Trust base.** Grep clean, with no `decide` and no `set_option`; the axiom lines are added. Not built locally.
+- **Nit.** arXiv calls this Theorem 1, while the docstring says Theorem 3.1.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #28 (Aliabadi's 9 ∈ U₄ \ D₄, Chung–Graham–Spiro gap-set conjecture false [FW-1], `Lab/FibWalk/`) · **pass, conditional on CI green + merge time filled in**
 
 Internal audit, outside review welcome. Reviewed at a443b66.
