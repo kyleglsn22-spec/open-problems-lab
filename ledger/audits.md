@@ -920,3 +920,19 @@ In-house Auditor (independent subagent).
 - Own brute force: k = 3, 4, 5 give 25, 50, 96 edges, min codegree 3 = bound, 0 tight Hamiltonian cycles.
 - Notes (fixed in this PR): minimality of `H₃` attributed to Ferudun's search; "modeled on Lemma 2.4" wording; Zhang
   citation clarified; "Internal audit" line.
+
+## 2026-11-28 · Claim GHT-1 (Goddard–Henning Conjecture 32, Kwon–Park–Sano's 36-vertex triangulation) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: planar triangulation = straight-line planar drawing (AB-1's `StraightLinePlanar`) plus exactly
+  `3n − 6` edges, `n ≥ 4`; conclusion in the partition form, implied by the original colouring form. Not vacuous.
+- Graph: rebuilt `B` from the paper's TikZ edge list of `G₁₄` and the Section 3 gluing; identical to `edges`
+  (36 vertices, 102 edges). The integer drawing re-checked exactly (no crossings or overlaps).
+- Logic of `partnerColoring_of_partition`, `lemma31` (hypotheses parsed: exactly the 36 edges of `G₁₄`, `N(v₃)`,
+  `N(v₅)`, `N(v₉)`, partner edge `v₀v₂`), `nbr_i_j`, `no_partner_coloring_B`, `triangle`, drawing proof,
+  `card_edgeFinset_B` checked. `set_option synthInstance.*` in Lemma.lean only raises instance-search limits.
+- Trust surface clean; axioms propext, Classical.choice, Quot.sound only.
+- Own brute force: Lemma 3.1 over all 4^14 colourings of `G₁₄`; `B` has 41,472 proper 4-colourings, 0 partner
+  colourings, and 0 colourings in partition form (tested directly).
+- Notes (fixed in this PR): ACHIEVEMENTS says only `n = 36` is formalized, "Internal audit" line, clearer wording;
+  audit script docstring corrected.

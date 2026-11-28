@@ -119,3 +119,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Bondage.dominationNumber_eq
 #print axioms OpenProblemsLab.TightHamilton.not_codegreeConjecture
 #print axioms OpenProblemsLab.TightHamilton.H_counterexample
+#print axioms OpenProblemsLab.TotalDomination.not_goddardHenningConjecture
+#print axioms OpenProblemsLab.TotalDomination.B_counterexample
+#print axioms OpenProblemsLab.TotalDomination.straightLinePlanar_B
