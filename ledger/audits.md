@@ -147,6 +147,18 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-28 · open-problems-lab PR #43 (Bougard–Joret conjecture, first regime, disproof at (7,3,4) [BJ-1], `Lab/BougardJoret/Basic.lean`) · **pass, conditional on green `build` at 64bd260 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at 64bd260.
+
+- **Statement:** checked against the original Conjecture 1 (Bougard–Joret, J. Graph Theory 58 (2008), Section 6, author-hosted preprint): hypotheses n ≥ 2α, n ≥ α+k, α ≥ 2, k ≥ 3 and f = ⌈nk/2⌉ for n ≤ kα match `BougardJoretFirstRegime` (attainment plus lower bound). `KConnected` is standard; `indepNum` is the stability number. No amendment found (Das–Gupta 2608.18828 v1 only; Wang–Wu 2022 and Liu–Ning 2026 restate it unchanged).
+- **Proof:** read in full (min degree ≥ k; 14 edges force 4-regular; independent triple complete to the rest; G − T is a perfect matching, disconnected).
+- **Independent recheck:** exhaustive Python over labelled 7-vertex graphs: no 4-connected graph with α = 3 has 14 edges (465 with min degree ≥ 4 checked); 490 such graphs with 15 edges, so f(7,3,4) = 15.
+- **Trust base:** no sorry/axiom/native_decide/decide/set_option; `#print axioms` added.
+- **Required changes:** add the BJ-1 entry to ACHIEVEMENTS.md.
+
+---
+
 ## 2026-11-28 · open-problems-lab PR #42 (Mizzi unstable-graph cycle conjecture disproof [UG-1], `Lab/Unstable/Mizzi.lean`) · **pass for the Lean content, conditional on green `build` at c628475 and documentation changes**
 
 Internal audit, outside review welcome. Reviewed at c628475.
