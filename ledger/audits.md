@@ -873,6 +873,20 @@ In-house Auditor (independent subagent).
 - Own brute force `k = 1..6` (exact fractions): μ* = k, H = 2k/(k+1) + k/2, counterexample iff k ≥ 4.
 - Optional note: the 9-vertex minimality is Gupta's computation, not proved in Lean (docstring attributes it).
 
+## 2026-11-28 · Claim BOND-1 (Teschner's bondage-number conjecture, Yavari's 18-vertex graph) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `IsDominating`, `dominationNumber`, `bondageNumber` (strict increase of γ), `TeschnerConjecture`
+  (nonempty edge set, ℚ comparison with `maxDegree`) faithful; the `sInf` sets are shown nonempty, so nothing rests on
+  `sInf ∅ = 0`. Edge list matches the paper; `nb` checked by `mem_nb`; certificate data `Ls` re-validated by `validL_eq`.
+- Logic of `isDominating_of_survB`, `dominationNumber_delete_le` (repeated sorted indices cover |F| < 4),
+  `seven_le_dominationNumber_F5`, `bondageNumber_eq` checked.
+- Trust surface clean; axioms propext, Classical.choice, Quot.sound only; leanchecker exit 0 on sampled modules.
+- Own brute force: cubic, connected, bipartite; γ = 6 (297 minimum sets); γ(G − F) ≤ 6 for all 17,550 four-edge F;
+  γ(G − F5) = 7.
+- Notes (fixed in this PR): comment explaining `GPart0`'s import of `QPart19` (single import chain for CI memory);
+  `explorer/bondage/gen_quads.py` committed with the Lean files.
+
 ## 2026-11-28 · open-problems-lab PR #53 (FW-4: `D_8 ≠ U_8`, `D_9 ≠ U_9`, `Lab/FibWalk/UpOnly/`) · **pass with notes**
 
 In-house Auditor (independent subagent).
