@@ -74,5 +74,7 @@ import Lab.Goemans.Unsplittable
 import Lab.Unstable.Mizzi
 import Lab.BougardJoret.Basic
 import Lab.HinrichsVybiral.Basic
+import Lab.FibWalk.Three.Main
+import Lab.FibWalk.Seven.Main
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
