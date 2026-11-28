@@ -98,3 +98,9 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.BougardJoret.fifteen_le_card_edges
 #print axioms OpenProblemsLab.HinrichsVybiral.not_hinrichsVybiralConjecture
 #print axioms OpenProblemsLab.HinrichsVybiral.f_posDef
+#print axioms OpenProblemsLab.FibWalk.gapSet_three
+#print axioms OpenProblemsLab.FibWalk.down_gapSet_three_eq_up
+#print axioms OpenProblemsLab.FibWalk.shift_up
+#print axioms OpenProblemsLab.FibWalk.gapSet_seven_ne
+#print axioms OpenProblemsLab.FibWalk.seventeen_mem_down
+#print axioms OpenProblemsLab.FibWalk.seventeen_not_mem_up
