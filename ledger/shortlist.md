@@ -132,8 +132,8 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 4 | Domination vs edge domination in cubic graphs (50 vertices, `γ = 16 > 15 = γ_e`) | 2609.10783 | No | Checked 2026-11-28: `γ ≥ 16` needs a ~500k-node branch-and-bound even with fractional pruning (paper: 2^20 enumeration or 893k-node tree); too heavy for kernel `decide` without a better certificate |
 | 5 | Harper-norm silver-mean conjecture (explicit rational point) | 2611.23265 | No | Checked 2026-11-28: needs operator norms on `ℓ²(ℤ)` and the Gerhold–Shalit reduction `E(p/q) = λ_max(H_{p/q})` for every phase; too heavy for the easy slot |
 | 6 | Hinrichs–Vybíral conjecture on positive definite functions (7-dim explicit example) | Vybíral 2609.21733 | No | **Done (HV-1):** Lean disproof, audited; see ledger/hinrichs-vybiral.md |
-| 7 | `D_3 = U_3` for slow Fibonacci walks (taken from the hard list, but already proved) | Mao–Zhao 2608.19886, Thm 1.2 | No (AFTD: not listed) | **In progress (FW-2):** Lean proof; see ledger/fib-walk-gaps.md |
-| 8 | (hard slot) `D_ℓ ≠ U_ℓ` for more `ℓ` | ours | n/a | **New, in progress (FW-3):** Lean proof of `D_7 ≠ U_7`; certified evidence up to `ℓ = 24` |
+| 7 | `D_3 = U_3` for slow Fibonacci walks (taken from the hard list, but already proved) | Mao–Zhao 2608.19886, Thm 1.2 | No (AFTD: not listed) | **Done (FW-2):** Lean proof, audited; see ledger/fib-walk-gaps.md |
+| 8 | (hard slot) `D_ℓ ≠ U_ℓ` for more `ℓ` | ours | n/a | **Done (FW-3, new):** Lean proof of `D_7 ≠ U_7`, audited; certified evidence up to `ℓ = 24` |
 
 Hard slot (2026-11-28): Mizzi's current conjecture (asymmetric unstable graphs) was attempted. There is no asymmetric unstable graph on ≤ 9 vertices (exhaustive search), and random two-fold-automorphism search produced no asymmetric graphs. Parked until `geng` is available for n = 10; see explorer/unstable-asymmetric/.
 

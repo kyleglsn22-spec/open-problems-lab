@@ -289,3 +289,16 @@ Words we use:
   passed. Internal audit: pass.
   Proof: [Basic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/HinrichsVybiral/Basic.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/hinrichs-vybiral.md).
+- **2026-11-28, about 1:15 AM ET.** We found and Lean-proved a **new fact about slow Fibonacci walks**: the 7-step
+  gap sets of "down" and "up" integers differ. Chung, Graham and Spiro (2019) split the whole numbers into two
+  families and asked whether the two families have the same spacing patterns. Published work answered this only for
+  patterns of up to 4 steps (no at 4 steps, yes at 3). We show the answer is also no at 7 steps: eight consecutive
+  down-integers can span exactly 17 (9 to 26), but eight consecutive up-integers never can. As far as we know this is
+  the first case beyond 4 steps, and computer checks suggest many more. Standard axioms only, kernel re-check
+  passed. Internal audit: pass.
+  Proof: [Seven/Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/Seven/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/fib-walk-gaps.md).
+- **2026-11-28, about 1:15 AM ET.** We Lean-checked **Mao and Zhao's theorem** (arXiv:2608.19886) that the 3-step
+  gap sets of down- and up-integers are equal, both {3, 4, 5, 6, 7, 8, 10, 11, 13}, with our own proof. Standard
+  axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Three/Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/Three/Main.lean).
