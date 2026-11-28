@@ -117,3 +117,9 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Bondage.not_teschnerConjecture
 #print axioms OpenProblemsLab.Bondage.bondageNumber_eq
 #print axioms OpenProblemsLab.Bondage.dominationNumber_eq
+#print axioms EdmondsJohnson.not_hasEJProperty_A6
+#print axioms EdmondsJohnson.not_hasEJProperty_A6plus
+#print axioms EdmondsJohnson.not_hasEJProperty_A7
+#print axioms EdmondsJohnson.isTHM_A6
+#print axioms EdmondsJohnson.isTHM_A6plus
+#print axioms EdmondsJohnson.isTHM_A7

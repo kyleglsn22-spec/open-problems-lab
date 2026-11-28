@@ -13,5 +13,6 @@ provers' code. Verdicts are in `../ledger/audits.md`.
 | `c37_own_cert.py` | Claim C37-1 with the Auditor's own 17-multiplier certificate | stdlib |
 | `c37_verify_pr5_cert.py <cert.json>` | PR 5's certificate file, using the Auditor's own forms | stdlib |
 | `c37_find_own_cert.py` | How the multipliers in `c37_own_cert.py` were found (LP, then rationalised) | scipy |
+| `edmonds_johnson_check.py` | EJ-1..3: `z ∈ P`, the paper's slack/mod-2 closure criterion, exact CG-cut check on a box of `w`, integer-hull separation, and THM of `A₆`, `A₆⁺`, `A₇` by exact inverses | stdlib |
 
 Run with `python3 -I <script>`.
