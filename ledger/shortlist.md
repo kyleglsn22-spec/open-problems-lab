@@ -145,9 +145,9 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 
 | # | Candidate | Source | Formalized elsewhere? | Plan |
 | --- | --- | --- | --- | --- |
-| 1 | Henning–Yeo identifying vertex cover bound (family `H_{t,r}`, smallest has 8 vertices) | Wang 2608.19455 | No | **IDC-1:** Lean disproof of the whole family, every `Δ ≥ 4`; see ledger/identifying-vertex-cover.md |
+| 1 | Henning–Yeo identifying vertex cover bound (family `H_{t,r}`, smallest has 8 vertices) | Wang 2608.19455 | No | **Done (IDC-1, PR 51):** Lean disproof of the whole family, every `Δ ≥ 4`; see ledger/identifying-vertex-cover.md |
 | 2 | Erveš–Tepeh conjectures on (1,2)-domination vs induced cycles in cubic graphs (counterexamples on 18–22 vertices, family `H(k)`) | Knor–Sedlar–Škrekovski 2608.17851 | No | Candidate |
-| 3 | TxGraffiti saturation number vs harmonic index (friendship graph `F_4`, 9 vertices) | Gupta 2606.15761 (after Bıyıkoğlu) | No | Candidate (easy) |
+| 3 | TxGraffiti saturation number vs harmonic index (friendship graph `F_4`, 9 vertices) | Gupta 2606.15761 (after Bıyıkoğlu) | No | **SAT-1:** Lean disproof, all `F_k`, `k ≥ 4`; see ledger/saturation-harmonic.md |
 
 Also seen: Wormald's linear-forest conjecture counterexample 2610.00086 (authors' own Lean proof; skip); Alon–Krivelevich
 choosability 2610.42094 (AFTD has it; skip).
