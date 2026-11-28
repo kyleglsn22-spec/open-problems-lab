@@ -22,7 +22,7 @@ status: first regime refuted (formalized); second regime open
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| BJ-1 | Lean: every 4-connected graph on 7 vertices with an independent 3-set has at least 15 edges, so the first regime of the Bougard–Joret conjecture fails at `(7, 3, 4)` | Kyle + Claude (Opus 5.5), 2026-11-28 | proved (awaiting internal audit) | `fifteen_le_card_edges`, `not_bougardJoretFirstRegime` in `Lab/BougardJoret/Basic.lean` |
+| BJ-1 | Lean: every 4-connected graph on 7 vertices with an independent 3-set has at least 15 edges, so the first regime of the Bougard–Joret conjecture fails at `(7, 3, 4)` | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass | `fifteen_le_card_edges`, `not_bougardJoretFirstRegime` in `Lab/BougardJoret/Basic.lean` |
 
 Statement notes for the Auditor:
 - `KConnected G k`: more than `k` vertices, and `G.induce Sᶜ` is connected for every vertex set `S` with `|S| < k`
