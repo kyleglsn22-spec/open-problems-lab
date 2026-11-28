@@ -28,10 +28,10 @@ AFTD (checked 2026-11-28) lists only Question 6.1; no formalization of the paper
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| EJ-1 | Lean: `A₆` does not have the EJ property (Del Pia, Prop. 3.3, with the paper's data) | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, audit pending | `not_hasEJProperty_A6` in `Lab/EdmondsJohnson/A6.lean` |
-| EJ-2 | Lean: `A₆` is THM (Prop. 2.4) | same | proved, audit pending | `isTHM_A6` in `Lab/EdmondsJohnson/THM6/Main.lean` |
-| EJ-3 | Lean: `A₆⁺` and `A₇` do not have the EJ property and are THM (the paper omits these proofs; the data `b, c, l, u, z` are ours) | same | proved, audit pending | `not_hasEJProperty_A6plus`, `not_hasEJProperty_A7`, `isTHM_A6plus`, `isTHM_A7` |
-| EJ-4 | Computer (exact, not Lean): the minors of `A₆`, `A₆⁺`, `A₇` form 3,388, 4,874 and 5,156 classes up to row/column permutation and sign. None is `A₃` or `A₄`, and none of the three matrices is a minor of another. All entries stay in `{0, ±1, ±2}` | same | computed | `explorer/edmonds-johnson/minors2.py` (and the slower full-canonical `minors.py`, which reproduces 3,388 for `A₆`) |
+| EJ-1 | Lean: `A₆` does not have the EJ property (Del Pia, Prop. 3.3, with the paper's data) | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass with notes | `not_hasEJProperty_A6` in `Lab/EdmondsJohnson/A6.lean` |
+| EJ-2 | Lean: `A₆` is THM (Prop. 2.4) | same | proved, internal audit pass with notes | `isTHM_A6` in `Lab/EdmondsJohnson/THM6/Main.lean` |
+| EJ-3 | Lean: `A₆⁺` and `A₇` do not have the EJ property and are THM. These are Del Pia's claims (§6, stated without proof); ours are the first proofs we know of, with our own data `b, c, l, u, z` | same | proved, internal audit pass with notes | `not_hasEJProperty_A6plus`, `not_hasEJProperty_A7`, `isTHM_A6plus`, `isTHM_A7` |
+| EJ-4 | Computer (exact, not Lean): the minors of `A₆`, `A₆⁺`, `A₇` form 3,388, 4,874 and 5,156 classes up to row/column permutation and sign (counting the empty matrix; 3,387 / 4,873 / 5,155 without it, as the Auditor's own search found). None is `A₃` or `A₄`, and none of the three matrices is a minor of another. All entries stay in `{0, ±1, ±2}` | same | computed | `explorer/edmonds-johnson/minors2.py` (and the slower full-canonical `minors.py`, which reproduces 3,388 for `A₆`) |
 
 ## How the Lean proof avoids LP duality
 The paper shows that its point `z` is in the Chvátal closure with the Appa–Kotnyek description of the closure of
@@ -39,9 +39,10 @@ THM systems by `{0, ½}`-cuts, which rests on LP duality (not in Mathlib). We us
 (`mem_chvatalClosure_of_witness` in `Basic.lean`): a CG cut `w·x ≤ ⌊δ⌋` holds at `z` as soon as some point
 `v ∈ P` has `w·v ≥ ⌈w·z⌉`, since then `δ ≥ w·v ≥ ⌈w·z⌉`, an integer. We take `v` among vertices of `P` (all
 half-integral), so the statement "for every integral `w` some vertex has `w·v ≥ ⌈w·z⌉`" is about integers only.
-A would-be counterexample `w` satisfies `w·(v − z) < 2/3 − 1/2` for every vertex `v`, which bounds it to a box of
+A would-be counterexample `w` satisfies `w·(v − z) ≤ 2/3 − 1/2` for every vertex `v`, which bounds it to a box of
 9 points (18 for `A₇`); `omega` derives the bounds and checks each point. This needs no structure of `A` beyond
-the finitely many vertices, so it works for any instance where the point is in the closure.
+the vertices, so it applies to other bounded instances whose vertices share a small denominator and whose point
+`z` is interior (so that the box is finite), as long as the point really is in the closure.
 
 Statement notes for the Auditor:
 - `poly`, `chvatalClosure` (all `w ∈ ℤⁿ`, all real `δ` with `w·x ≤ δ` valid on `P`), `integerHull`

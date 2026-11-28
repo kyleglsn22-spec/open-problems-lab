@@ -12,6 +12,6 @@ Need Python 3 with numpy, scipy and sympy. Run from this folder.
 | `minors.py` | Closure of `A₆` under the minor operations, up to row/column permutation and sign (full canonical form; slow). |
 | `minors2.py A6` / `A6p` / `A7` | Same with a faster canonical form (permutes only within invariant classes); reports whether `A₃, A₄, A₆, A₆⁺, A₇` occur. |
 
-Results of `minors2.py` (2026-11-28): `A₆` 3,388 classes, `A₆⁺` 4,874, `A₇` 5,156; entries stay in
+Results of `minors2.py` (2026-11-28): `A₆` 3,388 classes, `A₆⁺` 4,874, `A₇` 5,156 (each including the empty matrix); entries stay in
 `{0, ±1, ±2}`; none contains `A₃` or `A₄`, and none of `A₆, A₆⁺, A₇` is a minor of another. `minors.py`
 reproduces 3,388 for `A₆`.
