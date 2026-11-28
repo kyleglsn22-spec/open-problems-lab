@@ -280,3 +280,12 @@ Words we use:
   needed. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Basic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BougardJoret/Basic.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bougard-joret.md).
+- **2026-11-27, about 11:10 PM ET.** We Lean-checked the disproof of the **Hinrichs–Vybíral conjecture** (2011) on
+  "positive definite" functions, which measure similarity between points in space and are used in numerical
+  integration. The conjecture claimed every such function (nonnegative, bounded, equal to 1 at the origin) satisfies
+  a certain lower bound for any set of points and weights. Vybíral (arXiv:2609.21733) found a function on
+  7-dimensional space built from cosines where 8 points break the bound (4.4 versus the promised 4.5). Lean checks
+  that this function has every required property and that the bound fails. Standard axioms only, kernel re-check
+  passed. Internal audit: pass.
+  Proof: [Basic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/HinrichsVybiral/Basic.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/hinrichs-vybiral.md).
