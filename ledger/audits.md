@@ -157,6 +157,7 @@ Internal audit, outside review welcome. Reviewed at c628475.
 - **Independent recheck:** own Python/networkx: connected, non-bipartite, vertex-determining; |Aut(G)| = 2, |Aut(CDC)| = 8 > 4; cycle lengths 5, 5, 6.
 - **Trust base:** no sorry/axiom/native_decide/set_option; `#print axioms` added.
 - **Required changes:** docs, ledger and ACHIEVEMENTS must say the refuted statement is the v1/v2 conjecture, since amended to asymmetric graphs (not refuted); drop or fix the "holds for ≤ 9 vertices" row and don't call the graph smallest.
+- **Follow-up (792008d):** all required changes made (renamed to `MizziConjectureV1`, docs cite v1/v2 and the amendment, row dropped). Verdict now: pass, conditional only on green `build`.
 
 ---
 
