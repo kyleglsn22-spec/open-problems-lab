@@ -318,3 +318,13 @@ Words we use:
   Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Harmonic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Saturation/Harmonic.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/saturation-harmonic.md).
+- **2026-11-28, about 5:30 AM ET.** We Lean-checked **Yavari's disproof of Teschner's bondage-number conjecture**
+  (arXiv:2609.04257). The "bondage number" of a network is how many links you must cut before you need more
+  "guard" vertices to watch every vertex (each guard watches itself and its neighbours). Teschner conjectured in
+  1995 that this is at most 1.5 times the largest number of links at any vertex. Yavari's network has 18 vertices,
+  3 links at each, and needs 6 guards. Lean checks that cutting any 4 links still leaves 6 guards enough, while
+  cutting a certain 5 forces a 7th guard. So 5 cuts are needed, more than the 4.5 the conjecture allows.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Bondage/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bondage-number.md).
+

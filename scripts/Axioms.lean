@@ -112,3 +112,6 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Saturation.F_counterexample
 #print axioms OpenProblemsLab.Saturation.saturationNumber_F
 #print axioms OpenProblemsLab.Saturation.harmonicIndex_F
+#print axioms OpenProblemsLab.Bondage.not_teschnerConjecture
+#print axioms OpenProblemsLab.Bondage.bondageNumber_eq
+#print axioms OpenProblemsLab.Bondage.dominationNumber_eq
