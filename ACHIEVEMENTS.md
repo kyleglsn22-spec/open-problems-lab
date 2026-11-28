@@ -378,3 +378,12 @@ Words we use:
   [A6plus.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/EdmondsJohnson/A6plus.lean),
   [A7.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/EdmondsJohnson/A7.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/edmonds-johnson.md).
+- **2026-11-28, about 10 AM ET.** We Lean-checked the disproof of **Sra's "quantum coupon collector" conjecture**
+  (posed on MathOverflow in 2017; counterexample in arXiv:2608.29595, "GPT, the Counterexample Machine"). The
+  classic coupon-collector formula gives the expected time to collect all coupons as an alternating sum of
+  fractions, and it is always positive. Sra asked whether the same alternating sum stays positive when the numbers
+  are replaced by positive definite matrices. It does not: six explicit 3 × 3 matrices give a sum that is negative
+  in one direction. Lean checks all 63 matrix inverses involved with exact fractions. Standard axioms only, kernel
+  re-check passed. Internal audit: pass with notes (notes applied).
+  Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/QuantumCoupon/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/quantum-coupon-collector.md).

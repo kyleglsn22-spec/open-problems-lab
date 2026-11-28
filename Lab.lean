@@ -86,5 +86,6 @@ import Lab.EdmondsJohnson.THM7.Main
 import Lab.TightHamilton.Main
 import Lab.TotalDomination.Main
 import Lab.LonelyRunner.FunctionField
+import Lab.QuantumCoupon.Main
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
