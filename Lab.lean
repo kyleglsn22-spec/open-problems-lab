@@ -84,5 +84,6 @@ import Lab.EdmondsJohnson.THM6.Main
 import Lab.EdmondsJohnson.THM6plus.Main
 import Lab.EdmondsJohnson.THM7.Main
 import Lab.TightHamilton.Main
+import Lab.TotalDomination.Main
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/

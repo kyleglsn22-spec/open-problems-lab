@@ -23,7 +23,7 @@ have codegree at least `⌊(n − k + 3)/2⌋` has a tight Hamiltonian cycle.
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| TH-1 | Lean: the all-`n` conjecture is false. For `k = 3, 4, 5`, Ferudun's `H_k` on `k + 4` vertices is `k`-uniform, has minimum codegree `≥ 3 = ⌊7/2⌋`, and has no tight Hamiltonian cycle | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass with notes | `not_codegreeConjecture`, `H_counterexample` in `Lab/TightHamilton/Main.lean`; independent check `audit/tight_hamilton_check.py` (all cyclic orders) |
+| TH-1 | Lean: the all-`n` conjecture is false. For `k = 3, 4, 5`, Ferudun's `H_k` on `k + 4` vertices is `k`-uniform, has minimum codegree `≥ 3 = ⌊7/2⌋`, and has no tight Hamiltonian cycle | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass with notes (PR 56) | `not_codegreeConjecture`, `H_counterexample` in `Lab/TightHamilton/Main.lean`; independent check `audit/tight_hamilton_check.py` (all cyclic orders) |
 
 Statement notes for the Auditor:
 - Vertices are `Fin (k + 4)`; `W = {0,…,5}` (the paper's `1,…,6` shifted down by one), apexes are `6,…,k+3`.

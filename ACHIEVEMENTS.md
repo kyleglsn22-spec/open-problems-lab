@@ -346,6 +346,16 @@ Words we use:
   large n is untouched.) Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/TightHamilton/Main.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/tight-hamilton-codegree.md).
+- **2026-11-28, about 8:15 AM ET.** We Lean-checked **Kwon, Park and Sano's disproof of Goddard and Henning's
+  Conjecture 32** (arXiv:2611.00572). Take a map where every region is a triangle and colour its corners with
+  four colours so that neighbours always differ. Goddard and Henning (2018) conjectured that you can always do this
+  so that, grouping the colours into two pairs, every corner has a neighbour coloured from each pair. Kwon, Park and Sano found a
+  36-corner map where this is impossible. Lean checks that the map really is a flat triangle map: it has an
+  exact drawing and the right number of edges. It also checks that no such colouring exists. (Lean checks the 36-corner example; the paper's
+  bigger examples for every size from 36 up are not formalized.) Standard axioms only, kernel re-check passed.
+  Internal audit: pass.
+  Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/TotalDomination/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/goddard-henning-total-domination.md).
 - **2026-11-28, about 8:30 AM ET.** We Lean-checked **Del Pia's disproof of the Gerards–Schrijver conjecture**
   (arXiv:2611.28580), a 2007 conjecture in integer programming. It predicted exactly which "nicely behaved" matrices
   let one round of rounding cuts (the Chvátal closure) reach all whole-number solutions; Del Pia's 5 × 6 matrix
