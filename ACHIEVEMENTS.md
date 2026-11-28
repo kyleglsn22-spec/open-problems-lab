@@ -264,3 +264,11 @@ Words we use:
   60. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Unsplittable.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Goemans/Unsplittable.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/goemans-unsplittable.md).
+- **2026-11-27, about 9:00 PM ET.** We Lean-checked Srivastava's counterexample (arXiv:2608.15281) to the **first
+  version of Mizzi's cycle conjecture on unstable graphs** (arXiv:2603.27559 v1/v2). That version said every
+  "unstable" network (one whose doubled copy has unexpected symmetries) must contain loops of lengths `k` and `2k`
+  for some odd `k`. A 10-point network has loops of lengths 5, 5 and 6 only. Mizzi has since narrowed the
+  conjecture to networks with no symmetries at all; this example does not touch the narrowed version.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Mizzi.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Unstable/Mizzi.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/unstable-graphs.md).
