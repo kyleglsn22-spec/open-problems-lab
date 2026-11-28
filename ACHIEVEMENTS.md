@@ -356,3 +356,12 @@ Words we use:
   Internal audit: pass.
   Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/TotalDomination/Main.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/goddard-henning-total-domination.md).
+- **2026-11-28, about 9:45 AM ET.** We Lean-checked **Hu's disproof of the Chow–Rimanić "lonely runner"
+  conjecture for function fields** (arXiv:2608.18818). The classic lonely runner puzzle asks whether runners at
+  different speeds on a circular track always leave each runner, at some moment, far from all the others. Chow and
+  Rimanić (2019) studied a version where the speeds are polynomials over a finite field. In one case, their
+  conjecture says you need at least 15 speeds before "at every moment, some runner is very close to the start"
+  can happen at a certain closeness level. Hu found just 13 speeds (polynomials with 0/1 coefficients) that already
+  do it. Lean checks all 128 cases that matter. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [FunctionField.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LonelyRunner/FunctionField.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/lonely-runner-function-field.md).
