@@ -4,7 +4,7 @@ Notes from an attempt at Aliabadi's question (arXiv 2609.04473, §6): is `D_ℓ 
 We did **not** prove this. These notes record an exact description of the down/up pattern, the place where
 the differences come from, the numerical evidence, and why a proof looks hard.
 
-## 1. An exact local rule
+## 1. A local rule (per family exact; the cut picture is heuristic)
 
 Write `δ = {φn}`. For each `t ≥ 2` the equation `a f_t + b f_{t-1} = n` has exactly one integer solution
 with `0 ≤ Q := φb − a < φ^t`. (Solutions differ by `(f_{t-1}, −f_t)`, which changes `Q` by `φ^t`.) The same
@@ -18,16 +18,19 @@ a ≥ 1   ⇔  Q ≤ (φ n − φ^t) / f_{t-1}
 b ≤ f_t ⇔  Q ≤ φ^t − n / f_t
 ```
 
-`check_rule.py` confirms this rule against the CGS representation for every `n < 30000` (exact decimal
-arithmetic).
+`check_rule.py` confirms this per-family rule against the CGS representation for every `n < 30000`
+(high-precision decimal arithmetic).
 
 So inside a stretch of integers, "family `t`" is the set of `n` whose `δ` falls in an interval
 `I_t(n)`. Its endpoints move linearly and slowly with `n`. With `s = √5 n / φ^{2t}`, the interval is roughly
-`[s/φ², min(φ² s, 1 − s)]` (for `δ` if `t` is even, for `1 − δ` if `t` is odd). Consecutive even
-families tile `[0, c(n))` without gaps, and the odd families tile `(c(n), 1)`. Hence:
+`[s/φ², min(φ² s, 1 − s)]` (for `δ` if `t` is even, for `1 − δ` if `t` is odd). The even-family intervals
+are not literally contiguous: there are small gaps between them, for example at `n = 1000` between families 12 and
+10, but no integer lands in those gaps. Numerically (floating point, `105 ≤ n < 300000`) every even-family interval
+lies below every odd-family interval. This suggests the following picture, which we have **not proved**:
 
-> **`n` is a down-integer iff `{φn} < c(n)`**, where the cut `c(n)` is continuous and piecewise linear in
-> `n`. It oscillates between `η = 1/(√5φ) ≈ 0.276` and `ρ = 1 − η ≈ 0.724`, with period `φ⁴` on a log scale.
+> **Heuristic:** `n` is a down-integer iff `{φn} < c(n)`, where the cut `c(n)` is continuous and piecewise
+> linear in `n`. It oscillates between `η = 1/(√5φ) ≈ 0.276` and `ρ = 1 − η ≈ 0.724`, with period `φ⁴` on a
+> log scale.
 
 `adelta`-style listings (sort a stretch of integers by `{φn}` and print the types) show this directly: one
 block of `D`s, then one block of `U`s, mixing only where the moving cut sweeps through.
@@ -48,8 +51,10 @@ have exactly the same local parameter space (`δ` anywhere, cut anywhere in `[η
 gap sets agree "mostly" and differ only in a few gaps.
 
 To leading order the shapes do not matter. For example, the largest `ℓ`-step gap only depends on
-`pq/(p+q)` for valley slopes `p, q`, which is symmetric. This matches the data: `min D_ℓ = min U_ℓ` and
-`max D_ℓ = max U_ℓ` for every `ℓ` we checked. The differences are holes in the middle of the range.
+`pq/(p+q)` for valley slopes `p, q`, which is symmetric. This roughly matches the data. `min D_ℓ = min U_ℓ` for every `ℓ` we checked, and
+`max D_ℓ = max U_ℓ` for `ℓ ≤ 114`. From `ℓ = 115` on, the maxima at our cutoff differ by a little (for example
+728 vs 725 at `ℓ = 200`), and the maximum keeps growing at larger valleys. For small `ℓ` the differences are holes
+in the middle of the range.
 
 ## 3. Evidence
 
@@ -66,7 +71,7 @@ To leading order the shapes do not matter. For example, the largest `ℓ`-step g
 
 A difference seen only up to a cutoff could in principle be realised later. The cutoff is safe for the
 small cases: they are certified by the constraint method (`differences.md`) and Lean-proved for
-`ℓ = 4, 7, 8`.
+`ℓ = 4, 7, 8, 9`.
 
 ## 4. A route to "infinitely many", and why it is hard
 
