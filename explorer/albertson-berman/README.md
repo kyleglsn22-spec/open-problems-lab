@@ -12,3 +12,10 @@ Search code for Problems 5.1 and 5.3 of arXiv 2608.23260. No improvement found; 
 - `anneal_tri.py`: random planar triangulations and edge flips.
 
 Requires `networkx` and `ortools`.
+
+## Claim AB-1 (Lean disproof of the conjecture with `G₂₉`)
+- `ab1_check.py`: Python cross-check of the Lean data (`a(G29) = 14`, drawing has no crossings, cycle lists
+  hit every large vertex set on both sides of the separating edge).
+- `g29_coords.json`: integer drawing (rounded Tutte embedding of a triangulation containing `G₂₉`).
+- `g29_cycles.json`: hitting cycle lists per side and port case (greedy cover).
+- `lean-gen/`: regenerates `Lab/AlbertsonBerman/*.lean` (`python3 gen_lean.py && python3 gen_lean2.py`).

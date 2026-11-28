@@ -249,3 +249,10 @@ Words we use:
   9 but every cyclic cover needs 10. Lean checks this for the 30-point example. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Petersen.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/OddFoldCovers/Petersen.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/odd-fold-covers.md).
+- **2026-11-27, about 7:00 PM ET.** We Lean-checked the disproof of the **Albertson–Berman conjecture** (1979),
+  which says every planar network on `n` points keeps a cycle-free part on at least half its points. Cames van
+  Batenburg, Goedgebeur and Jooken (arXiv:2608.23260) found a 29-point planar network where every cycle-free part
+  has at most 14 points. Lean checks both halves: an exact straight-line drawing with no crossings, and the
+  14-point bound. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/AlbertsonBerman/Counterexample.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/albertson-berman.md).
