@@ -365,3 +365,16 @@ Words we use:
   do it. Lean checks all 128 cases that matter. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [FunctionField.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/LonelyRunner/FunctionField.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/lonely-runner-function-field.md).
+- **2026-11-28, about 8:30 AM ET.** We Lean-checked **Del Pia's disproof of the Gerards–Schrijver conjecture**
+  (arXiv:2611.28580), a 2007 conjecture in integer programming. It predicted exactly which "nicely behaved" matrices
+  let one round of rounding cuts (the Chvátal closure) reach all whole-number solutions; Del Pia's 5 × 6 matrix
+  breaks it. Lean checks that the matrix is of the right type and that the rounding cuts fall short for it. The step
+  the paper does with linear-programming duality (not available in Lean's library) we did with a new shortcut that
+  needs only a 9-case integer check. The paper also names **two more counterexample matrices without proofs**; we
+  found data for them and proved them in Lean too, the first proofs we know of. Not in Lean: that the matrices avoid
+  the conjecture's two forbidden patterns (computer-checked by us instead).
+  Standard axioms only, kernel re-check passed. Internal audit: pass with notes (notes applied).
+  Proof: [A6.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/EdmondsJohnson/A6.lean),
+  [A6plus.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/EdmondsJohnson/A6plus.lean),
+  [A7.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/EdmondsJohnson/A7.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/edmonds-johnson.md).

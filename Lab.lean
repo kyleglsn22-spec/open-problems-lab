@@ -80,6 +80,9 @@ import Lab.FibWalk.UpOnly.L9Main
 import Lab.IdentifyingCover.Counterexample
 import Lab.Saturation.Harmonic
 import Lab.Bondage.Main
+import Lab.EdmondsJohnson.THM6.Main
+import Lab.EdmondsJohnson.THM6plus.Main
+import Lab.EdmondsJohnson.THM7.Main
 import Lab.TightHamilton.Main
 import Lab.TotalDomination.Main
 import Lab.LonelyRunner.FunctionField
