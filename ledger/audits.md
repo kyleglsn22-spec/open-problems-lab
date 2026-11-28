@@ -906,3 +906,17 @@ In-house Auditor (independent subagent).
   wrong as written. (b) "max D_ℓ = max U_ℓ for every ℓ checked" fails from ℓ = 115 at the cutoff; now restricted.
   (c) The list of Lean-proved ℓ in valleys.md now includes 9. check_rule.py is now described as "high-precision".
 - No claim that infinitely many ℓ is proved; the ℓ = 12…300 differences are marked as evidence.
+
+
+## 2026-11-28 · Claim TH-1 (all-n exact codegree conjecture for tight Hamiltonian cycles, Ferudun's H_k, k = 3, 4, 5) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `codegree`, `window` (indices mod `n`), `HasTightHamiltonCycle` (bijection `Fin n → V`),
+  `CodegreeConjecture` (k ≥ 3, n ≥ k + 1, k-uniform, bound `(n − k + 3)/2` in ℕ: no truncation since n ≥ k + 1)
+  faithful to RRS 2011 Conj. 1.1; `Dface` is Ferudun's D′ shifted by one; `E k` is exactly `H_k`. Not vacuous.
+- Logic of `no_tight_cycle`, `codegree_E_eq`, `forced5` (cases 7–8 vacuous), `H_counterexample` checked. The kernel
+  checks the conclusion of Lemma 2.4 over every apex position set, independent of the paper's gap-vector proof.
+- Trust surface clean; axioms propext, Classical.choice, Quot.sound only; all 8 files compile from source.
+- Own brute force: k = 3, 4, 5 give 25, 50, 96 edges, min codegree 3 = bound, 0 tight Hamiltonian cycles.
+- Notes (fixed in this PR): minimality of `H₃` attributed to Ferudun's search; "modeled on Lemma 2.4" wording; Zhang
+  citation clarified; "Internal audit" line.

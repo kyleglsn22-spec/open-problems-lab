@@ -123,3 +123,5 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms EdmondsJohnson.isTHM_A6
 #print axioms EdmondsJohnson.isTHM_A6plus
 #print axioms EdmondsJohnson.isTHM_A7
+#print axioms OpenProblemsLab.TightHamilton.not_codegreeConjecture
+#print axioms OpenProblemsLab.TightHamilton.H_counterexample

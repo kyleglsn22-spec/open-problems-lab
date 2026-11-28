@@ -337,3 +337,12 @@ Words we use:
   Proof: [UpOnly/L8Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/UpOnly/L8Main.lean),
   [UpOnly/L9Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/UpOnly/L9Main.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/fib-walk-gaps.md).
+- **2026-11-28, about 7:00 AM ET.** We Lean-checked **Ferudun's counterexamples to the all-n codegree conjecture
+  for tight Hamiltonian cycles** (Zenodo 10.5281/zenodo.23006717). A "hypergraph" has edges that join k vertices at
+  once. Rödl, Ruciński and Szemerédi (2011) conjectured that if every group of k − 1 vertices sits inside at least
+  about (n − k + 3)/2 edges, then all n vertices can be arranged in a circle so that every k neighbours in a row form
+  an edge. Ferudun found that this fails for small n: a 7-vertex example for k = 3 built from the
+  "hemi-icosahedron", plus 8- and 9-vertex versions for k = 4 and 5. Lean checks all three. (The conjecture for
+  large n is untouched.) Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/TightHamilton/Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/tight-hamilton-codegree.md).
