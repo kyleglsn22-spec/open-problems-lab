@@ -147,6 +147,19 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-28 · open-problems-lab PR #49 (slow Fibonacci walks: D₃ = U₃ [FW-2] and D₇ ≠ U₇ [FW-3], `Lab/FibWalk/Three/`, `Lab/FibWalk/Seven/`) · **pass (both), conditional on green `build` at a9493e8 and ACHIEVEMENTS.md entries**
+
+Internal audit, outside review welcome. Reviewed at a9493e8.
+
+- **Statement (FW-2):** `gapSet_three` matches Mao–Zhao (arXiv:2608.19886 v1) Theorem 1.2, D₃ = U₃ = {3,4,5,6,7,8,10,11,13}, with 0-indexed `Nat.nth` = their 1-indexed enumeration. As at FW-1, `IsDown`/`IsUp` equal the paper's D/U via the CGS uniqueness theorem (the proof itself uses no uniqueness).
+- **Statement (FW-3):** `gapSet_seven_ne` (17 ∈ D₇ \ U₇), same definitions. Novelty: Mao–Zhao treat ℓ = 3, 4 only; Aliabadi (2609.04473) proves ℓ = 4 and asks about larger ℓ; arXiv search finds no other slow-Fibonacci-walk paper. "As far as we know new" is justified.
+- **Independent recheck:** own Python, exhaustive CGS representations to 2·10⁶: uniqueness holds; D₃ = U₃ = S3; D₇ \ U₇ = {17}, U₇ \ D₇ = ∅.
+- **Trust base:** only `linter.*` set_options in generated pattern files; no sorry/axiom/native_decide/implemented_by/custom syntax; `shift_up` and top-level assembly read; generated window lemmas rely on the kernel check.
+- **Wording:** ledger and `differences.md` do not overclaim (certified differences beyond ℓ = 7 labelled floating-point evidence; FW-2 presented as our proof of a known result). Nit: shortlist rows 7–8 still "In progress".
+- **Required changes:** ACHIEVEMENTS.md entries for FW-2 and FW-3.
+
+---
+
 ## 2026-11-28 · open-problems-lab PR #46 (Hinrichs–Vybíral positive-definite-function conjecture disproof [HV-1], `Lab/HinrichsVybiral/Basic.lean`) · **pass, conditional on green `build` at 82e8ef0 and an ACHIEVEMENTS.md entry**
 
 Internal audit, outside review welcome. Reviewed at 82e8ef0.
