@@ -147,6 +147,44 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-28 · open-problems-lab PR #42 (Mizzi unstable-graph cycle conjecture disproof [UG-1], `Lab/Unstable/Mizzi.lean`) · **pass for the Lean content, conditional on green `build` at c628475 and documentation changes**
+
+Internal audit, outside review welcome. Reviewed at c628475.
+
+- **Statement:** `cdc`, `IsUnstable` (an automorphism of G × K₂ outside Aut(G) × ℤ₂), `IsVertexDetermining`, connected, non-bipartite and `HasCycleOfLength` (cycle subgraph) faithfully state the conjecture in the abstract of **v1/v2** of arXiv:2603.27559 ("every unstable graph contains C_k and C_2k for some odd k"). The both-in-G reading is the only non-trivial one (C_2k in the CDC is automatic for non-bipartite G).
+- **Version issue:** v3/v4 (current, 16 Nov 2026) restrict the conjecture to **asymmetric** unstable graphs; v4 §7 discusses Srivastava's graph, notes |Aut(G)| = 2, and gives a smaller 7-vertex counterexample (C_6 plus a pin) to the old statement. The current conjecture is not refuted.
+- **Edge list:** matches Srivastava (arXiv:2608.15281) eq. (2) and the list in Mizzi v4 §7.
+- **Independent recheck:** own Python/networkx: connected, non-bipartite, vertex-determining; |Aut(G)| = 2, |Aut(CDC)| = 8 > 4; cycle lengths 5, 5, 6.
+- **Trust base:** no sorry/axiom/native_decide/set_option; `#print axioms` added.
+- **Required changes:** docs, ledger and ACHIEVEMENTS must say the refuted statement is the v1/v2 conjecture, since amended to asymmetric graphs (not refuted); drop or fix the "holds for ≤ 9 vertices" row and don't call the graph smallest.
+- **Follow-up (792008d):** all required changes made (renamed to `MizziConjectureV1`, docs cite v1/v2 and the amendment, row dropped). Verdict now: pass, conditional only on green `build`.
+
+---
+
+## 2026-11-28 · open-problems-lab PR #41 (Goemans single-source unsplittable-flow conjecture disproof [GUF-1], `Lab/Goemans/Unsplittable.lean`) · **pass, conditional on green `build` at 8eee6b4 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at 8eee6b4.
+
+- **Statement:** `IsFlow`, `fracLoad`/`unsplitLoad`, `totalCost`, `maxDemand` and `GoemansConjecture` match Ge–Xie–Li–Li (arXiv:2611.23244) Def. 2.1 (path flows over directed simple s–t_i paths), eq. (2.2)–(2.3) (arc loads, cost), Def. 2.2 with λ = 1 and Conjecture 2.4. Loads and admissibility over all pairs are equivalent to over arcs. The Lean conjecture quantifies over slightly more instances (terminals need not be distinct or ≠ s), but the counterexample is a valid instance of the paper's setting, so the refutation applies to the paper's conjecture.
+- **Instance:** arcs, costs, demands (15,10,15) and path flows match §2.2.2 (Rybin's example).
+- **Independent recheck:** own Python: 2 simple paths per terminal; fractional loads (10,6,24,14,10,5,9,4,5) as in eq. (2.6), cost 58; over all 8 unsplittable choices the 1-admissible ones cost 60, 90, 60, 60, so minimum 60.
+- **Trust base:** no sorry/axiom/native_decide/set_option; small `decide` only; `#print axioms` added.
+- **Required changes:** add the GUF-1 entry to ACHIEVEMENTS.md.
+
+---
+
+## 2026-11-27 · open-problems-lab PR #38 (Albertson–Berman conjecture disproof via G29 [AB-1], `Lab/AlbertsonBerman/`) · **pass, conditional on green `build` at f991235 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at f991235.
+
+- **Statement:** `AlbertsonBermanConjecture` (every straight-line planar graph on n vertices has S with `(H.induce S).IsAcyclic` and n ≤ 2|S|) is the conjecture c_P ≥ 1/2 of Cames van Batenburg–Goedgebeur–Jooken (arXiv:2608.23260, Conj. 1.1) restricted to straight-line drawable graphs, so its negation refutes the original. `StraightLinePlanar` (injective map to ℝ², distinct edges' segments meet only at images of common endpoints) is a faithful straight-line plane drawing; the integer-orientation proof is sound.
+- **Edge list:** parsed from the arXiv TikZ of the G29 figure (labels v0..v28): the 80 solid edges equal `Basic.lean` `edges` exactly; the dashed G'29 edge is correctly excluded.
+- **Independent recheck:** own Python: planar, connectivity 2, {27,28} separates sides of size 12 and 15; exact integer check of the Lean coordinates (no crossings or touchings); CP-SAT with lazy cycle cuts gives a(G29) = 14.
+- **Trust base:** no sorry/axiom/native_decide/set_option; `decide +kernel` facts only; `allSub_sound` read; `#print axioms` added for the three main theorems.
+- **Required changes:** add the AB-1 entry to ACHIEVEMENTS.md.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #34 (Chen–van der Holst–Luo–Ma odd-fold cover conjecture disproof [OFC-1], `Lab/OddFoldCovers/Petersen.lean`) · **pass, conditional on green `build` at f19dd94 and the merge time being filled in**
 
 Internal audit, outside review welcome. Reviewed at f19dd94.
