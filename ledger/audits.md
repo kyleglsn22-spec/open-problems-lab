@@ -851,3 +851,15 @@ In-house Auditor (independent subagent).
 - Notes (fixed in this PR): ledger said "Theorem 6 in full"; only the bound (first half) is proved,
   the strict part in the corrected weaker form; status line updated after this audit.
 
+## 2026-11-28 · Claim IDC-1 (Henning–Yeo identifying vertex cover conjecture, Wang's `H_{t,r}`, PR 51) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `IsIdCover` (covers every edge, equal traces force equal edges) and `idCoverNumber` (sInf over a
+  nonempty set, `isIdCover_univ`) match Henning–Yeo; `HenningYeoConjecture` is the full bound over all finite graphs in ℚ.
+  `adjB`/`H` match Wang's `H_{t,r}` (non-edges checked by `decide`). Main theorems also give connectivity and `Δ = t + r`.
+- Trust surface: no sorry/axiom/native_decide/implemented_by/extern/unsafe/opaque. `#print axioms`: propext,
+  Classical.choice, Quot.sound only. `leanchecker` passed.
+- Own brute force: `τ_D = n − 1` and excess `(t−1)(r−1)/(Δ²+1)` for six `(t, r)`; `t = 1` or `r = 1` give equality.
+- Notes (fixed in this PR): ACHIEVEMENTS wording (the excess is fractional, 7 vs ≈ 6.94), "Internal audit" line,
+  ledger margin wording and status.
+
