@@ -104,3 +104,7 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.FibWalk.gapSet_seven_ne
 #print axioms OpenProblemsLab.FibWalk.seventeen_mem_down
 #print axioms OpenProblemsLab.FibWalk.seventeen_not_mem_up
+#print axioms OpenProblemsLab.IdCover.not_henningYeoConjecture
+#print axioms OpenProblemsLab.IdCover.H_counterexample
+#print axioms OpenProblemsLab.IdCover.idCoverNumber_H
+#print axioms OpenProblemsLab.IdCover.exists_counterexample_of_maxDegree
