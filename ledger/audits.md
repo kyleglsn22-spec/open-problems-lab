@@ -147,6 +147,19 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-28 · open-problems-lab PR #46 (Hinrichs–Vybíral positive-definite-function conjecture disproof [HV-1], `Lab/HinrichsVybiral/Basic.lean`) · **pass, conditional on green `build` at 82e8ef0 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at 82e8ef0.
+
+- **Statement:** `IsPosDef` (complex Hermitian form, equivalent to the paper's Σ c̄_j c_k convention) and `HinrichsVybiralConjecture` (continuous, bounded, nonnegative, positive definite, f(0) = 1 ⇒ (Σc)²/n ≤ Σ c_j c_k f(x_j − x_k)) match Conjecture 2 of Hinrichs–Vybíral (2011) as quoted in Vybíral, arXiv:2609.21733 v1 (only version), §1; the real-coefficient conclusion is implied by the matrix inequality, so its refutation refutes the conjecture. The 2011 original was not read directly (quoted by its co-author).
+- **Proof:** read in full (feature expansion for PD; multiaffinity plus 128 sign vectors for f ≥ 0; integer identity for the form).
+- **Independent recheck:** own Python (exact rationals): f(0) = 1; min of 280·P on sign vectors is 0; form 22/5 vs 9/2 (violation −1/10, paper eq. (2.3)); random Gram matrices PSD, random min f ≥ 0.
+- **Trust base:** no sorry/axiom/native_decide/set_option; `decide +kernel` only; `#print axioms` added.
+- **Ledger wording:** claims nothing beyond the Lean statement. Nit: shortlist row 6 still says "In progress".
+- **Required changes:** add the HV-1 entry to ACHIEVEMENTS.md.
+
+---
+
 ## 2026-11-28 · open-problems-lab PR #43 (Bougard–Joret conjecture, first regime, disproof at (7,3,4) [BJ-1], `Lab/BougardJoret/Basic.lean`) · **pass, conditional on green `build` at 64bd260 and an ACHIEVEMENTS.md entry**
 
 Internal audit, outside review welcome. Reviewed at 64bd260.
