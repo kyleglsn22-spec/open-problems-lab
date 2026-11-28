@@ -110,3 +110,7 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.IdCover.H_counterexample
 #print axioms OpenProblemsLab.IdCover.idCoverNumber_H
 #print axioms OpenProblemsLab.IdCover.exists_counterexample_of_maxDegree
+#print axioms OpenProblemsLab.Saturation.not_txGraffitiConjecture
+#print axioms OpenProblemsLab.Saturation.F_counterexample
+#print axioms OpenProblemsLab.Saturation.saturationNumber_F
+#print axioms OpenProblemsLab.Saturation.harmonicIndex_F

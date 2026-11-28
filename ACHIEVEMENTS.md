@@ -302,7 +302,7 @@ Words we use:
   gap sets of down- and up-integers are equal, both {3, 4, 5, 6, 7, 8, 10, 11, 13}, with our own proof. Standard
   axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Three/Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/Three/Main.lean).
-- **2026-11-28, about 2:45 AM ET.** We Lean-checked **Wang's disproof of the Henning–Yeo conjecture**
+- **2026-11-28, about 3:10 AM ET.** We Lean-checked **Wang's disproof of the Henning–Yeo conjecture**
   (arXiv:2608.19455). In 2012 Henning and Yeo predicted an upper limit on how many vertices of a network you need
   to "tell every link apart" (an identifying vertex cover), in terms of the number of vertices, links and the
   largest degree. Wang found a family of small networks that need more vertices than the limit allows (7 versus a
@@ -310,3 +310,11 @@ Words we use:
   Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/IdentifyingCover/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/identifying-vertex-cover.md).
+- **2026-11-28, about 4:00 AM ET.** We Lean-checked a **disproof of a computer-generated graph conjecture**
+  (TxGraffiti, 2023): that in every connected network, the fewest links you can pick so that no two touch and
+  no further link can be added (a minimum maximal matching) is at most the "harmonic index", a degree-weighted
+  link count. Gupta (arXiv:2606.15761), after Bıyıkoğlu, showed that k triangles sharing one corner break it for
+  every k ≥ 4: 4 links are needed but the index is only 3.6 for k = 4. Lean checks both exact formulas for every k.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Harmonic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Saturation/Harmonic.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/saturation-harmonic.md).

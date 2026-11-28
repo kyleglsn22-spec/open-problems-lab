@@ -863,6 +863,16 @@ In-house Auditor (independent subagent).
 - Notes (fixed in this PR): ACHIEVEMENTS wording (the excess is fractional, 7 vs ≈ 6.94), "Internal audit" line,
   ledger margin wording and status.
 
+## 2026-11-28 · Claim SAT-1 (TxGraffiti μ* ≤ H, friendship graphs, Gupta Thm 1) · **pass**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `IsMatching`/`IsMaximalMatching` standard; `saturationNumber` is `sInf` over sizes (every finite
+  graph has a maximal matching, so a true minimum); `harmonicIndex` sums `2/(d(u)+d(v))` over `edgeFinset` in ℚ;
+  `TxGraffitiConjecture` = connected with ≥ 2 vertices. `F`/`adjB` is exactly `F_k`.
+- Trust surface clean; `#print axioms` on the four main theorems: propext, Classical.choice, Quot.sound only.
+- Own brute force `k = 1..6` (exact fractions): μ* = k, H = 2k/(k+1) + k/2, counterexample iff k ≥ 4.
+- Optional note: the 9-vertex minimality is Gupta's computation, not proved in Lean (docstring attributes it).
+
 ## 2026-11-28 · open-problems-lab PR #53 (FW-4: `D_8 ≠ U_8`, `D_9 ≠ U_9`, `Lab/FibWalk/UpOnly/`) · **pass with notes**
 
 In-house Auditor (independent subagent).

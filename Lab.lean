@@ -78,5 +78,6 @@ import Lab.FibWalk.Three.Main
 import Lab.FibWalk.Seven.Main
 import Lab.FibWalk.UpOnly.L9Main
 import Lab.IdentifyingCover.Counterexample
+import Lab.Saturation.Harmonic
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
