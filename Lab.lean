@@ -70,5 +70,6 @@ import Lab.Bipanchromatic.Sunflower
 import Lab.SpanningForests.Counterexample
 import Lab.OddFoldCovers.Petersen
 import Lab.AlbertsonBerman.Counterexample
+import Lab.Goemans.Unsplittable
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
