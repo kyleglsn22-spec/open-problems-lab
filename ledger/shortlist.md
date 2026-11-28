@@ -150,7 +150,8 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 3 | TxGraffiti saturation number vs harmonic index (friendship graph `F_4`, 9 vertices) | Gupta 2606.15761 (after Bıyıkoğlu) | No | **Done (SAT-1, PR 52):** Lean disproof, all `F_k`, `k ≥ 4`; see ledger/saturation-harmonic.md |
 | 4 | Teschner's bondage-number conjecture `b(G) ≤ (3/2)Δ` (cubic bipartite graph on 18 vertices, `b = 5`) | Yavari 2609.04257 | No | **Done (BOND-1, PR 54):** Lean disproof; see ledger/bondage-number.md |
 | 5 | Rödl–Ruciński–Szemerédi exact codegree conjecture for tight Hamiltonian cycles, all-`n` form (7-vertex 3-graph `H₃`, also `k = 4, 5`) | Ferudun, Zenodo 10.5281/zenodo.23006717 (Sep 2026) | No | **Done (TH-1, PR 56):** Lean disproof for `k = 3, 4, 5`; see ledger/tight-hamilton-codegree.md |
-| 6 | Goddard–Henning Conjecture 32 (proper 4-colouring of triangulations with two total dominating colour pairs; 36-vertex triangulation) | Kwon–Park–Sano 2611.00572 | No (AFTD lists only its open Conjecture 1.4) | **GHT-1:** Lean disproof (`n = 36`); see ledger/goddard-henning-total-domination.md |
+| 6 | Goddard–Henning Conjecture 32 (proper 4-colouring of triangulations with two total dominating colour pairs; 36-vertex triangulation) | Kwon–Park–Sano 2611.00572 | No (AFTD lists only its open Conjecture 1.4) | **Done (GHT-1, PR 58):** Lean disproof (`n = 36`); see ledger/goddard-henning-total-domination.md |
+| 7 | Chow–Rimanić lonely runner conjecture over function fields (13 polynomials over `𝔽₂`, `C₃(2) ≤ 13 < 15`) | Hu 2608.18818 | No | **LR-1:** Lean disproof; see ledger/lonely-runner-function-field.md |
 
 Also seen: Wormald's linear-forest conjecture counterexample 2610.00086 (authors' own Lean proof; skip); Alon–Krivelevich
 choosability 2610.42094 (AFTD has it; skip).

@@ -937,6 +937,21 @@ In-house Auditor (independent subagent).
 - Notes (fixed in this PR): ACHIEVEMENTS says only `n = 36` is formalized, "Internal audit" line, clearer wording;
   audit script docstring corrected.
 
+## 2026-11-28 · Claim LR-1 (Chow–Rimanić lonely runner conjecture over function fields, Hu's 13 polynomials) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `fracCoeff` (coefficient of `T^{-m}` in `αf` is `∑ f_j α_{m+j}`), `lonelyNorm` (`2^{-m₀}`,
+  `m₀` least with nonzero coefficient), `delta` (`sSup` of a nonempty bounded set, so a true supremum; the proof
+  only uses `csSup_le`). Checked against the original (arXiv:1711.01207v2): `1 ≤ |F| < (q^{k+1}−1)/(q−1)` implies
+  `δ(F) ≥ q^{-k}`; `q = 2`, `k ≥ 1` only weaken the formal statement.
+- `tbl` is exactly the paper's `F*`. Logic of `coeff_poly`, `fracCoeff_poly`, `cover`, `exists_small` (index
+  shift), `delta_Fstar_le` checked.
+- Trust surface clean; axioms propext, Classical.choice, Quot.sound only.
+- Own brute force (Laurent multiplication): max over `α` of `min_f ‖αf‖` is exactly `2^{-4}`; multiplicity table
+  {1: 83, 2: 26, 3: 15, 4: 2, 7: 1, 13: 1} reproduced; `α = T^{-4}` attains `2^{-4}`.
+- Notes (fixed in this PR): ACHIEVEMENTS wording (speeds over any finite field; "in one case"), "Internal audit"
+  line; ledger nonemptiness note; audit script simplified.
+
 ## 2026-11-28 · open-problems-lab PR #57 (EJ-1..4: Edmonds–Johnson, `A₆`, `A₆⁺`, `A₇`, `Lab/EdmondsJohnson/`) · **pass with notes**
 
 In-house Auditor (independent subagent).
