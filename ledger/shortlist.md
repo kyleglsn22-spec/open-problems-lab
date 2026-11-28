@@ -132,4 +132,6 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 5 | Harper-norm silver-mean conjecture (explicit rational point) | 2611.23265 | No | Checked 2026-11-28: needs operator norms on `ℓ²(ℤ)` and the Gerhold–Shalit reduction `E(p/q) = λ_max(H_{p/q})` for every phase; too heavy for the easy slot |
 | 6 | Hinrichs–Vybíral conjecture on positive definite functions (7-dim explicit example) | Vybíral 2609.21733 | No | **Done (HV-1):** Lean disproof, audited; see ledger/hinrichs-vybiral.md |
 
+Hard slot (2026-11-28): Mizzi's current conjecture (asymmetric unstable graphs) was attempted. There is no asymmetric unstable graph on ≤ 9 vertices (exhaustive search), and random two-fold-automorphism search produced no asymmetric graphs. Parked until `geng` is available for n = 10; see explorer/unstable-asymmetric/.
+
 Also seen: the quantum Hedetniemi counterexample 2609.20690 is already Lean-checked by its authors (skip).

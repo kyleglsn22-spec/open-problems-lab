@@ -22,6 +22,7 @@ statement and also gives a smaller one (`C_6` with a pendant on an antipodal pai
 | v1/v2 statement false: 10 vertices, 11 edges, two-fold automorphism `α = (1 6)`, `β = (2 3)`, cycle lengths `5, 5, 6` | Srivastava 2608.15281 | Yes (UG-1) |
 | v1/v2 statement false: 7-vertex example; conjecture restated for asymmetric graphs | Mizzi 2603.27559 v4 §7 | No |
 | Asymmetric version (current) | Mizzi v3/v4 | Open |
+| No connected, non-bipartite, vertex-determining asymmetric unstable graph on ≤ 9 vertices, so a counterexample to the current version needs ≥ 10 vertices (exhaustive computer search, not Lean) | our search, `explorer/unstable-asymmetric/` (2026-11-28) | Computation only |
 
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
