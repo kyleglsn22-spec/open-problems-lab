@@ -936,3 +936,22 @@ In-house Auditor (independent subagent).
   colourings, and 0 colourings in partition form (tested directly).
 - Notes (fixed in this PR): ACHIEVEMENTS says only `n = 36` is formalized, "Internal audit" line, clearer wording;
   audit script docstring corrected.
+
+## 2026-11-28 · open-problems-lab PR #57 (EJ-1..4: Edmonds–Johnson, `A₆`, `A₆⁺`, `A₇`, `Lab/EdmondsJohnson/`) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statements: `poly`, `chvatalClosure` (all `w ∈ ℤⁿ`, all real valid `δ`), `integerHull`, `HasEJProperty` match
+  Del Pia §1; `IsTHM` matches the paper's definition. `A6`, `A6plus`, `A7` match §1/§6 entry for entry; `A₆`'s
+  data match (3). Nothing vacuous.
+- Logic: `mem_chvatalClosure_of_witness`, `mem_chvatalClosure_of_int` (`3k ≤ w·y + 2 ⇔ k ≤ ⌈w·y/3⌉`),
+  `integerHull_le` and `isTHM_of_certs` (`Tuple.sort`, `inv_submatrix_equiv`, kernel vector ⇒ det 0,
+  `SN = 2I ⇒ S⁻¹ = N/2`) are correct; table sizes right (791 for `A₇`).
+- Trust: no sorry, admit, axiom, native_decide, implemented_by or unsafe; axioms propext, Classical.choice,
+  Quot.sound; leanchecker exit 0 on sampled modules.
+- Own recomputation: `z ∈ P`, `z ∉ P_I` (LP over integer points), no violated `{0,½}`-cut, no violated CG cut for
+  `w ∈ [-3,3]⁶` / `[-2,2]⁷`, THM by exact inverses, minor closures 3,387 / 4,873 / 5,155 (without the empty
+  matrix), no `A₃`/`A₄`, none of the three a minor of another.
+- Notes (fixed in this PR): PR title no longer says "counterexamples in Lean" (no-minor clause is not Lean);
+  EJ-3 credits the claims to Del Pia §6 (our proofs and data, not new results); `<` → `≤` and a softened
+  generality sentence in the ledger; EJ-4 counts say they include the empty matrix; Axioms re-run after merging
+  main.
