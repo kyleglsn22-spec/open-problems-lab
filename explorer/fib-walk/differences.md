@@ -18,4 +18,11 @@ the way FW-3 does it.
 | `f_2..f_7` | 300 | additionally `ℓ = 8, 9, 12, 15, 17, 18` |
 | `f_2..f_8` | 715 | `ℓ = 4, 7, 8, 9, 12, 15, 16, 17, 18, 20, 21, 22, 23, 24` |
 
-`ℓ = 7` is Lean-proved (FW-3, `Lab/FibWalk/Seven/Main.lean`).
+`ℓ = 7` is Lean-proved (FW-3, `Lab/FibWalk/Seven/Main.lean`). `ℓ = 8, 9` are Lean-proved (FW-4, `Lab/FibWalk/UpOnly/`).
+They use the up-only gaps that `certify_differences.py ℓ ℓ 2,3,4,5,6,7 105` certifies: threshold
+105 is enough there, because down-integers `≥ 105` already allow the shift `−13`. Up-integers need `≥ 274` for it.
+The same generator handles `ℓ = 12, 15, 17, 18` (`gen_up_only.py 12 30 25`, `15 38 25`, `17 46 30`, `18 46 25`).
+The `ℓ = 12` proof builds locally, but its main case tree peaks at 12.4 GB. For `ℓ ≥ 15` the long windows go past 13 GB. They
+need lighter `omega` calls before they can go into CI.
+
+For the mechanism behind the differences and evidence for every `ℓ ≤ 300`, see `valleys.md`.

@@ -327,4 +327,13 @@ Words we use:
   Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Bondage/Main.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bondage-number.md).
-
+- **2026-11-28, about 6:30 AM ET.** We proved, with computer-checked Lean proofs, that the down- and up-integer
+  spacing patterns also **differ at 8 steps and at 9 steps**. Nine consecutive up-integers can span exactly 17 (25 to
+  42), and ten can span 25 (30 to 55), but down-integers never can. As far as we know these are new; published work
+  stops at 4 steps and our 7-step result came earlier today. We also attacked the open question of whether this
+  happens for infinitely many step counts. We did not prove it, but computer checks show a difference for every step
+  count from 15 to 300, and we found where the differences come from (notes in explorer/fib-walk/valleys.md).
+  Standard axioms only, kernel re-check passed. Internal audit: pass with notes (notes applied).
+  Proof: [UpOnly/L8Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/UpOnly/L8Main.lean),
+  [UpOnly/L9Main.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/FibWalk/UpOnly/L9Main.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/fib-walk-gaps.md).

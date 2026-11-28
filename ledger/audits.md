@@ -887,3 +887,22 @@ In-house Auditor (independent subagent).
 - Notes (fixed in this PR): comment explaining `GPart0`'s import of `QPart19` (single import chain for CI memory);
   `explorer/bondage/gen_quads.py` committed with the Lean files.
 
+## 2026-11-28 · open-problems-lab PR #53 (FW-4: `D_8 ≠ U_8`, `D_9 ≠ U_9`, `Lab/FibWalk/UpOnly/`) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statements: `gapSet_ne_uo8/uo9 : gapSet IsDown ℓ ≠ gapSet IsUp ℓ` (ℓ = 8, 9) use the unchanged FW-1 definitions.
+  `up_only_mem_up8/9` (17 ∈ U_8, 25 ∈ U_9) come from a `decide +kernel` witness via the audited `isUp_iff_ut`.
+  `up_only_not_mem_down8/9` cover all k: a kernel table for d_k < 105, and a generated case tree with window
+  lemmas for d_k ≥ 105.
+- Independent recomputation (exact integers, n ≤ 10^6): the representation is unique; up-integers 25…42 are 9
+  consecutive (span 17) and 30…55 are 10 consecutive (span 25); no 9 (resp. 10) consecutive down-integers span 17
+  (resp. 25). Side observation: ℓ = 8 also has 27 ∈ D_8 \ U_8.
+- Trust: no sorry, admit, axiom, native_decide, implemented_by or unsafe in the new files. Axioms are propext,
+  Classical.choice, Quot.sound. `leanchecker` passes on L8Main, L9Main, Shift13 and all five Patterns modules.
+- Shift13: θ₇ = (17φ−26)/5 satisfies θ₇√5φ⁶ = φ⁵+1 (checked by proof and numerically). `shift'` applies with
+  j = 7 because down N ≥ 105 has t ≥ 8 (`eight_le_of_rep`).
+- Notes (fixed in this PR): (a) "n down iff {φn} < c(n)" was called exact; it is now marked heuristic and checked
+  numerically only. check_rule.py checks only the per-family rule, and the "families tile without gaps" sentence was
+  wrong as written. (b) "max D_ℓ = max U_ℓ for every ℓ checked" fails from ℓ = 115 at the cutoff; now restricted.
+  (c) The list of Lean-proved ℓ in valleys.md now includes 9. check_rule.py is now described as "high-precision".
+- No claim that infinitely many ℓ is proved; the ℓ = 12…300 differences are marked as evidence.
