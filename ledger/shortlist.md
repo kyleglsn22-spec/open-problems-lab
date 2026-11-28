@@ -138,3 +138,17 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 Hard slot (2026-11-28): Mizzi's current conjecture (asymmetric unstable graphs) was attempted. There is no asymmetric unstable graph on ≤ 9 vertices (exhaustive search), and random two-fold-automorphism search produced no asymmetric graphs. Parked until `geng` is available for n = 10; see explorer/unstable-asymmetric/.
 
 Also seen: the quantum Hedetniemi counterexample 2609.20690 is already Lean-checked by its authors (skip).
+
+## Round 8 easy-slot scouting (2026-11-28)
+
+Fresh disproofs checked against AFTD (kb generated 2026-11-27):
+
+| # | Candidate | Source | Formalized elsewhere? | Plan |
+| --- | --- | --- | --- | --- |
+| 1 | Henning–Yeo identifying vertex cover bound (family `H_{t,r}`, smallest has 8 vertices) | Wang 2608.19455 | No | **IDC-1:** Lean disproof of the whole family, every `Δ ≥ 4`; see ledger/identifying-vertex-cover.md |
+| 2 | Erveš–Tepeh conjectures on (1,2)-domination vs induced cycles in cubic graphs (counterexamples on 18–22 vertices, family `H(k)`) | Knor–Sedlar–Škrekovski 2608.17851 | No | Candidate |
+| 3 | TxGraffiti saturation number vs harmonic index (friendship graph `F_4`, 9 vertices) | Gupta 2606.15761 (after Bıyıkoğlu) | No | Candidate (easy) |
+
+Also seen: Wormald's linear-forest conjecture counterexample 2610.00086 (authors' own Lean proof; skip); Alon–Krivelevich
+choosability 2610.42094 (AFTD has it; skip).
+
