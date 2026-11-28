@@ -130,6 +130,6 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 3 | Bougard–Joret conjecture, smallest case `(n, α, k) = (7, 3, 4)` | 2608.18828 | No | **Done (BJ-1):** Lean disproof of the first regime; see ledger/bougard-joret.md |
 | 4 | Domination vs edge domination in cubic graphs (50 vertices, `γ = 16 > 15 = γ_e`) | 2609.10783 | No | Checked 2026-11-28: `γ ≥ 16` needs a ~500k-node branch-and-bound even with fractional pruning (paper: 2^20 enumeration or 893k-node tree); too heavy for kernel `decide` without a better certificate |
 | 5 | Harper-norm silver-mean conjecture (explicit rational point) | 2611.23265 | No | Checked 2026-11-28: needs operator norms on `ℓ²(ℤ)` and the Gerhold–Shalit reduction `E(p/q) = λ_max(H_{p/q})` for every phase; too heavy for the easy slot |
-| 6 | Hinrichs–Vybíral conjecture on positive definite functions (7-dim explicit example) | Vybíral 2609.21733 | No | **In progress (HV-1):** Lean disproof; see ledger/hinrichs-vybiral.md |
+| 6 | Hinrichs–Vybíral conjecture on positive definite functions (7-dim explicit example) | Vybíral 2609.21733 | No | **Done (HV-1):** Lean disproof, audited; see ledger/hinrichs-vybiral.md |
 
 Also seen: the quantum Hedetniemi counterexample 2609.20690 is already Lean-checked by its authors (skip).

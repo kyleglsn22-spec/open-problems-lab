@@ -21,7 +21,7 @@ and points `x_1, …, x_n`, the matrix `[f(x_j − x_k)]` dominates `J_n / n` (a
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| HV-1 | Lean: the Hinrichs–Vybíral conjecture is false (Vybíral's 7-dimensional example) | Kyle + Claude (Opus 5.5), 2026-11-28 | proved (awaiting internal audit) | `not_hinrichsVybiralConjecture`, `f_posDef`, `f_nonneg` in `Lab/HinrichsVybiral/Basic.lean` |
+| HV-1 | Lean: the Hinrichs–Vybíral conjecture is false (Vybíral's 7-dimensional example) | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass | `not_hinrichsVybiralConjecture`, `f_posDef`, `f_nonneg` in `Lab/HinrichsVybiral/Basic.lean` |
 
 Statement notes for the Auditor:
 - `IsPosDef f`: for all `n`, points `x` and complex `c`, `0 ≤ ∑_{j,k} c_j c̄_k f(x_j − x_k)` in `ℂ`'s order (real and
