@@ -25,7 +25,7 @@ AFTD (checked 2026-11-28) has definitions for this paper's seven-vertex network 
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| GUF-1 | Lean: Goemans's conjecture is false, via the seven-vertex network of 2611.23244 §2.2.2 | Kyle + Claude (Opus 5.5), 2026-11-28 | proved (awaiting internal audit) | `not_goemansConjecture`, `unsplittable_bad`, `fracFlow_isFlow`, `fracCost_eq` in `Lab/Goemans/Unsplittable.lean` |
+| GUF-1 | Lean: Goemans's conjecture is false, via the seven-vertex network of 2611.23244 §2.2.2 | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, internal audit pass | `not_goemansConjecture`, `unsplittable_bad`, `fracFlow_isFlow`, `fracCost_eq` in `Lab/Goemans/Unsplittable.lean` |
 
 Statement notes for the Auditor:
 - `Network V`: a decidable arc relation (so no parallel arcs), real costs `≥ 0`, a source. `IsPath`: a duplicate-free

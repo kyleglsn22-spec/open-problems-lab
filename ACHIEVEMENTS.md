@@ -256,3 +256,11 @@ Words we use:
   14-point bound. Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/AlbertsonBerman/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/albertson-berman.md).
+- **2026-11-27, about 8:00 PM ET.** We Lean-checked the disproof of **Goemans's unsplittable-flow conjecture**
+  (2000). Picture shipping goods from one warehouse to several stores: the conjecture said any plan that splits
+  shipments over several routes can be replaced by a plan using one route per store, without overloading any road
+  by more than the largest order and without costing more. Ge, Xie, Li and Li (arXiv:2611.23244, example credited
+  to Rybin) give a 7-point network where the split plan costs 58 but every allowed single-route plan costs at least
+  60. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Unsplittable.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Goemans/Unsplittable.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/goemans-unsplittable.md).

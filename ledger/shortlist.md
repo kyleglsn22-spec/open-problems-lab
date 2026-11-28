@@ -125,7 +125,7 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 
 | # | Candidate | Source | Formalized elsewhere? | Plan |
 | --- | --- | --- | --- | --- |
-| 1 | Goemans's unsplittable-flow conjecture (7-vertex network) | Ge–Xie–Li–Li 2611.23244 | AFTD: definitions only, no theorem | **In progress (GUF-1):** Lean disproof; see ledger/goemans-unsplittable.md |
+| 1 | Goemans's unsplittable-flow conjecture (7-vertex network) | Ge–Xie–Li–Li 2611.23244 | AFTD: definitions only, no theorem | **Done (GUF-1):** Lean disproof; see ledger/goemans-unsplittable.md |
 | 2 | Mizzi's conjecture on unstable graphs (10-vertex counterexample) | 2608.15281 | No | Next easy candidate |
 | 3 | Bougard–Joret conjecture, smallest case `(n, α, k) = (7, 3, 4)` | 2608.18828 | No | Candidate |
 | 4 | Domination vs edge domination in cubic graphs (50 vertices, `γ = 16 > 15 = γ_e`) | 2609.10783 | No | Needs a clever lower bound for `γ`; heavier |
