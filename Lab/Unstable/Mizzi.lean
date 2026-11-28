@@ -1,7 +1,7 @@
 import Mathlib
 
 /-!
-# Unstable graphs: Mizzi's cycle conjecture is false
+# Unstable graphs: the first version of Mizzi's cycle conjecture is false
 
 The canonical double cover `CDC(G) = G × K₂` has vertex set `V × Bool`, with `(u, a) ~ (v, b)` when
 `a ≠ b` and `u ~ v`. Every automorphism `φ` of `G` gives automorphisms `(v, a) ↦ (φ v, a)` and
@@ -9,9 +9,12 @@ The canonical double cover `CDC(G) = G × K₂` has vertex set `V × Bool`, with
 other automorphism. Two kinds of graph are unstable for trivial reasons: bipartite graphs and graphs
 with two vertices of equal neighbourhood (not vertex-determining).
 
-R. Mizzi (arXiv:2603.27559, abstract and Section 7, working with connected graphs and excluding the
-trivial cases) conjectured that every unstable graph contains cycles `C_k` and `C_{2k}` for some
-odd `k`. He checked this by computer for all connected graphs on at most 9 vertices.
+R. Mizzi (arXiv:2603.27559, versions 1 and 2, abstract and Section 7, working with connected graphs and
+excluding the trivial cases) conjectured that every unstable graph contains cycles `C_k` and `C_{2k}`
+for some odd `k`. Versions 3 and 4 of that paper restrict the conjecture to *asymmetric* unstable
+graphs. The graph below has an automorphism group of order 2, so it does **not** refute the current
+version, and Mizzi's version 4 acknowledges it as a counterexample to the earlier statement. We
+formalize the version 1/2 statement as `MizziConjectureV1`.
 
 P. R. Srivastava (arXiv:2608.15281) gave a 10-vertex counterexample. Its vertices are `1, …, 10`,
 and here `0, …, 9`. Its 11 edges are `12, 1 10, 24, 34, 36, 45, 57, 5 10, 6 10, 79, 8 10`.
@@ -22,7 +25,8 @@ does not come from `Aut(G) × ℤ₂`. The only cycles have lengths 5, 5 and 6.
 "Contains" is read in the weakest sense: as a (not necessarily induced) subgraph, that is, a cycle
 walk of that length. Our counterexample has no such pair, so it refutes every stronger reading too.
 
-Main result: `not_mizziConjecture`.
+Main result: `not_mizziConjectureV1`. (Mizzi's version 4 also gives a smaller, 7-vertex
+counterexample to the version 1/2 statement; we do not formalize it.)
 -/
 
 namespace OpenProblemsLab.Unstable
@@ -48,9 +52,9 @@ def IsVertexDetermining {V : Type} (G : SimpleGraph V) : Prop :=
 def HasCycleOfLength {V : Type} (G : SimpleGraph V) (n : ℕ) : Prop :=
   ∃ (v : V) (p : G.Walk v v), p.IsCycle ∧ p.length = n
 
-/-- **Mizzi's conjecture** (for unstable graphs): every connected, non-bipartite, vertex-determining,
+/-- **Mizzi's conjecture, as stated in versions 1–2 of arXiv:2603.27559** (for unstable graphs): every connected, non-bipartite, vertex-determining,
 unstable finite graph contains cycles `C_k` and `C_{2k}` for some odd `k`. -/
-def MizziConjecture : Prop :=
+def MizziConjectureV1 : Prop :=
   ∀ (V : Type) [Fintype V] (G : SimpleGraph V), G.Connected → ¬ G.Colorable 2 →
     IsVertexDetermining G → IsUnstable G →
     ∃ k, Odd k ∧ HasCycleOfLength G k ∧ HasCycleOfLength G (2 * k)
@@ -186,9 +190,9 @@ theorem not_cycle_pair : ¬ ∃ k, Odd k ∧ HasCycleOfLength G k ∧ HasCycleOf
   · exact no_triangle hp hl
   · exact no_ten hq hl2
 
-/-- **Mizzi's conjecture is false**: Srivastava's 10-vertex graph is connected, non-bipartite,
+/-- **Mizzi's conjecture (versions 1–2) is false**: Srivastava's 10-vertex graph is connected, non-bipartite,
 vertex-determining and unstable, but has no cycles `C_k`, `C_{2k}` with `k` odd. -/
-theorem not_mizziConjecture : ¬ MizziConjecture := fun h =>
+theorem not_mizziConjectureV1 : ¬ MizziConjectureV1 := fun h =>
   not_cycle_pair (h (Fin 10) G G_connected G_not_bipartite G_vertexDetermining G_unstable)
 
 end OpenProblemsLab.Unstable
