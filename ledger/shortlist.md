@@ -118,3 +118,17 @@ Also already formalized (skip): Costas-array conjecture disproof 2611.00098 (aut
 | Albertson–Berman ratio `c_P ≤ 25/52` (Problem 5.1) and Chappell–Pelsmajer `d = 2..6` (Problem 5.3) | 2608.23260 | Attempted: gadget calculus and searches, no improvement; see ledger/albertson-berman.md. Easy slot: **Done (AB-1)**, Lean disproof of the conjecture itself via `G₂₉` |
 | Petersen colouring: smallest counterexample, gap `40 ≤ n ≤ 52` | 2608.10028 | **In progress (hard slot):** multipole replacement searches in G52, nothing smaller yet |
 | Non-cancelling intersections: smallest lattice without a winning tree | 2608.27416 | Not started (small primes `p = 5, 7` look unhelpful) |
+
+## Round 7 easy-slot scouting (2026-11-28)
+
+Fresh disproofs checked against AFTD (kb generated 2026-11-27):
+
+| # | Candidate | Source | Formalized elsewhere? | Plan |
+| --- | --- | --- | --- | --- |
+| 1 | Goemans's unsplittable-flow conjecture (7-vertex network) | Ge–Xie–Li–Li 2611.23244 | AFTD: definitions only, no theorem | **Done (GUF-1):** Lean disproof; see ledger/goemans-unsplittable.md |
+| 2 | Mizzi's conjecture on unstable graphs (10-vertex counterexample) | 2608.15281 | No | Next easy candidate |
+| 3 | Bougard–Joret conjecture, smallest case `(n, α, k) = (7, 3, 4)` | 2608.18828 | No | Candidate |
+| 4 | Domination vs edge domination in cubic graphs (50 vertices, `γ = 16 > 15 = γ_e`) | 2609.10783 | No | Needs a clever lower bound for `γ`; heavier |
+| 5 | Harper-norm silver-mean conjecture (explicit rational point) | 2611.23265 | No | Candidate |
+
+Also seen: the quantum Hedetniemi counterexample 2609.20690 is already Lean-checked by its authors (skip).
