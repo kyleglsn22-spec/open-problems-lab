@@ -130,3 +130,5 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.TotalDomination.straightLinePlanar_B
 #print axioms OpenProblemsLab.LonelyRunner.not_chowRimanicConjectureTwo
 #print axioms OpenProblemsLab.LonelyRunner.delta_Fstar_le
+#print axioms OpenProblemsLab.QuantumCoupon.not_sraConjecture
+#print axioms OpenProblemsLab.QuantumCoupon.counterexample

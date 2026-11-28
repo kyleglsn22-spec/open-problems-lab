@@ -151,7 +151,13 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 4 | Teschner's bondage-number conjecture `b(G) ≤ (3/2)Δ` (cubic bipartite graph on 18 vertices, `b = 5`) | Yavari 2609.04257 | No | **Done (BOND-1, PR 54):** Lean disproof; see ledger/bondage-number.md |
 | 5 | Rödl–Ruciński–Szemerédi exact codegree conjecture for tight Hamiltonian cycles, all-`n` form (7-vertex 3-graph `H₃`, also `k = 4, 5`) | Ferudun, Zenodo 10.5281/zenodo.23006717 (Sep 2026) | No | **Done (TH-1, PR 56):** Lean disproof for `k = 3, 4, 5`; see ledger/tight-hamilton-codegree.md |
 | 6 | Goddard–Henning Conjecture 32 (proper 4-colouring of triangulations with two total dominating colour pairs; 36-vertex triangulation) | Kwon–Park–Sano 2611.00572 | No (AFTD lists only its open Conjecture 1.4) | **Done (GHT-1, PR 58):** Lean disproof (`n = 36`); see ledger/goddard-henning-total-domination.md |
-| 7 | Chow–Rimanić lonely runner conjecture over function fields (13 polynomials over `𝔽₂`, `C₃(2) ≤ 13 < 15`) | Hu 2608.18818 | No | **LR-1:** Lean disproof; see ledger/lonely-runner-function-field.md |
+| 7 | Chow–Rimanić lonely runner conjecture over function fields (13 polynomials over `𝔽₂`, `C₃(2) ≤ 13 < 15`) | Hu 2608.18818 | No | **Done (LR-1, PR 59):** Lean disproof; see ledger/lonely-runner-function-field.md |
+| 8 | Sra's quantum coupon-collector conjecture `Qₙ ≻ 0` (MathOverflow 263833; `n = 6`, six `3 × 3` matrices) | Count ex Machina 2608.29595, §8 | No (AFTD: not listed; repo has exact Python checks only) | **QC-1:** Lean disproof; see ledger/quantum-coupon-collector.md |
+
+Also seen (QC-1 scouting): Game of Cycles parity conjecture 2610.15145 (15-vertex spider; game tree too big for
+the kernel), Gamma-Theta eternal domination 2609.11500 (243 vertices, ~2M dominating sets), h-perfect almost-kernel
+conjecture (EGRES TR 2026-04; every superorientation must be checked), q-permanent 2611.14694 and nonnegative-rank
+Kronecker counterexamples (authors' own Lean), Bapat–Sunder real 2611.23269 (32 × 32 permanents).
 
 Also seen: Wormald's linear-forest conjecture counterexample 2610.00086 (authors' own Lean proof; skip); Alon–Krivelevich
 choosability 2610.42094 (AFTD has it; skip).

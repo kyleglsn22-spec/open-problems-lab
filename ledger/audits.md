@@ -970,3 +970,19 @@ In-house Auditor (independent subagent).
   EJ-3 credits the claims to Del Pia §6 (our proofs and data, not new results); `<` → `≤` and a softened
   generality sentence in the ledger; EJ-4 counts say they include the empty matrix; Axioms re-run after merging
   main.
+
+## 2026-11-28 · Claim QC-1 (Sra's quantum coupon-collector conjecture, Count ex Machina's n = 6 witness) · **pass with notes**
+
+In-house Auditor (independent subagent).
+- Statement fidelity: `couponMatrix` is the alternating sum over nonempty `S ⊆ Fin n` with sign `(-1)^(|S|+1)`,
+  the same as the MathOverflow form; `SraConjecture` quantifies over all `d` and `n ≥ 1`, with Mathlib's
+  `Matrix.PosDef` (symmetric, `xᵀMx > 0`) as hypothesis and conclusion. Every subset sum is positive definite, so
+  `Matrix.inv` is the true inverse. Not weakened, not vacuous.
+- Witness data (`u`, `w`, `ε = 1/100`, `v = (4,1,3)`) matches the paper's source exactly.
+- Logic of `sol_spec`, `qval_neg`, `X_eq`, `X_posDef`, `sum_X`, `inv_mulVec`, `quadratic_form_eq`,
+  `counterexample`, `not_sraConjecture` checked.
+- Trust surface clean; axioms propext, Classical.choice, Quot.sound only; kernel re-check passed.
+- Own exact computation (separate Gaussian elimination): `vᵀQ₆v ≈ −95.0957`, agreeing with
+  `audit/quantum_coupon_check.py`.
+- Notes (fixed in this PR): ledger says "facet-averaging argument" for `n ≤ 5`, and that the formal statement is
+  quantified exactly as posed.
