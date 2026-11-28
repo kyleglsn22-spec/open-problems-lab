@@ -17,14 +17,14 @@ order `n`, size `m` and maximum degree `Δ` has `τ_D(G) ≤ (Δ(Δ − 1) n + 2
 | Bound or result | Reference | Checked by us? |
 | --- | --- | --- |
 | True for regular graphs and for `Δ ≤ 3` | Henning–Yeo 2012 | No |
-| False: `H_{t,r}` (`t, r ≥ 2`), diameter two, `τ_D = n − 1`, margin `−(t − 1)(r − 1)`; fails for every `Δ ≥ 4` | Wang 2608.19455, Thm 3.1, Cor 3.2 | Yes (IDC-1) |
+| False: `H_{t,r}` (`t, r ≥ 2`), diameter two, `τ_D = n − 1` exceeds the bound by `(t − 1)(r − 1)/(Δ² + 1)`; fails for every `Δ ≥ 4` | Wang 2608.19455, Thm 3.1, Cor 3.2 | Yes (IDC-1) |
 | Unbounded additive gap for every fixed `Δ ≥ 4` (Petersen fibres, block chains); `Δ c_Δ → 1` | Wang 2608.19455, §4–5 | No |
 | `H_{2,2}` (8 vertices) is order-minimal (computer search over all graphs on ≤ 7 vertices) | Wang 2608.19455, Prop 6.1 | No |
 
 ## Claims
 | ID | Claim | Author (person + AI/model) | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| IDC-1 | Lean: the Henning–Yeo conjecture is false. For all `t, r ≥ 2`, `H_{t,r}` is connected, has maximum degree `t + r`, `τ_D = t + 2r + 1`, and violates the bound; hence a connected counterexample with maximum degree exactly `Δ` exists for every `Δ ≥ 4` | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, audit pending | `not_henningYeoConjecture`, `H_counterexample`, `idCoverNumber_H`, `exists_counterexample_of_maxDegree` in `Lab/IdentifyingCover/Counterexample.lean`; independent brute-force check `audit/idcover_check.py` (`2 ≤ t, r ≤ 5`) |
+| IDC-1 | Lean: the Henning–Yeo conjecture is false. For all `t, r ≥ 2`, `H_{t,r}` is connected, has maximum degree `t + r`, `τ_D = t + 2r + 1`, and violates the bound; hence a connected counterexample with maximum degree exactly `Δ` exists for every `Δ ≥ 4` | Kyle + Claude (Opus 5.5), 2026-11-28 | proved, audited (pass with notes, applied) | `not_henningYeoConjecture`, `H_counterexample`, `idCoverNumber_H`, `exists_counterexample_of_maxDegree` in `Lab/IdentifyingCover/Counterexample.lean`; independent brute-force check `audit/idcover_check.py` (`2 ≤ t, r ≤ 5`) |
 
 Statement notes for the Auditor:
 - `IsIdCover G T`: every edge `e` (an element of `G.edgeSet : Set (Sym2 V)`) has a vertex in `T`, and edges with

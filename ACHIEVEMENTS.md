@@ -305,8 +305,8 @@ Words we use:
 - **2026-11-28, about 2:45 AM ET.** We Lean-checked **Wang's disproof of the Henning–Yeo conjecture**
   (arXiv:2608.19455). In 2012 Henning and Yeo predicted an upper limit on how many vertices of a network you need
   to "tell every link apart" (an identifying vertex cover), in terms of the number of vertices, links and the
-  largest degree. Wang found a family of small networks, the smallest with 8 vertices, that need one vertex more
-  than the limit allows. Lean checks the whole family, so the prediction fails for every largest degree from 4 up.
-  Standard axioms only, kernel re-check passed.
+  largest degree. Wang found a family of small networks that need more vertices than the limit allows (7 versus a
+  limit of about 6.94 for the smallest, 8-vertex example). Lean checks the whole family, so the prediction fails for every largest degree from 4 up.
+  Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Counterexample.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/IdentifyingCover/Counterexample.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/identifying-vertex-cover.md).
