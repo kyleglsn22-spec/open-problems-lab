@@ -148,7 +148,8 @@ Fresh disproofs checked against AFTD (kb generated 2026-11-27):
 | 1 | Henning–Yeo identifying vertex cover bound (family `H_{t,r}`, smallest has 8 vertices) | Wang 2608.19455 | No | **Done (IDC-1, PR 51):** Lean disproof of the whole family, every `Δ ≥ 4`; see ledger/identifying-vertex-cover.md |
 | 2 | Erveš–Tepeh conjectures on (1,2)-domination vs induced cycles in cubic graphs (counterexamples on 18–22 vertices, family `H(k)`) | Knor–Sedlar–Škrekovski 2608.17851 | No | Candidate |
 | 3 | TxGraffiti saturation number vs harmonic index (friendship graph `F_4`, 9 vertices) | Gupta 2606.15761 (after Bıyıkoğlu) | No | **Done (SAT-1, PR 52):** Lean disproof, all `F_k`, `k ≥ 4`; see ledger/saturation-harmonic.md |
-| 4 | Teschner's bondage-number conjecture `b(G) ≤ (3/2)Δ` (cubic bipartite graph on 18 vertices, `b = 5`) | Yavari 2609.04257 | No | **BOND-1:** Lean disproof; see ledger/bondage-number.md |
+| 4 | Teschner's bondage-number conjecture `b(G) ≤ (3/2)Δ` (cubic bipartite graph on 18 vertices, `b = 5`) | Yavari 2609.04257 | No | **Done (BOND-1, PR 54):** Lean disproof; see ledger/bondage-number.md |
+| 5 | Rödl–Ruciński–Szemerédi exact codegree conjecture for tight Hamiltonian cycles, all-`n` form (7-vertex 3-graph `H₃`, also `k = 4, 5`) | Ferudun, Zenodo 10.5281/zenodo.23006717 (Sep 2026) | No | **TH-1:** Lean disproof for `k = 3, 4, 5`; see ledger/tight-hamilton-codegree.md |
 
 Also seen: Wormald's linear-forest conjecture counterexample 2610.00086 (authors' own Lean proof; skip); Alon–Krivelevich
 choosability 2610.42094 (AFTD has it; skip).
