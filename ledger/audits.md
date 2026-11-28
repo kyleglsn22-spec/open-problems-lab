@@ -147,6 +147,18 @@ progressions could only lower the true h. After the fix, the PR says this and no
 
 ---
 
+## 2026-11-28 · open-problems-lab PR #41 (Goemans single-source unsplittable-flow conjecture disproof [GUF-1], `Lab/Goemans/Unsplittable.lean`) · **pass, conditional on green `build` at 8eee6b4 and an ACHIEVEMENTS.md entry**
+
+Internal audit, outside review welcome. Reviewed at 8eee6b4.
+
+- **Statement:** `IsFlow`, `fracLoad`/`unsplitLoad`, `totalCost`, `maxDemand` and `GoemansConjecture` match Ge–Xie–Li–Li (arXiv:2611.23244) Def. 2.1 (path flows over directed simple s–t_i paths), eq. (2.2)–(2.3) (arc loads, cost), Def. 2.2 with λ = 1 and Conjecture 2.4. Loads and admissibility over all pairs are equivalent to over arcs. The Lean conjecture quantifies over slightly more instances (terminals need not be distinct or ≠ s), but the counterexample is a valid instance of the paper's setting, so the refutation applies to the paper's conjecture.
+- **Instance:** arcs, costs, demands (15,10,15) and path flows match §2.2.2 (Rybin's example).
+- **Independent recheck:** own Python: 2 simple paths per terminal; fractional loads (10,6,24,14,10,5,9,4,5) as in eq. (2.6), cost 58; over all 8 unsplittable choices the 1-admissible ones cost 60, 90, 60, 60, so minimum 60.
+- **Trust base:** no sorry/axiom/native_decide/set_option; small `decide` only; `#print axioms` added.
+- **Required changes:** add the GUF-1 entry to ACHIEVEMENTS.md.
+
+---
+
 ## 2026-11-27 · open-problems-lab PR #38 (Albertson–Berman conjecture disproof via G29 [AB-1], `Lab/AlbertsonBerman/`) · **pass, conditional on green `build` at f991235 and an ACHIEVEMENTS.md entry**
 
 Internal audit, outside review welcome. Reviewed at f991235.
