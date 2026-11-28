@@ -272,3 +272,11 @@ Words we use:
   Standard axioms only, kernel re-check passed. Internal audit: pass.
   Proof: [Mizzi.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/Unstable/Mizzi.lean),
   [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/unstable-graphs.md).
+- **2026-11-27, about 9:30 PM ET.** We Lean-checked the disproof of the **Bougard–Joret conjecture** (J. Graph
+  Theory, 2008) on the fewest links a robust network can have. A network is "4-connected" if it stays in one piece
+  after removing any 3 points. The conjecture predicted the fewest links for such networks with a given number of
+  points and a given largest set of mutually unlinked points; Das and Gupta (arXiv:2608.18828) showed the first part
+  fails for 7 points, where the prediction is 14 links but every such network needs 15. Lean checks that 15 is
+  needed. Standard axioms only, kernel re-check passed. Internal audit: pass.
+  Proof: [Basic.lean](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/Lab/BougardJoret/Basic.lean),
+  [ledger](https://github.com/kyleglsn22-spec/open-problems-lab/blob/main/ledger/bougard-joret.md).

@@ -94,3 +94,5 @@ Add a `#print axioms` line for every theorem the ledger marks as checked.
 #print axioms OpenProblemsLab.Goemans.unsplittable_bad
 #print axioms OpenProblemsLab.Unstable.not_mizziConjectureV1
 #print axioms OpenProblemsLab.Unstable.G_unstable
+#print axioms OpenProblemsLab.BougardJoret.not_bougardJoretFirstRegime
+#print axioms OpenProblemsLab.BougardJoret.fifteen_le_card_edges

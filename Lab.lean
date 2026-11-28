@@ -72,5 +72,6 @@ import Lab.OddFoldCovers.Petersen
 import Lab.AlbertsonBerman.Counterexample
 import Lab.Goemans.Unsplittable
 import Lab.Unstable.Mizzi
+import Lab.BougardJoret.Basic
 
 /-! Root of the Open Problems Lab library: imports every checked file. -/
